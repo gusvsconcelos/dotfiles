@@ -1,0 +1,19 @@
+#!/bin/bash
+
+## Set GTK Themes, Icons, Cursor and Fonts
+
+THEME='Plata-Grey-Noir-Compact'
+ICONS='ePapirus-Dark'
+FONT='Fantasque Sans Mono 12'
+CURSOR='WhiteSur-cursors'
+
+SCHEMA='gsettings set org.gnome.desktop.interface'
+
+apply_themes() {
+	${SCHEMA} gtk-theme "$THEME"
+	${SCHEMA} icon-theme "$ICONS"
+	${SCHEMA} cursor-theme "$CURSOR"
+	${SCHEMA} font-name "$FONT"
+}
+
+apply_themes

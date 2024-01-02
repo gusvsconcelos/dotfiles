@@ -1,6 +1,6 @@
 # @gusvsconcelos's Hyprland Rice on Arch Linux
 
-Here are my configuration files for this rice. This rice relies heavily on [Pywal](https://github.com/dylanaraps/pywal). Colors change as you change your wallpaper!
+Here are my configuration files for this rice. This rice relies heavily on [Pywal](https://github.com/dylanaraps/pywal). Colors change as you change your wallpaper.
 
 ## Some features and configs
 
@@ -29,16 +29,6 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
 -   Run `hyprcfg` in your terminal to edit your `hyprland.conf` file
 -   Run `waycfg` in your terminal to open your waybar config folder
 
-![](https://raw.githubusercontent.com/gusvsconcelos/dotfiles/master/Screenshots/1.png)
-
-![](https://raw.githubusercontent.com/gusvsconcelos/dotfiles/master/Screenshots/2.png)
-
-![](https://raw.githubusercontent.com/gusvsconcelos/dotfiles/master/Screenshots/3.png)
-
-![](https://raw.githubusercontent.com/gusvsconcelos/dotfiles/master/Screenshots/4.png)
-
-![](https://raw.githubusercontent.com/gusvsconcelos/dotfiles/master/Screenshots/5.png)
-
 If you want to use these dotfiles on your machine, you may need to run these commands first. Please use these dotfiles at your own risk !!!
 
 ## Installing Hyprland
@@ -46,13 +36,13 @@ If you want to use these dotfiles on your machine, you may need to run these com
 I have `yay` as my AUR helper. You can use whatever you want!
 
 ```
-yay -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland swww waybar xdg-desktop-portal-wlr wlroots xdg-desktop-portal
+$ yay -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland swww waybar xdg-desktop-portal-wlr wlroots xdg-desktop-portal
 ```
 
 ## Setting up themes and other stuff
 
 ```
-yay -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools sddm-sugar-candy-git ark playerctl pamixer whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pillow python-pywalfox mako-git viewnior gnome-keyring neofetch imagemagick wtype inter-font-beta rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler
+$ yay -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools sddm-sugar-candy-git ark playerctl pamixer whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pillow python-pywalfox mako-git viewnior gnome-keyring neofetch imagemagick wtype inter-font-beta rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler
 ```
 
 ## Installing all other applications
@@ -60,8 +50,8 @@ yay -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontr
 Here are the apps that I normally have installed on distros that I use. Feel free to remove those that you're not using anyway.
 
 ```
-paru -S spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh vlc
-pacman -S firefox obsidian github-cli
+$ paru -S spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh vlc
+$ pacman -S firefox obsidian github-cli
 ```
 
 ## Fonts
@@ -121,8 +111,8 @@ If you want to have the custom Firefox homepage, you can just set this [url](htt
 
 -   Open and login with Spotify first.
 -   Once done, initially run `spicetify backup apply` in your terminal.
--   Then you can set the theme by running `spicetify config current_theme Sleek` in your terminal.
--   And finally you can set the Pywal color scheme by running `spicetify config color_scheme UltraBlack`
+-   Then you can set the theme by running `spicetify config current_theme PywalSleek` in your terminal.
+-   And finally you can set the Pywal color scheme by running `spicetify config color_scheme Dynamic`
 Open Spotify and you should be good to go.
 
 Note that you need to restart Spotify everytime the colors are changed. This process will be automatically done if you run Spotify using the `CTRL + Alt + S` keybind that I've set in `hyprland.conf` (you can change this keybind to whatever you want).

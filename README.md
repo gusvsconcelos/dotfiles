@@ -79,7 +79,7 @@ After that, you can now copy the `.zshrc` file to your home directory.
 
 ## Installing Pywal
 
-If you want the regular Pywal, you can install it with `paru -S python-pywal`. But if you want 16 colors to be generated (which I use in this), you can install it by:
+If you want the regular Pywal, you can install it with `pacman -S python-pywal`. But if you want 16 colors to be generated (which I use in this), you can install it by:
 
 -   Cloning [this](https://github.com/eylles/pywal16) repo
 -   `cd` into the repo and run `pip3 install --user . --break-system-packages`

@@ -11,8 +11,9 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
     -   Workspace 1: Terminal
     -   Workspace 2: Firefox
     -   Workspace 3: VS Code
-    -   Workspace 4: Spotify
-    -   Workspace 5: Files (`ranger`)
+    -   Workspace 4: GitHub Desktop
+    -   Workspace 5: Spotify
+    -   Workspace 6: Files (`ranger`)
 -   Toggle full screen: `Super + F`
 -   Launcher: `Super + D`
 -   Power menu: `Super + X`

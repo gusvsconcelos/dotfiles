@@ -1,18 +1,18 @@
 sort=-time
 layer=overlay
-background-color=#050506
-width=345
+background-color=#020002
+width=360
 height=110
 border-size=0
-text-color=#c0c0c0
-border-color=#68B0D6
+text-color=#bfbfbf
+border-color=#0BA6F7
 border-radius=10
 icons=1
 padding=14
 max-icon-size=96
 default-timeout=5000
 ignore-timeout=1
-font=Fantasque Sans Mono
+font=Cartograph CF
 
 [urgency=high]
 default-timeout=0

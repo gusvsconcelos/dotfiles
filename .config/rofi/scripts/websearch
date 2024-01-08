@@ -36,7 +36,7 @@ gen_list() {
 
 main() {
   # Pass the list to rofi
-  platform=$( (gen_list) | rofi -dmenu -matching fuzzy -no-custom -location 0 -p "Platforma: " -theme ${dir}/${theme}.rasi)
+  platform=$( (gen_list) | rofi -dmenu -matching fuzzy -no-custom -location 0 -p "Plataforma: " -theme ${dir}/${theme}.rasi)
 
   if [[ -n "$platform" ]]; then
     query=$( (echo ) | rofi  -dmenu -matching fuzzy -location 0 -p "Pesquisa: " -theme ${dir}/${theme}.rasi)

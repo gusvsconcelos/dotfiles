@@ -40,7 +40,7 @@ window#waybar.hidden {
 #custom-launcher {
     color: @color9;
     padding: 0 23px 0 14px;
-    margin-left: 8px;
+    margin-left: 6px;
     margin-right: 6px;
     font-size: 22px;
 }
@@ -89,27 +89,30 @@ window#waybar.hidden {
 }
 
 #custom-wallpaper {
-    padding: 0 18px 0 12px;
     color: @color14;
     border-radius: 0;
 }
 
 #custom-theme {
-    padding: 0 14px 0 12px;
     color: @color13;
-    border-radius: 10 0 0 10
+    border-radius: 10 0 0 10;
+    padding: 0 10 0 12;
+    font-size: 17px;
 }
 
 #pulseaudio,
 #network {
     background-color: @background;
-    padding: 0 12px;
-    margin: 3px 0px 1px 1px;
+}
+
+#network,
+#custom-wallpaper {
+    padding: 0 10 0 10;
+    font-size: 17px;
 }
 
 #network {
     color: @color13;
-    padding-right: 14px;
     border-right: none;
     border-left: none;
     margin-left: 0px;
@@ -126,6 +129,8 @@ window#waybar.hidden {
     border-right: none;
     margin-left: 0px;
     border-radius: 0 10 10 0;
+    padding: 0 14 0 10;
+    font-size: 20px;
 }
 
 #pulseaudio.muted {
@@ -145,7 +150,7 @@ window#waybar.hidden {
 
 #custom-power-menu {
     color: @color11;
-    margin-right: 8px;
+    margin-right: 6px;
     margin-left: 6px;
     padding: 0 12px 0 10px;
 }

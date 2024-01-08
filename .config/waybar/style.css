@@ -1,0 +1,180 @@
+@import 'colors-waybar.css';
+
+* {
+    font-family: CartographCF;
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.1;
+}
+
+#window {
+    color: @foreground;
+}
+
+#pulseaudio,
+#network, 
+#cpu,
+#memory,
+#workspaces,
+#custom-power-menu,
+#custom-wallpaper,
+#custom-launcher,
+#custom-spotify,
+#custom-theme {
+    color: @foreground;
+    padding: 2px 10px;
+    background-color: @background;
+    border-radius: 10px;
+    margin: 3px 0px 1px;
+}
+
+#custom-launcher {
+    color: @color9;
+    padding: 0 23px 0 14px;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 22px;
+}
+
+#cpu {
+    color: @color10;
+    margin-right: 6px;
+    font-weight: bold;
+}
+
+#memory {
+    color: @color11;
+    margin-right: 6px;
+    font-weight: bold;
+}
+
+#workspaces {
+}
+
+#workspaces button {
+    color: @color11;
+    box-shadow: inset 0 -3px transparent;
+    margin-right: 0em;
+    transition: all 0.2s cubic-bezier(0.1, -0.1, 0.1, 1);
+    padding: 0 0 0 0;
+}
+
+#workspaces button.active {
+    color: @color9;
+    margin-right: 0em;
+    transition: all 0.2s cubic-bezier(0.1, -0.1, 0.1, 1);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#custom-spotify {
+    color: @color10;
+}
+
+#custom-wallpaper {
+    color: @color14;
+    border-radius: 0;
+}
+
+#custom-theme {
+    color: @color13;
+    border-radius: 10 0 0 10;
+    padding: 0 10 0 12;
+    font-size: 17px;
+}
+
+#pulseaudio,
+#network {
+    background-color: @background;
+}
+
+#network,
+#custom-wallpaper {
+    padding: 0 10 0 10;
+    font-size: 17px;
+}
+
+#network {
+    color: @color13;
+    border-right: none;
+    border-left: none;
+    margin-left: 0px;
+    border-radius: 0;
+}
+
+#network.disconnected {
+    color: @color11;
+}
+
+#pulseaudio {
+    color: @color13;
+    border-left: none;
+    border-right: none;
+    margin-left: 0px;
+    border-radius: 0 10 10 0;
+    padding: 0 14 0 10;
+    font-size: 20px;
+}
+
+#pulseaudio.muted {
+    color: @color11;
+}
+
+#clock {
+     color: @foreground;
+    padding: 0 0 2 10;
+    background-color: @background;
+    border-radius: 10px;
+    margin: 3px 0px 1px;
+    color: @color12;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+#custom-power-menu {
+    color: @color11;
+    margin-right: 6px;
+    margin-left: 6px;
+    padding: 0 12px 0 10px;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(30, 34, 42, 0.5);
+        color: #abb2bf;
+    }
+}
+
+tooltip {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: @background;
+    color: @foreground;
+    font-family: CartographCF Nerd Font;
+}
+
+tooltip label {
+    padding: 5px;
+    color: @foreground;
+}
+
+label:focus {
+    background-color: @background;
+}

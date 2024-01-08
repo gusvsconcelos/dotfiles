@@ -49,12 +49,14 @@ window#waybar.hidden {
     color: @color10;
     margin-right: 6px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 #memory {
     color: @color11;
     margin-right: 6px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 #workspaces {
@@ -86,6 +88,7 @@ window#waybar.hidden {
 
 #custom-spotify {
     color: @color10;
+    font-size: 15px;
 }
 
 #custom-wallpaper {
@@ -146,6 +149,7 @@ window#waybar.hidden {
     color: @color12;
     font-weight: bold;
     margin-left: 6px;
+    font-size: 14px;
 }
 
 #custom-power-menu {

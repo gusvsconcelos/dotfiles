@@ -39,10 +39,10 @@ window#waybar.hidden {
 
 #custom-launcher {
     color: @color9;
-    padding: 0 23px 0 14px;
+    padding: 0 16 0 10;
     margin-left: 6px;
     margin-right: 6px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #cpu {
@@ -152,7 +152,7 @@ window#waybar.hidden {
     color: @color11;
     margin-right: 6px;
     margin-left: 6px;
-    padding: 0 12px 0 10px;
+    padding: 0 5 0 3;
 }
 
 @keyframes blink {

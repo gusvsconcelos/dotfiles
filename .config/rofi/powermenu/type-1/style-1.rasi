@@ -45,7 +45,7 @@ mainbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     5px;
+    spacing:                     0px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
@@ -61,15 +61,15 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         "";
     padding:                     9 16 9 13;
-    margin:                      1px;
+    margin:                      2px;
     border-radius:               10px;
     background-color:            @urgent;
     text-color:                  @background;
 }
 prompt {
     enabled:                     true;
-    margin:                      0px;
-    padding:                     10 0 0 10;
+    margin:                      0;
+    padding:                     10;
     border:                      0px solid;
     border-radius:               10px;
     border-color:                @selected;

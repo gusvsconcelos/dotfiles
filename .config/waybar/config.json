@@ -1,5 +1,5 @@
 {
-    "height": 30,
+    "height": 35,
     "layer": "top",
     "modules-left": ["custom/launcher", "cpu", "memory", "custom/spotify"],
     "modules-center": ["hyprland/workspaces"],

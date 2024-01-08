@@ -4,7 +4,7 @@
 
 THEME='Plata-Grey-Noir-Compact'
 ICONS='ePapirus-Dark'
-FONT='Fantasque Sans Mono 12'
+FONT='Cartograph CF 11'
 CURSOR='WhiteSur-cursors'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'

@@ -5,7 +5,7 @@ swaylock \
 --screenshots \
 --indicator \
 --clock \
---font 'Fantasque Sans Mono:style=Regular,Regular 40' \
+--font 'Cartograph CF' \
 --inside-wrong-color "$color2"  \
 --ring-wrong-color "$color5" \
 --inside-clear-color "$background" \

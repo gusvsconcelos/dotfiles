@@ -5,7 +5,7 @@ swaylock \
 --screenshots \
 --indicator \
 --clock \
---font 'Cartograph CF' \
+--font 'JetBrainsMono Nerd Font' \
 --inside-wrong-color "$color2"  \
 --ring-wrong-color "$color5" \
 --inside-clear-color "$background" \

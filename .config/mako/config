@@ -1,18 +1,18 @@
 sort=-time
 layer=overlay
-background-color=#020002
+background-color=#010409
 width=360
 height=110
 border-size=0
-text-color=#bfbfbf
-border-color=#0BA6F7
+text-color=#bfc0c1
+border-color=#9B96AB
 border-radius=10
 icons=1
 padding=14
 max-icon-size=96
 default-timeout=5000
 ignore-timeout=1
-font=Cartograph CF
+font=JetBrainsMono Nerd Font
 
 [urgency=high]
 default-timeout=0

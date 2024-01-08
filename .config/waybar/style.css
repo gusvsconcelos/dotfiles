@@ -1,7 +1,7 @@
 @import 'colors-waybar.css';
 
 * {
-    font-family: CartographCF;
+    font-family: JetBrainsMono Nerd Font;
     font-size: 16px;
 }
 
@@ -31,10 +31,10 @@ window#waybar.hidden {
 #custom-spotify,
 #custom-theme {
     color: @foreground;
-    padding: 2px 10px;
+    padding: 0px 10px;
     background-color: @background;
     border-radius: 10px;
-    margin: 3px 0px 1px;
+    margin: 3px 0px 0px;
 }
 
 #custom-launcher {
@@ -97,7 +97,7 @@ window#waybar.hidden {
     color: @color13;
     border-radius: 10 0 0 10;
     padding: 0 10 0 12;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 #pulseaudio,
@@ -108,7 +108,7 @@ window#waybar.hidden {
 #network,
 #custom-wallpaper {
     padding: 0 10 0 10;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 #network {
@@ -130,7 +130,7 @@ window#waybar.hidden {
     margin-left: 0px;
     border-radius: 0 10 10 0;
     padding: 0 14 0 10;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #pulseaudio.muted {
@@ -139,7 +139,7 @@ window#waybar.hidden {
 
 #clock {
      color: @foreground;
-    padding: 0 0 2 10;
+    padding: 0 0 0 10;
     background-color: @background;
     border-radius: 10px;
     margin: 3px 0px 1px;

@@ -1,18 +1,18 @@
 sort=-time
 layer=overlay
-background-color=#090504
+background-color=#030407bb
 width=340
 height=120
 border-size=0
-text-color=#c1c0c0
-border-color=#906B56
+text-color=#c0c0c1
+border-color=#D93A62
 border-radius=10
 icons=1
 padding=14
 max-icon-size=80
 default-timeout=5000
 ignore-timeout=1
-font=JetBrainsMono Nerd Font 11
+font=JetBrainsMono Nerd Font 10
 
 [urgency=high]
 default-timeout=0

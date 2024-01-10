@@ -10,6 +10,7 @@ window#waybar {
     color: @foreground;
     transition-property: background-color;
     transition-duration: 0.5s;
+    opacity: 0.75;
 }
 
 window#waybar.hidden {
@@ -33,29 +34,27 @@ window#waybar.hidden {
     color: @foreground;
     padding: 0px 10px;
     background-color: @background;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 3px 0px 0px;
 }
 
 #custom-launcher {
     color: @color9;
-    padding: 0 16 0 10;
-    margin-left: 6px;
+    padding: 0 14 1 9;
+    margin-left: 8px;
     margin-right: 6px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 #cpu {
-    color: @color10;
+    color: @color11;
     margin-right: 6px;
-    font-weight: bold;
     font-size: 14px;
 }
 
 #memory {
     color: @color11;
     margin-right: 6px;
-    font-weight: bold;
     font-size: 14px;
 }
 
@@ -67,13 +66,15 @@ window#waybar.hidden {
     box-shadow: inset 0 -3px transparent;
     margin-right: 0em;
     transition: all 0.2s cubic-bezier(0.1, -0.1, 0.1, 1);
-    padding: 0 0 0 0;
+    padding: 0 3 0 0;
 }
 
 #workspaces button.active {
-    color: @color9;
     margin-right: 0em;
     transition: all 0.2s cubic-bezier(0.1, -0.1, 0.1, 1);
+    border-bottom: 2px solid  @color9;
+    margin-bottom: 1px;
+    padding-left:0;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -88,19 +89,19 @@ window#waybar.hidden {
 
 #custom-spotify {
     color: @color10;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #custom-wallpaper {
-    color: @color14;
+    color: @color11;
     border-radius: 0;
 }
 
 #custom-theme {
-    color: @color13;
-    border-radius: 10 0 0 10;
-    padding: 0 10 0 12;
-    font-size: 16px;
+    color: @color11;
+    border-radius: 20 0 0 20;
+    padding: 0 8 0 12;
+    font-size: 15px;
 }
 
 #pulseaudio,
@@ -110,12 +111,12 @@ window#waybar.hidden {
 
 #network,
 #custom-wallpaper {
-    padding: 0 10 0 10;
-    font-size: 16px;
+    padding: 0 8 0 8;
+    font-size: 15px;
 }
 
 #network {
-    color: @color13;
+    color: @color11;
     border-right: none;
     border-left: none;
     margin-left: 0px;
@@ -123,40 +124,39 @@ window#waybar.hidden {
 }
 
 #network.disconnected {
-    color: @color11;
+    color: @color9;
 }
 
 #pulseaudio {
-    color: @color13;
+    color: @color11;
     border-left: none;
     border-right: none;
     margin-left: 0px;
-    border-radius: 0 10 10 0;
-    padding: 0 14 0 10;
-    font-size: 18px;
+    border-radius: 0 20 20 0;
+    padding: 0 14 0 8;
+    font-size: 17px;
 }
 
 #pulseaudio.muted {
-    color: @color11;
+    color: @color9;
 }
 
 #clock {
      color: @foreground;
-    padding: 0 0 0 10;
+    padding: 0 6 0 14;
     background-color: @background;
-    border-radius: 10px;
-    margin: 3px 0px 1px;
-    color: @color12;
-    font-weight: bold;
+    border-radius: 20px;
+    margin: 3px 0px 0px;
+    color: @color9;
     margin-left: 6px;
     font-size: 14px;
 }
 
 #custom-power-menu {
-    color: @color11;
-    margin-right: 6px;
+    color: @color9;
+    margin-right: 8px;
     margin-left: 6px;
-    padding: 0 5 0 3;
+    padding: 0 3 1 0;
 }
 
 @keyframes blink {
@@ -171,7 +171,7 @@ tooltip {
     padding: 15px;
     background-color: @background;
     color: @foreground;
-    font-family: CartographCF Nerd Font;
+    font-family: JetBrainsMono Nerd Font;
 }
 
 tooltip label {

@@ -10,14 +10,14 @@ image="$(ls $wallpapers | rofi -dmenu -i -p "  Selecionar wallpaper" -theme $
 wallpaper=$wallpapers/$image
 
 if [[ -d $wallpapers/$image ]]; then
-    echo "$wallpapers/$image is a directory"
+    echo "$wallpapers/$image é um diretório"
     wallpaper_temp="$image"
     sleep2
     wallpaper_location="$(ls $wallpapers/$image)"
 elif [[ -f $wallpapers/$image ]]; then
-    echo "$wallpapers/$image is a file"
+    echo "$wallpapers/$image é um arquivo"
 else
-    echo "$wallpapers/$image is not valid"
+    echo "$wallpapers/$image não é válido"
     exit 1
 fi
 

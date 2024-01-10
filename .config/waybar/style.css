@@ -73,8 +73,8 @@ window#waybar.hidden {
     margin-right: 0em;
     transition: all 0.2s cubic-bezier(0.1, -0.1, 0.1, 1);
     border-bottom: 2px solid  @color9;
+    border-radius: 0px;
     margin-bottom: 1px;
-    padding-left:0;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

@@ -58,10 +58,6 @@ paru -S spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-c
 pacman -S firefox obsidian github-cli vlc
 ```
 
-## Fonts
-
-I'm using [Fantasque Sans](https://github.com/belluzj/fantasque-sans).
-
 ## Setting up Oh My Zsh
 
 Do these first before copying the `.zshrc` file to your home directory:

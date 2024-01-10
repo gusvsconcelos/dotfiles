@@ -38,13 +38,15 @@ If you want to use these dotfiles on your machine, you may need to run these com
 I have `yay` as my AUR helper. You can use whatever you want!
 
 ```
-yay -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland swww waybar xdg-desktop-portal-wlr wlroots xdg-desktop-portal
+pacman -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland waybar xdg-desktop-portal-wlr wlroots xdg-desktop-portal
+yay -S swww
 ```
 
 ## Setting up themes and other stuff
 
 ```
-pacman -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools sddm-sugar-candy-git ark playerctl pamixer whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pillow python-pywalfox mako-git viewnior gnome-keyring neofetch imagemagick wtype inter-font-beta rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler
+pacman -S polkit-kde-agent kitty pcmanfm-qt neovim gedit pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools ark playerctl pamixer python-pillow viewnior gnome-keyring neofetch imagemagick wtype rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler epapirus-icon-theme
+yay -S swaylock-effects sddm-sugar-candy-git whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pywalfox mako-git inter-font-beta
 ```
 
 ## Installing all other applications

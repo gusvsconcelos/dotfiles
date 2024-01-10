@@ -27,6 +27,7 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
     -   Right click on the wallpaper button on your bar to set a random wallpaper and set colors from it
     -   Click on the signal icon to open `nmtui`
     -   Click on the audio icon to open `pavucontrol`
+    -   Click on the CPU icon to open `bottom`
 -   Run `hyprcfg` in your terminal to edit your `hyprland.conf` file
 -   Run `waycfg` in your terminal to open your waybar config folder
 
@@ -43,7 +44,7 @@ yay -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev 
 ## Setting up themes and other stuff
 
 ```
-yay -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools sddm-sugar-candy-git ark playerctl pamixer whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pillow python-pywalfox mako-git viewnior gnome-keyring neofetch imagemagick wtype inter-font-beta rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler
+pacman -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools sddm-sugar-candy-git ark playerctl pamixer whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pillow python-pywalfox mako-git viewnior gnome-keyring neofetch imagemagick wtype inter-font-beta rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler
 ```
 
 ## Installing all other applications
@@ -51,8 +52,8 @@ yay -S polkit-kde-agent kitty pcmanfm-qt neovim gedit swaylock-effects pavucontr
 Here are the apps that I normally have installed on distros that I use. Feel free to remove those that you're not using anyway.
 
 ```
-paru -S spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh vlc
-pacman -S firefox obsidian github-cli
+paru -S spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh
+pacman -S firefox obsidian github-cli vlc
 ```
 
 ## Fonts

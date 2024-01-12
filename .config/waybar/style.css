@@ -40,10 +40,10 @@ window#waybar.hidden {
 
 #custom-launcher {
     color: @color9;
-    padding: 0 15 1 10;
-    margin-left: 8px;
+    padding: 0 14 1 8;
+    margin-left: 4px;
     margin-right: 6px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 #cpu {
@@ -59,6 +59,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
+    margin-right: 6px;
 }
 
 #workspaces button {
@@ -70,11 +71,10 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
+    color: @color9;
     margin-right: 0em;
     transition: all 0.2s cubic-bezier(0.1, -0.1, 0.1, 1);
-    border-bottom: 2px solid  @color9;
-    border-radius: 0px;
-    margin-bottom: 1px;
+
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -143,7 +143,7 @@ window#waybar.hidden {
 
 #clock {
      color: @foreground;
-    padding: 0 6 0 14;
+    padding: 0 5 0 14;
     background-color: @background;
     border-radius: 20px;
     margin: 3px 0px 0px;
@@ -154,9 +154,9 @@ window#waybar.hidden {
 
 #custom-power-menu {
     color: @color9;
-    margin-right: 8px;
+    margin-right: 4px;
     margin-left: 6px;
-    padding: 0 4 0 1;
+    padding: 0 3 1 0;
 }
 
 @keyframes blink {

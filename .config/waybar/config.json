@@ -1,14 +1,16 @@
 {
     "height": 30,
     "layer": "top",
-    "modules-left": ["custom/launcher", "cpu", "memory", "custom/spotify"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/spotify"],
+    "modules-center": ["clock"],
     "modules-right": [
+        "cpu",
+        "memory",
         "custom/theme",
         "custom/wallpaper",
         "network",
         "pulseaudio",
-        "clock",
+        
         "custom/power-menu"
     ],
     "hyprland/workspaces": {

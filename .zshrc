@@ -22,5 +22,6 @@ source $ZSH/oh-my-zsh.sh
 alias hyprcfg="code ${HOME}/.config/hypr/hyprland.conf"
 alias waycfg="code ${HOME}/.config/waybar"
 alias cava="${HOME}/.config/cava/scripts/update-colors.sh"
+alias neofetch="${HOME}/.config/neofetch/customNeofetch.sh"
 
-neofetch --source ~/.config/neofetch/logos/great-wave.png
+neofetch

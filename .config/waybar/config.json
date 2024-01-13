@@ -6,6 +6,7 @@
     "modules-right": [
         "cpu",
         "memory",
+        "custom/pacman",
         "custom/theme",
         "custom/wallpaper",
         "network",
@@ -54,6 +55,16 @@
         "format-alt": " {used:0.1f}GB",
         "max-length": 10
     },
+    "custom/pacman": {
+        "format": "{icon}{}",
+        "return-type": "json",
+        "format-icons": {
+          "pending-updates": " ",
+          "updated": " "
+        },
+        "exec-if": "which waybar-updates",
+        "exec": "waybar-updates"
+      },
     "network": {
         "format-wifi": "{icon}",
         "format-ethernet": "󰢾",

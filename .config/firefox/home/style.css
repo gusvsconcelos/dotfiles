@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('file:///home/gus/.cache/wal/colors.css');
+
+:root {
+    --color1: var(--color11);
+    --color2: var(--color9);
+    --color3: var(--color14);
+}
+
+html {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Rajdhani;
+}
+
+h1 {
+    font-size: 120px;
+    margin-bottom: 0px;
+    color: var(--color1);
+}
+
+h2 {
+    font-size: 20px;
+    color: var(--color2);
+    margin: 0px;
+}
+
+p {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--color3);
+}
+
+#rule {
+    margin-bottom: 30px;
+    color: rgb(15, 15, 15);
+    width: 100%;
+}
+
+#bookmarks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px 0px 0px 36px;
+}
+
+li {
+    list-style-type: none;
+    padding: 0 64px 45px 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color2);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}

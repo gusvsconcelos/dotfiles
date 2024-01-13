@@ -30,7 +30,8 @@ window#waybar.hidden {
 #custom-wallpaper,
 #custom-launcher,
 #custom-spotify,
-#custom-theme {
+#custom-theme,
+#custom-pacman {
     color: @foreground;
     padding: 0px 10px;
     background-color: @background;
@@ -90,6 +91,26 @@ window#waybar.hidden {
 #custom-spotify {
     color: @color14;
     font-size: 14px;
+}
+
+@keyframes blink-update {
+	to {
+		background-color: @color9;
+	}
+}
+
+#custom-pacman {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+    color: @color11;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 6 0 10;
+}
+#custom-pacman.pending-updates {
+	animation-name: blink-update;
+	animation-duration: 3s;
 }
 
 #custom-wallpaper {

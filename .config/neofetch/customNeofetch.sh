@@ -1,0 +1,1 @@
+neofetch --source ~/.config/neofetch/logos/great-wave.png

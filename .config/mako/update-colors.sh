@@ -8,7 +8,7 @@ conffile="${HOME}/.config/mako/config"
 declare -A colors
 colors=(
     ["background-color"]="$background"bb
-    ["text-color"]="$foreground"
+    ["text-color"]="$color11"
     ["border-color"]="$color13"
 )
 

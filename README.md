@@ -40,7 +40,7 @@ I have `yay` as my AUR helper. You can use whatever you want!
 
 ```
 pacman -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland waybar xdg-desktop-portal-wlr wlroots xdg-desktop-portal
-yay -S swww
+yay -S swww waybar-updates
 ```
 
 ## Setting up themes and other stuff

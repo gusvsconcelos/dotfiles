@@ -1,4 +1,4 @@
-# @gusvsconcelos's Hyprland Rice on Arch Linux
+# Hyprland Rice on Arch Linux
 
 Here are my configuration files for this rice. This rice relies heavily on [Pywal](https://github.com/dylanaraps/pywal). Colors change as you change your wallpaper.
 
@@ -6,7 +6,7 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
 
 -   Select a wallpaper with `Super + W` and see the colors change
 -   Spotify, VS Code, and Firefox are also themed
--   Add any wallpapers in the home/Imagens/Wallpapers directory and let Pywal handle the colors for you
+-   Add any wallpapers in the /home/user/Imagens/Wallpapers directory and let Pywal handle the colors for you
 -   Apps will open in their respective workspaces
     -   Workspace 1: Terminal
     -   Workspace 2: Firefox
@@ -22,8 +22,9 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
 -   Terminal: `Super + Enter`
 -   Ranger: `Super + Shift + Enter`
 -   VS Code: `CTRL + Alt + V`
--   Spotify: `CTRL + Alt + S`
+-   Spotify: `Super + F1`
 -   Blue Light Filter: `Super + F9` to enable and `Super + F10` to disable
+-   More shortcuts in the hyprland config file, see the `binds` section
 -   Some of the waybar configs:
     -   Right click on the wallpaper button on your bar to set a random wallpaper and set colors from it
     -   Click on the signal icon to open `nmtui`
@@ -32,11 +33,9 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
 -   Run `hyprcfg` in your terminal to edit your `hyprland.conf` file
 -   Run `waycfg` in your terminal to open your waybar config folder
 
-If you want to use these dotfiles on your machine, you may need to run these commands first. Please use these dotfiles at your own risk !!!
-
 ## Installing Hyprland
 
-I have `yay` as my AUR helper. You can use whatever you want!
+I have `yay` as my AUR helper. You can use whatever you want.
 
 ```
 pacman -S wayland libdrm pixman libxkbcommon python libxml2 llvm libpng gegl mtdev xorg-xwayland qt5-wayland qt6-wayland hyprland waybar xdg-desktop-portal-wlr wlroots xdg-desktop-portal
@@ -47,7 +46,7 @@ yay -S swww waybar-updates
 
 ```
 pacman -S polkit-kde-agent kitty pcmanfm-qt neovim gedit pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools ark playerctl pamixer python-pillow viewnior gnome-keyring neofetch imagemagick wtype rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler epapirus-icon-theme
-yay -S swaylock-effects sddm-sugar-candy-git whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pywalfox mako-git inter-font-beta
+yay -S swaylock-effects sddm-sugar-candy-git whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pywalfox mako-git inter-font-beta github-cli
 ```
 
 ## Installing all other applications
@@ -55,8 +54,8 @@ yay -S swaylock-effects sddm-sugar-candy-git whitesur-icon-theme-git whitesur-cu
 Here are the apps that I normally have installed on distros that I use. Feel free to remove those that you're not using anyway.
 
 ```
-paru -S spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh
-pacman -S firefox obsidian github-cli vlc
+paru -S github-desktop spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh
+pacman -S firefox obsidian vlc
 ```
 
 ## Setting up Oh My Zsh
@@ -116,11 +115,4 @@ If you want to have the custom Firefox homepage, you can just set this [url](htt
 -   And finally you can set the Pywal color scheme by running `spicetify config color_scheme Dynamic`
 Open Spotify and you should be good to go.
 
-Note that you need to restart Spotify everytime the colors are changed. This process will be automatically done if you run Spotify using the `CTRL + Alt + S` keybind that I've set in `hyprland.conf` (you can change this keybind to whatever you want).
-
-## Some notes <a name="some-notes"></a>
-
--   I don't know about you but in case you're experiencing a super slow reboot or shutdown with this, I followed [this](https://www.reddit.com/r/archlinux/comments/whsqdq/comment/ij9r90h/?utm_source=reddit&utm_medium=web2x&context=3) Reddit comment and it helped! Not really sure why that's happening, though.
--   If you get an error on line 60 of `hyprland.conf` after rebooting saying that colors couldn't be found, be sure to check line 24. Replace "gus" with your Linux username. After that, run `hyprctl reload` in your terminal. Once this is resolved, it shouldn't happen anymore for future reboots.
--   Be sure to customize your sddm conf file in `/lib/sddm/sddm.conf.d/default.conf`. Change your name, fonts, etc. if you want.
--   This repo is also open to forks if you guys want to make changes of your own and take them into your own repository.
+Note that you need to restart Spotify everytime the colors are changed. This process will be automatically done if you run Spotify using the `Super + F1` keybind that I've set in `hyprland.conf` (you can change this keybind to whatever you want).

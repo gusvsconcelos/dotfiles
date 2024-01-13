@@ -23,6 +23,7 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
 -   Ranger: `Super + Shift + Enter`
 -   VS Code: `CTRL + Alt + V`
 -   Spotify: `CTRL + Alt + S`
+-   Blue Light Filter: 'Super + F9' to enable and 'Super + F10' to disable
 -   Some of the waybar configs:
     -   Right click on the wallpaper button on your bar to set a random wallpaper and set colors from it
     -   Click on the signal icon to open `nmtui`

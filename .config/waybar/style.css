@@ -111,6 +111,7 @@ window#waybar.hidden {
 #custom-pacman.pending-updates {
 	animation-name: blink-update;
 	animation-duration: 3s;
+	padding: 0 10 0 12;
 }
 
 #custom-wallpaper {

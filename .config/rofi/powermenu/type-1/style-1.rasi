@@ -60,7 +60,7 @@ textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         "";
-    padding:                     9 16 9 14;
+    padding:                     9 16 9 13;
     margin:                      0px;
     border-radius:               20px;
     background-color:            @urgent;

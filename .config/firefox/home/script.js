@@ -14,26 +14,25 @@ function date() {
     date.innerHTML = dayOfMonth
 }
 
-/* https://theysaidso.com/user/subscriptions
-async function getQuote() {
-    const apiKey = 'BSyttsZZJ0wGJ3dm24BLEI6Ab5ZeCZOV61DdhyRe';
-    const apiUrl = `http://quotes.rest/qod.json?category=inspire&api_key=${apiKey}`;
-
+async function getQuotes() {
     try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        const quoteElement = document.getElementById('quote');
-
-        quoteElement.textContent = data.contents.quotes[0].quote;
+        const answer = await fetch('https://api.quotable.io/random')
+        const data = await answer.json()
+        return `${data.content}`
     } catch (error) {
-        console.error('Erro ao obter citação:', error);
+        console.error('Erro ao obter frase:', error)
     }
 }
-*/
 
-function quoteElement() {
-    const quote = document.getElementById('quote')
-    quote.innerHTML = "'And i'm not here to be the savior you long for, only the one you don't.'"
+async function quoteOfTheDay() {
+    const quoteElement = document.getElementById('quote')
+    const quote = await getQuotes()
+
+    quoteElement.textContent = `'${quote}'`
+
+    if (quote == undefined) {
+        quoteElement.textContent = "'I know the hatred and envy of your hearts. Ye are not great enough not to know of hatred and envy. Then be great enough not to be ashamed of them.'"
+    }
 }
 
 function darkTheme() {
@@ -54,8 +53,7 @@ window.addEventListener("load", functionLoader, true); function functionLoader()
     time()
     date()
     updateFavicon()
-    quoteElement()
+    quoteOfTheDay()
 }
 
 setInterval(time, 1000)
-

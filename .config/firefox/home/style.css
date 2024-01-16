@@ -2,9 +2,9 @@
 @import url('file:///home/gus/.cache/wal/colors.css');
 
 :root {
-    --color1: var(--color11);
-    --color2: var(--color9);
-    --color3: var(--color14);
+    --primarycolor: var(--color2);
+    --secundarycolor: var(--color11);
+    --accentcolor: var(--color9);
 }
 
 html {
@@ -35,24 +35,24 @@ body {
 h1 {
     font-size: 120px;
     margin-bottom: 0px;
-    color: var(--color1);
+    color: var(--primarycolor);
 }
 
 h2 {
     font-size: 20px;
-    color: var(--color2);
+    color: var(--secundarycolor);
     margin: 0px;
 }
 
 p {
     font-size: 16px;
     font-style: italic;
-    color: var(--color3);
+    color: var(--accentcolor);
 }
 
 #rule {
     margin-bottom: 30px;
-    color: rgb(15, 15, 15);
+    color: rgb(25, 25, 25);
     width: 100%;
 }
 

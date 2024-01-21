@@ -103,9 +103,9 @@ window#waybar.hidden {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   color: @color11;
-  font-size: 18px;
+  font-size: 16px;
   margin-right: 6px;
-  padding: 0 3 0 10;
+  padding: 0 4 0 11;
 }
 #custom-pacman.pending-updates {
   animation-name: blink-update;

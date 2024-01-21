@@ -7,7 +7,7 @@
 # A simple command for demonstration purposes follows.
 # -----------------------------------------------------------------------------
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
 
 # You can import any python module as needed.
 import os
@@ -60,4 +60,3 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
-    

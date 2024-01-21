@@ -4,34 +4,34 @@ Here are my configuration files for this rice. This rice relies heavily on [Pywa
 
 ## Some features and configs
 
--   Select a wallpaper with `Super + W` and see the colors change
--   Spotify, VS Code, and Firefox are also themed
--   Add any wallpapers in the /home/user/Imagens/Wallpapers directory and let Pywal handle the colors for you
--   Apps will open in their respective workspaces
-    -   Workspace 1: Terminal
-    -   Workspace 2: Firefox
-    -   Workspace 3: VS Code
-    -   Workspace 4: GitHub Desktop
-    -   Workspace 5: Spotify
-    -   Workspace 6: Files (`ranger`)
--   Toggle full screen: `Super + F`
--   Launcher: `Super + D`
--   Power menu: `Super + X`
--   Search anything on the internet: `Super + Space`
--   Select emojis: `Super + ;`
--   Terminal: `Super + Enter`
--   Ranger: `Super + Shift + Enter`
--   VS Code: `CTRL + Alt + V`
--   Spotify: `Super + F1`
--   Blue Light Filter: `Super + F9` to enable and `Super + F10` to disable
--   More shortcuts in the hyprland config file, see the `binds` section
--   Some of the waybar configs:
-    -   Right click on the wallpaper button on your bar to set a random wallpaper and set colors from it
-    -   Click on the signal icon to open `nmtui`
-    -   Click on the audio icon to open `pavucontrol`
-    -   Click on the CPU icon to open `bottom`
--   Run `hyprcfg` in your terminal to edit your `hyprland.conf` file
--   Run `waycfg` in your terminal to open your waybar config folder
+- Select a wallpaper with `Super + W` and see the colors change
+- Spotify, VS Code, and Firefox are also themed
+- Add any wallpapers in the /home/user/Imagens/Wallpapers directory and let Pywal handle the colors for you
+- Apps will open in their respective workspaces
+  - Workspace 1: Terminal
+  - Workspace 2: Firefox
+  - Workspace 3: VS Code
+  - Workspace 4: GitHub Desktop
+  - Workspace 5: Spotify
+  - Workspace 6: Files (`ranger`)
+- Toggle full screen: `Super + F`
+- Launcher: `Super + D`
+- Power menu: `Super + X`
+- Search anything on the internet: `Super + Space`
+- Select emojis: `Super + ;`
+- Terminal: `Super + Enter`
+- Ranger: `Super + Shift + Enter`
+- VS Code: `CTRL + Alt + V`
+- Spotify: `Super + F1`
+- Blue Light Filter: `Super + F9` to enable and `Super + F10` to disable
+- More shortcuts in the hyprland config file, see the `binds` section
+- Some of the waybar configs:
+  - Right click on the wallpaper button on your bar to set a random wallpaper and set colors from it
+  - Click on the signal icon to open `nmtui`
+  - Click on the audio icon to open `pavucontrol`
+  - Click on the CPU icon to open `bottom`
+- Run `hyprcfg` in your terminal to edit your `hyprland.conf` file
+- Run `waycfg` in your terminal to open your waybar config folder
 
 ## Installing Hyprland
 
@@ -62,18 +62,19 @@ pacman -S firefox obsidian vlc
 
 Do these first before copying the `.zshrc` file to your home directory:
 
--   Install first Oh My Zsh by running this command:
-    ```
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
+- Install first Oh My Zsh by running this command:
 
--   Install the syntax highlighting plugin and the autosuggestions plugin:
-    ```
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    ```
-    ```
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    ```
+  ```
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
+
+- Install the syntax highlighting plugin and the autosuggestions plugin:
+  ```
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  ```
+  ```
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  ```
 
 After that, you can now copy the `.zshrc` file to your home directory.
 
@@ -81,8 +82,8 @@ After that, you can now copy the `.zshrc` file to your home directory.
 
 If you want the regular Pywal, you can install it with `pacman -S python-pywal`. But if you want 16 colors to be generated (which I use in this), you can install it by:
 
--   Cloning [this](https://github.com/eylles/pywal16) repo
--   `cd` into the repo and run `pip3 install --user . --break-system-packages`
+- Cloning [this](https://github.com/eylles/pywal16) repo
+- `cd` into the repo and run `pip3 install --user . --break-system-packages`
 
 ## Copying the dotfiles
 
@@ -98,8 +99,8 @@ There's a [Pywal](https://marketplace.visualstudio.com/items?itemName=dlasagno.w
 
 If you use Firefox and want to have Pywal colors:
 
--   Download the theme extension [here.](https://addons.mozilla.org/en-US/firefox/addon/pywalfox/)
--   Run `pywalfox update` in your terminal.
+- Download the theme extension [here.](https://addons.mozilla.org/en-US/firefox/addon/pywalfox/)
+- Run `pywalfox update` in your terminal.
 
 Once done, you don't need to worry about manually updating the colors everytime you change your wallpaper. A script already takes care of that BUT you do need to manually restart Firefox to apply the new colors.
 
@@ -109,10 +110,10 @@ If you want to have the custom Firefox homepage, you can just set this [url](htt
 
 ## Setting up Spotify
 
--   Open and login with Spotify first.
--   Once done, initially run `spicetify backup apply` in your terminal.
--   Then you can set the theme by running `spicetify config current_theme PywalSleek` in your terminal.
--   And finally you can set the Pywal color scheme by running `spicetify config color_scheme Dynamic`
-Open Spotify and you should be good to go.
+- Open and login with Spotify first.
+- Once done, initially run `spicetify backup apply` in your terminal.
+- Then you can set the theme by running `spicetify config current_theme PywalSleek` in your terminal.
+- And finally you can set the Pywal color scheme by running `spicetify config color_scheme Dynamic`
+  Open Spotify and you should be good to go.
 
 Note that you need to restart Spotify everytime the colors are changed. This process will be automatically done if you run Spotify using the `Super + F1` keybind that I've set in `hyprland.conf` (you can change this keybind to whatever you want).

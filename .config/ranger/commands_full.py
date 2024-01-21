@@ -89,7 +89,7 @@
 # of ranger.
 # ===================================================================
 
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
 
 from collections import deque
 import os
@@ -169,8 +169,12 @@ class cd(Command):
                 dest_exp = tail
         else:
             dest_exp = ''
-        return (start, dest_exp, os.path.join(self.fm.thisdir.path, dest_exp),
-                dest.endswith(os.path.sep))
+        return (
+            start,
+            dest_exp,
+            os.path.join(self.fm.thisdir.path, dest_exp),
+            dest.endswith(os.path.sep),
+        )
 
     @staticmethod
     def _tab_paths(dest, dest_abs, ends_with_sep):
@@ -182,7 +186,9 @@ class cd(Command):
 
         if ends_with_sep:
             try:
-                return [os.path.join(dest, path) for path in next(os.walk(dest_abs))[1]], ''
+                return [
+                    os.path.join(dest, path) for path in next(os.walk(dest_abs))[1]
+                ], ''
             except (OSError, StopIteration):
                 return [], ''
 
@@ -205,10 +211,12 @@ class cd(Command):
         except (OSError, StopIteration):
             return [], ''
 
-        return [os.path.join(dest_dir, d) for d in dirnames if self._tab_match(dest_base, d)], ''
+        return [
+            os.path.join(dest_dir, d) for d in dirnames if self._tab_match(dest_base, d)
+        ], ''
 
     def _tab_fuzzy_match(self, basepath, tokens):
-        """ Find directories matching tokens recursively """
+        """Find directories matching tokens recursively"""
         if not tokens:
             tokens = ['']
         paths = [basepath]
@@ -220,8 +228,11 @@ class cd(Command):
                     directories = next(os.walk(path))[1]
                 except (OSError, StopIteration):
                     continue
-                matches += [os.path.join(path, d) for d in directories
-                            if self._tab_match(token, d)]
+                matches += [
+                    os.path.join(path, d)
+                    for d in directories
+                    if self._tab_match(token, d)
+                ]
             if not tokens or not matches:
                 return matches
             paths = matches
@@ -244,8 +255,10 @@ class cd(Command):
         paths = self._tab_fuzzy_match(basepath, tokens)
         if not os.path.isabs(dest):
             paths_rel = self.fm.thisdir.path
-            paths = [os.path.relpath(os.path.join(basepath, path), paths_rel)
-                     for path in paths]
+            paths = [
+                os.path.relpath(os.path.join(basepath, path), paths_rel)
+                for path in paths
+            ]
         else:
             paths_rel = ''
         return paths, paths_rel
@@ -267,7 +280,8 @@ class cd(Command):
         if self.fm.settings.cd_bookmarks:
             paths[0:0] = [
                 os.path.relpath(v.path, paths_rel) if paths_rel else v.path
-                for v in self.fm.bookmarks.dct.values() for path in paths
+                for v in self.fm.bookmarks.dct.values()
+                for path in paths
                 if v.path.startswith(os.path.join(paths_rel, path) + sep)
             ]
 
@@ -283,6 +297,7 @@ class chain(Command):
 
     Calls multiple commands at once, separated by semicolons.
     """
+
     resolve_macros = False
 
     def execute(self):
@@ -309,17 +324,21 @@ class shell(Command):
 
     def tab(self, tabnum):
         from ranger.ext.get_executables import get_executables
+
         if self.arg(1) and self.arg(1)[0] == '-':
             command = self.rest(2)
         else:
             command = self.rest(1)
-        start = self.line[0:len(self.line) - len(command)]
+        start = self.line[0 : len(self.line) - len(command)]
 
         try:
             position_of_last_space = command.rindex(" ")
         except ValueError:
-            return (start + program + ' ' for program
-                    in get_executables() if program.startswith(command))
+            return (
+                start + program + ' '
+                for program in get_executables()
+                if program.startswith(command)
+            )
         if position_of_last_space == len(command) - 1:
             selection = self.fm.thistab.get_selection()
             if len(selection) == 1:
@@ -327,25 +346,29 @@ class shell(Command):
             return self.line + '%s '
 
         before_word, start_of_word = self.line.rsplit(' ', 1)
-        return (before_word + ' ' + file.shell_escaped_basename
-                for file in self.fm.thisdir.files or []
-                if file.shell_escaped_basename.startswith(start_of_word))
+        return (
+            before_word + ' ' + file.shell_escaped_basename
+            for file in self.fm.thisdir.files or []
+            if file.shell_escaped_basename.startswith(start_of_word)
+        )
 
 
 class open_with(Command):
-
     def execute(self):
         app, flags, mode = self._get_app_flags_mode(self.rest(1))
         self.fm.execute_file(
             files=[f for f in self.fm.thistab.get_selection()],
             app=app,
             flags=flags,
-            mode=mode)
+            mode=mode,
+        )
 
     def tab(self, tabnum):
         return self._tab_through_executables()
 
-    def _get_app_flags_mode(self, string):  # pylint: disable=too-many-branches,too-many-statements
+    def _get_app_flags_mode(
+        self, string
+    ):  # pylint: disable=too-many-branches,too-many-statements
         """Extracts the application, flags and mode from a string.
 
         examples:
@@ -420,6 +443,7 @@ class open_with(Command):
     @staticmethod
     def _is_flags(arg):
         from ranger.core.runner import ALLOWED_FLAGS
+
         return all(x in ALLOWED_FLAGS for x in arg)
 
     @staticmethod
@@ -434,6 +458,7 @@ class set_(Command):
 
     Use `:set <option>!` to toggle or cycle it, e.g. `:set flush_input!`
     """
+
     name = 'set'  # don't override the builtin set class
 
     def execute(self):
@@ -446,22 +471,27 @@ class set_(Command):
 
     def tab(self, tabnum):  # pylint: disable=too-many-return-statements
         from ranger.gui.colorscheme import get_all_colorschemes
+
         name, value, name_done = self.parse_setting_line()
         settings = self.fm.settings
         if not name:
             return sorted(self.firstpart + setting for setting in settings)
         if not value and not name_done:
-            return sorted(self.firstpart + setting for setting in settings
-                          if setting.startswith(name))
+            return sorted(
+                self.firstpart + setting
+                for setting in settings
+                if setting.startswith(name)
+            )
         if not value:
             value_completers = {
                 "colorscheme":
                 # Cycle through colorschemes when name, but no value is specified
-                lambda: sorted(self.firstpart + colorscheme for colorscheme
-                               in get_all_colorschemes(self.fm)),
-
-                "column_ratios":
-                lambda: self.firstpart + ",".join(map(str, settings[name])),
+                lambda: sorted(
+                    self.firstpart + colorscheme
+                    for colorscheme in get_all_colorschemes(self.fm)
+                ),
+                "column_ratios": lambda: self.firstpart
+                + ",".join(map(str, settings[name])),
             }
 
             def default_value_completer():
@@ -475,8 +505,11 @@ class set_(Command):
                 return self.firstpart + 'False'
         # Tab complete colorscheme values if incomplete value is present
         if name == "colorscheme":
-            return sorted(self.firstpart + colorscheme for colorscheme
-                          in get_all_colorschemes(self.fm) if colorscheme.startswith(value))
+            return sorted(
+                self.firstpart + colorscheme
+                for colorscheme in get_all_colorschemes(self.fm)
+                if colorscheme.startswith(value)
+            )
         return None
 
 
@@ -485,6 +518,7 @@ class setlocal(set_):
 
     Gives an option a new value.
     """
+
     PATH_RE_DQUOTED = re.compile(r'^setlocal\s+path="(.*?)"')
     PATH_RE_SQUOTED = re.compile(r"^setlocal\s+path='(.*?)'")
     PATH_RE_UNQUOTED = re.compile(r'^path=(.*?)$')
@@ -526,13 +560,14 @@ class setintag(set_):
 
 
 class default_linemode(Command):
-
     def execute(self):
         from ranger.container.fsobject import FileSystemObject
 
         if len(self.args) < 2:
             self.fm.notify(
-                "Usage: default_linemode [path=<regexp> | tag=<tag(s)>] <linemode>", bad=True)
+                "Usage: default_linemode [path=<regexp> | tag=<tag(s)>] <linemode>",
+                bad=True,
+            )
 
         # Extract options like "path=..." or "tag=..." from the command line
         arg1 = self.arg(1)
@@ -551,8 +586,8 @@ class default_linemode(Command):
         lmode = self.rest(1)
         if lmode not in FileSystemObject.linemode_dict:
             self.fm.notify(
-                "Invalid linemode: %s; should be %s" % (
-                    lmode, "/".join(FileSystemObject.linemode_dict)),
+                "Invalid linemode: %s; should be %s"
+                % (lmode, "/".join(FileSystemObject.linemode_dict)),
                 bad=True,
             )
 
@@ -566,9 +601,11 @@ class default_linemode(Command):
                 col.need_redraw = True
 
     def tab(self, tabnum):
-        return (self.arg(0) + " " + lmode
-                for lmode in self.fm.thisfile.linemode_dict.keys()
-                if lmode.startswith(self.arg(1)))
+        return (
+            self.arg(0) + " " + lmode
+            for lmode in self.fm.thisfile.linemode_dict.keys()
+            if lmode.startswith(self.arg(1))
+        )
 
 
 class quit(Command):  # pylint: disable=redefined-builtin
@@ -577,6 +614,7 @@ class quit(Command):  # pylint: disable=redefined-builtin
     Closes the current tab, if there's more than one tab.
     Otherwise quits if there are no tasks in progress.
     """
+
     def _exit_no_work(self):
         if self.fm.loader.has_work():
             self.fm.notify('Not quitting: Tasks in progress: Use `quit!` to force quit')
@@ -596,6 +634,7 @@ class quit_bang(Command):
     Closes the current tab, if there's more than one tab.
     Otherwise force quits immediately.
     """
+
     name = 'quit!'
     allow_abbrev = False
 
@@ -611,9 +650,12 @@ class quitall(Command):
 
     Quits if there are no tasks in progress.
     """
+
     def _exit_no_work(self):
         if self.fm.loader.has_work():
-            self.fm.notify('Not quitting: Tasks in progress: Use `quitall!` to force quit')
+            self.fm.notify(
+                'Not quitting: Tasks in progress: Use `quitall!` to force quit'
+            )
         else:
             self.fm.exit()
 
@@ -626,6 +668,7 @@ class quitall_bang(Command):
 
     Force quits immediately.
     """
+
     name = 'quitall!'
     allow_abbrev = False
 
@@ -641,6 +684,7 @@ class terminal(Command):
 
     def execute(self):
         from ranger.ext.get_executables import get_term
+
         self.fm.run(get_term(), flags='f')
 
 
@@ -666,11 +710,15 @@ class delete(Command):
         from functools import partial
 
         def is_directory_with_files(path):
-            return os.path.isdir(path) and not os.path.islink(path) and len(os.listdir(path)) > 0
+            return (
+                os.path.isdir(path)
+                and not os.path.islink(path)
+                and len(os.listdir(path)) > 0
+            )
 
         if self.rest(1):
             files = shlex.split(self.rest(1))
-            many_files = (len(files) > 1 or is_directory_with_files(files[0]))
+            many_files = len(files) > 1 or is_directory_with_files(files[0])
         else:
             cwd = self.fm.thisdir
             tfile = self.fm.thisfile
@@ -680,7 +728,7 @@ class delete(Command):
 
             # relative_path used for a user-friendly output in the confirmation.
             files = [f.relative_path for f in self.fm.thistab.get_selection()]
-            many_files = (cwd.marked_items or is_directory_with_files(tfile.path))
+            many_files = cwd.marked_items or is_directory_with_files(tfile.path)
 
         confirm = self.fm.settings.confirm_on_delete
         if confirm != 'never' and (confirm != 'multiple' or many_files):
@@ -724,11 +772,15 @@ class trash(Command):
         from functools import partial
 
         def is_directory_with_files(path):
-            return os.path.isdir(path) and not os.path.islink(path) and len(os.listdir(path)) > 0
+            return (
+                os.path.isdir(path)
+                and not os.path.islink(path)
+                and len(os.listdir(path)) > 0
+            )
 
         if self.rest(1):
             files = shlex.split(self.rest(1))
-            many_files = (len(files) > 1 or is_directory_with_files(files[0]))
+            many_files = len(files) > 1 or is_directory_with_files(files[0])
         else:
             cwd = self.fm.thisdir
             tfile = self.fm.thisfile
@@ -738,7 +790,7 @@ class trash(Command):
 
             # relative_path used for a user-friendly output in the confirmation.
             files = [f.relative_path for f in self.fm.thistab.get_selection()]
-            many_files = (cwd.marked_items or is_directory_with_files(tfile.path))
+            many_files = cwd.marked_items or is_directory_with_files(tfile.path)
 
         confirm = self.fm.settings.confirm_on_delete
         if confirm != 'never' and (confirm != 'multiple' or many_files):
@@ -768,6 +820,7 @@ class jump_non(Command):
      -r    Jump in reverse order
      -w    Wrap around if reaching end of filelist
     """
+
     def __init__(self, *args, **kwargs):
         super(jump_non, self).__init__(*args, **kwargs)
 
@@ -784,7 +837,9 @@ class jump_non(Command):
         passed = False
         found_before = None
         found_after = None
-        for fobj in self.fm.thisdir.files[::-1] if self._flag_reverse else self.fm.thisdir.files:
+        for fobj in (
+            self.fm.thisdir.files[::-1] if self._flag_reverse else self.fm.thisdir.files
+        ):
             if fobj.path == tfile.path:
                 passed = True
                 continue
@@ -808,6 +863,7 @@ class mark_tag(Command):
     Mark all tags that are tagged with either of the given tags.
     When leaving out the tag argument, all tagged files are marked.
     """
+
     do_mark = True
 
     def execute(self):
@@ -849,22 +905,24 @@ class load_copy_buffer(Command):
 
     Load the copy buffer from datadir/copy_buffer
     """
+
     copy_buffer_filename = 'copy_buffer'
 
     def execute(self):
         import sys
         from ranger.container.file import File
         from os.path import exists
+
         fname = self.fm.datapath(self.copy_buffer_filename)
         unreadable = IOError if sys.version_info[0] < 3 else OSError
         try:
             fobj = open(fname, 'r')
         except unreadable:
             return self.fm.notify(
-                "Cannot open %s" % (fname or self.copy_buffer_filename), bad=True)
+                "Cannot open %s" % (fname or self.copy_buffer_filename), bad=True
+            )
 
-        self.fm.copy_buffer = set(File(g)
-                                  for g in fobj.read().split("\n") if exists(g))
+        self.fm.copy_buffer = set(File(g) for g in fobj.read().split("\n") if exists(g))
         fobj.close()
         self.fm.ui.redraw_main_column()
         return None
@@ -875,18 +933,21 @@ class save_copy_buffer(Command):
 
     Save the copy buffer to datadir/copy_buffer
     """
+
     copy_buffer_filename = 'copy_buffer'
 
     def execute(self):
         import sys
+
         fname = None
         fname = self.fm.datapath(self.copy_buffer_filename)
         unwritable = IOError if sys.version_info[0] < 3 else OSError
         try:
             fobj = open(fname, 'w')
         except unwritable:
-            return self.fm.notify("Cannot open %s" %
-                                  (fname or self.copy_buffer_filename), bad=True)
+            return self.fm.notify(
+                "Cannot open %s" % (fname or self.copy_buffer_filename), bad=True
+            )
         fobj.write("\n".join(fobj.path for fobj in self.fm.copy_buffer))
         fobj.close()
         return None
@@ -898,6 +959,7 @@ class unmark_tag(mark_tag):
     Unmark all tags that are tagged with either of the given tags.
     When leaving out the tag argument, all tagged files are unmarked.
     """
+
     do_mark = False
 
 
@@ -968,12 +1030,14 @@ class eval_(Command):
     :eval len(fm.directories)
     :eval p("Hello World!")
     """
+
     name = 'eval'
     resolve_macros = False
 
     def execute(self):
         # The import is needed so eval() can access the ranger module
         import ranger  # NOQA pylint: disable=unused-import,unused-variable
+
         if self.arg(1) == '-q':
             code = self.rest(2)
             quiet = True
@@ -994,8 +1058,11 @@ class eval_(Command):
                 if result and not quiet:
                     p(result)
         except Exception as err:  # pylint: disable=broad-except
-            fm.notify("The error `%s` was caused by evaluating the "
-                      "following code: `%s`" % (err, code), bad=True)
+            fm.notify(
+                "The error `%s` was caused by evaluating the "
+                "following code: `%s`" % (err, code),
+                bad=True,
+            )
 
 
 class rename(Command):
@@ -1042,6 +1109,7 @@ class rename_append(Command):
      -a    Position before all extensions
      -r    Remove everything before extensions
     """
+
     def __init__(self, *args, **kwargs):
         super(rename_append, self).__init__(*args, **kwargs)
 
@@ -1067,7 +1135,7 @@ class rename_append(Command):
         pos = len(relpath) - len(basename) + pos_ext
 
         if self._flag_remove:
-            relpath = relpath[:-len(basename)] + basename[pos_ext:]
+            relpath = relpath[: -len(basename)] + basename[pos_ext:]
             pos -= pos_ext
 
         self.fm.open_console('rename ' + relpath, position=(7 + pos))
@@ -1089,8 +1157,9 @@ class chmod(Command):
         mode_str = self.rest(1)
         if not mode_str:
             if self.quantifier is None:
-                self.fm.notify("Syntax: chmod <octal number> "
-                               "or specify a quantifier", bad=True)
+                self.fm.notify(
+                    "Syntax: chmod <octal number> " "or specify a quantifier", bad=True
+                )
                 return
             mode_str = str(self.quantifier)
 
@@ -1130,6 +1199,7 @@ class bulkrename(Command):
         import tempfile
         from ranger.container.file import File
         from ranger.ext.shell_escape import shell_escape as esc
+
         py3 = sys.version_info[0] >= 3
 
         # Create and edit the file list
@@ -1137,13 +1207,19 @@ class bulkrename(Command):
         with tempfile.NamedTemporaryFile(delete=False) as listfile:
             listpath = listfile.name
             if py3:
-                listfile.write("\n".join(filenames).encode(
-                    encoding="utf-8", errors="surrogateescape"))
+                listfile.write(
+                    "\n".join(filenames).encode(
+                        encoding="utf-8", errors="surrogateescape"
+                    )
+                )
             else:
                 listfile.write("\n".join(filenames))
         self.fm.execute_file([File(listpath)], app='editor')
-        with (open(listpath, 'r', encoding="utf-8", errors="surrogateescape") if
-              py3 else open(listpath, 'r')) as listfile:
+        with (
+            open(listpath, 'r', encoding="utf-8", errors="surrogateescape")
+            if py3
+            else open(listpath, 'r')
+        ) as listfile:
             new_filenames = listfile.read().split("\n")
         os.unlink(listpath)
         if all(a == b for a, b in zip(filenames, new_filenames)):
@@ -1153,26 +1229,34 @@ class bulkrename(Command):
         # Generate script
         with tempfile.NamedTemporaryFile() as cmdfile:
             script_lines = []
-            script_lines.append("# This file will be executed when you close"
-                                " the editor.")
-            script_lines.append("# Please double-check everything, clear the"
-                                " file to abort.")
+            script_lines.append(
+                "# This file will be executed when you close" " the editor."
+            )
+            script_lines.append(
+                "# Please double-check everything, clear the" " file to abort."
+            )
             new_dirs = []
             for old, new in zip(filenames, new_filenames):
                 if old != new:
                     basepath, _ = os.path.split(new)
-                    if (basepath and basepath not in new_dirs
-                            and not os.path.isdir(basepath)):
-                        script_lines.append("mkdir -vp -- {dir}".format(
-                            dir=esc(basepath)))
+                    if (
+                        basepath
+                        and basepath not in new_dirs
+                        and not os.path.isdir(basepath)
+                    ):
+                        script_lines.append(
+                            "mkdir -vp -- {dir}".format(dir=esc(basepath))
+                        )
                         new_dirs.append(basepath)
-                    script_lines.append("mv -vi -- {old} {new}".format(
-                        old=esc(old), new=esc(new)))
+                    script_lines.append(
+                        "mv -vi -- {old} {new}".format(old=esc(old), new=esc(new))
+                    )
             # Make sure not to forget the ending newline
             script_content = "\n".join(script_lines) + "\n"
             if py3:
-                cmdfile.write(script_content.encode(encoding="utf-8",
-                                                    errors="surrogateescape"))
+                cmdfile.write(
+                    script_content.encode(encoding="utf-8", errors="surrogateescape")
+                )
             else:
                 cmdfile.write(script_content)
             cmdfile.flush()
@@ -1181,7 +1265,7 @@ class bulkrename(Command):
             # script was modified by the user
             self.fm.execute_file([File(cmdfile.name)], app='editor')
             cmdfile.seek(0)
-            script_was_edited = (script_content != cmdfile.read())
+            script_was_edited = script_content != cmdfile.read()
 
             # Do the renaming
             self.fm.run(['/bin/sh', cmdfile.name], flags='w')
@@ -1219,7 +1303,9 @@ class relink(Command):
             return self.fm.notify('Syntax: relink <newpath>', bad=True)
 
         if not tfile.is_link:
-            return self.fm.notify('%s is not a symlink!' % tfile.relative_path, bad=True)
+            return self.fm.notify(
+                '%s is not a symlink!' % tfile.relative_path, bad=True
+            )
 
         if new_path == os.readlink(tfile.path):
             return None
@@ -1247,6 +1333,7 @@ class help_(Command):
 
     Display ranger's manual page.
     """
+
     name = 'help'
 
     def execute(self):
@@ -1265,7 +1352,7 @@ class help_(Command):
         self.fm.ui.console.ask(
             "View [m]an page, [k]ey bindings, [c]ommands or [s]ettings? (press q to abort)",
             callback,
-            list("mqkcs")
+            list("mqkcs"),
         )
 
 
@@ -1274,6 +1361,7 @@ class copymap(Command):
 
     Copies a "browser" keybinding from <keys> to <newkeys>
     """
+
     context = 'browser'
 
     def execute(self):
@@ -1291,6 +1379,7 @@ class copypmap(copymap):
 
     Copies a "pager" keybinding from <keys> to <newkeys>
     """
+
     context = 'pager'
 
 
@@ -1299,6 +1388,7 @@ class copycmap(copymap):
 
     Copies a "console" keybinding from <keys> to <newkeys>
     """
+
     context = 'console'
 
 
@@ -1307,6 +1397,7 @@ class copytmap(copymap):
 
     Copies a "taskview" keybinding from <keys> to <newkeys>
     """
+
     context = 'taskview'
 
 
@@ -1315,6 +1406,7 @@ class unmap(Command):
 
     Remove the given "browser" mappings
     """
+
     context = 'browser'
 
     def execute(self):
@@ -1327,6 +1419,7 @@ class uncmap(unmap):
 
     Remove the given "console" mappings
     """
+
     context = 'console'
 
 
@@ -1348,6 +1441,7 @@ class unpmap(unmap):
 
     Remove the given "pager" mappings
     """
+
     context = 'pager'
 
 
@@ -1369,6 +1463,7 @@ class untmap(unmap):
 
     Remove the given "taskview" mappings
     """
+
     context = 'taskview'
 
 
@@ -1394,13 +1489,16 @@ class map_(Command):
     map j move down
     map J move down 10
     """
+
     name = 'map'
     context = 'browser'
     resolve_macros = False
 
     def execute(self):
         if not self.arg(1) or not self.arg(2):
-            self.fm.notify("Syntax: {0} <keysequence> <command>".format(self.get_name()), bad=True)
+            self.fm.notify(
+                "Syntax: {0} <keysequence> <command>".format(self.get_name()), bad=True
+            )
             return
 
         self.fm.ui.keymaps.bind(self.context, self.arg(1), self.rest(2))
@@ -1415,6 +1513,7 @@ class cmap(map_):
     cmap <ESC> console_close
     cmap <C-x> console_type test
     """
+
     context = 'console'
 
 
@@ -1423,6 +1522,7 @@ class tmap(map_):
 
     Maps a command to a keysequence in the "taskview" context.
     """
+
     context = 'taskview'
 
 
@@ -1431,6 +1531,7 @@ class pmap(map_):
 
     Maps a command to a keysequence in the "pager" context.
     """
+
     context = 'pager'
 
 
@@ -1458,21 +1559,22 @@ class scout(Command):
     Multiple flags can be combined.  For example, ":scout -gpt" would create
     a :filter-like command using globbing.
     """
+
     # pylint: disable=bad-whitespace
-    AUTO_OPEN     = 'a'
+    AUTO_OPEN = 'a'
     OPEN_ON_ENTER = 'e'
-    FILTER        = 'f'
-    SM_GLOB       = 'g'
-    IGNORE_CASE   = 'i'
-    KEEP_OPEN     = 'k'
+    FILTER = 'f'
+    SM_GLOB = 'g'
+    IGNORE_CASE = 'i'
+    KEEP_OPEN = 'k'
     SM_LETTERSKIP = 'l'
-    MARK          = 'm'
-    UNMARK        = 'M'
-    PERM_FILTER   = 'p'
-    SM_REGEX      = 'r'
-    SMART_CASE    = 's'
-    AS_YOU_TYPE   = 't'
-    INVERT        = 'v'
+    MARK = 'm'
+    UNMARK = 'M'
+    PERM_FILTER = 'p'
+    SM_REGEX = 'r'
+    SMART_CASE = 's'
+    AS_YOU_TYPE = 't'
+    INVERT = 'v'
     # pylint: enable=bad-whitespace
 
     def __init__(self, *args, **kwargs):
@@ -1506,8 +1608,7 @@ class scout(Command):
         # clean up:
         self.cancel()
 
-        if self.OPEN_ON_ENTER in flags or \
-                (self.AUTO_OPEN in flags and count == 1):
+        if self.OPEN_ON_ENTER in flags or (self.AUTO_OPEN in flags and count == 1):
             if pattern == '..':
                 self.fm.cd(pattern)
             else:
@@ -1520,7 +1621,7 @@ class scout(Command):
             if not pattern:
                 self.fm.open_console(self.line)
             else:
-                self.fm.open_console(self.line[0:-len(pattern)])
+                self.fm.open_console(self.line[0 : -len(pattern)])
 
         if self.quickly_executed and thisdir != self.fm.thisdir and pattern != "..":
             self.fm.block_input(0.5)
@@ -1582,8 +1683,7 @@ class scout(Command):
         # Compile Regular Expression
         # pylint: disable=no-member
         options = re.UNICODE
-        if self.IGNORE_CASE in flags or self.SMART_CASE in flags and \
-                pattern.islower():
+        if self.IGNORE_CASE in flags or self.SMART_CASE in flags and pattern.islower():
             options |= re.IGNORECASE
         # pylint: enable=no-member
         try:
@@ -1628,6 +1728,7 @@ class narrow(Command):
     Show only the files selected right now. If no files are selected,
     disable narrowing.
     """
+
     def execute(self):
         if self.fm.thisdir.marked_items:
             selection = [f.basename for f in self.fm.thistab.get_selection()]
@@ -1670,6 +1771,7 @@ class filter_stack(Command):
         filter_stack clear
         filter_stack show
     """
+
     def execute(self):
         from ranger.core.filter_stack import SIMPLE_FILTERS, FILTER_COMBINATORS
 
@@ -1703,10 +1805,7 @@ class filter_stack(Command):
             pager.move(to=100, percentage=True)
             return
         else:
-            self.fm.notify(
-                "Unknown subcommand: {}".format(subcommand),
-                bad=True
-            )
+            self.fm.notify("Unknown subcommand: {}".format(subcommand), bad=True)
             return
 
         self.fm.thisdir.refilter()
@@ -1757,6 +1856,7 @@ class reset_previews(Command):
 
     Reset the file previews.
     """
+
     def execute(self):
         self.fm.previews = {}
         self.fm.ui.need_redraw = True
@@ -1806,6 +1906,7 @@ class unstage(Command):
             self.fm.ui.vcsthread.process(self.fm.thisdir)
         else:
             self.fm.notify('Unable to unstage files: Not in repository')
+
 
 # Metadata commands
 # --------------------------------
@@ -1864,8 +1965,9 @@ class meta(prompt_metadata):
         metadata = self.fm.metadata.get_metadata(self.fm.thisfile.path)
         if key in metadata and metadata[key]:
             return [" ".join([self.arg(0), self.arg(1), metadata[key]])]
-        return [self.arg(0) + " " + k for k in sorted(metadata)
-                if k.startswith(self.arg(1))]
+        return [
+            self.arg(0) + " " + k for k in sorted(metadata) if k.startswith(self.arg(1))
+        ]
 
 
 class linemode(default_linemode):
@@ -1883,6 +1985,7 @@ class linemode(default_linemode):
 
         if mode == "normal":
             from ranger.core.linemode import DEFAULT_LINEMODE
+
             mode = DEFAULT_LINEMODE
 
         if mode not in self.fm.thisfile.linemode_dict:
@@ -1916,6 +2019,7 @@ class yank(Command):
 
         def clipboards():
             from ranger.ext.get_executables import get_executables
+
             clipboard_managers = {
                 'xclip': [
                     ['xclip'],
@@ -1946,20 +2050,16 @@ class yank(Command):
 
         new_clipboard_contents = "\n".join(selection)
         for command in clipboard_commands:
-            process = subprocess.Popen(command, universal_newlines=True,
-                                       stdin=subprocess.PIPE)
+            process = subprocess.Popen(
+                command, universal_newlines=True, stdin=subprocess.PIPE
+            )
             process.communicate(input=new_clipboard_contents)
 
     def get_selection_attr(self, attr):
-        return [getattr(item, attr) for item in
-                self.fm.thistab.get_selection()]
+        return [getattr(item, attr) for item in self.fm.thistab.get_selection()]
 
     def tab(self, tabnum):
-        return (
-            self.start(1) + mode for mode
-            in sorted(self.modes.keys())
-            if mode
-        )
+        return (self.start(1) + mode for mode in sorted(self.modes.keys()) if mode)
 
 
 class paste_ext(Command):
@@ -1991,4 +2091,3 @@ class paste_ext(Command):
 
     def execute(self):
         return self.fm.paste(make_safe_path=paste_ext.make_safe_path)
-    

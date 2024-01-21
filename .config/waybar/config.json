@@ -1,115 +1,115 @@
 {
-    "height": 30,
-    "layer": "top",
-    "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/spotify"],
-    "modules-center": ["clock"],
-    "modules-right": [
-        "cpu",
-        "memory",
-        "custom/pacman",
-        "custom/theme",
-        "custom/wallpaper",
-        "network",
-        "pulseaudio",
-        
-        "custom/power-menu"
-    ],
-    "hyprland/workspaces": {
-        "all-outputs": true,
-        "active-only": false,
-        "on-click": "activate",
-        "format": "{icon}",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "format-icons": {
-            "1": "󰮯",
-            "2": "",
-            "3": "󰨞",
-            "4": "",
-            "5": "",
-            "6": "",
-            "urgent": "",
-            "default": ""
-        },
-        "persistent-workspaces": {
-            "*": 6
-        }
+  "height": 30,
+  "layer": "top",
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/spotify"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "custom/pacman",
+    "custom/theme",
+    "custom/wallpaper",
+    "network",
+    "pulseaudio",
+
+    "custom/power-menu"
+  ],
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format-icons": {
+      "1": "󰮯",
+      "2": "",
+      "3": "󰨞",
+      "4": "",
+      "5": "",
+      "6": "",
+      "urgent": "",
+      "default": ""
     },
-    "clock": {
-        "interval": 60,
-        "align": 0,
-        "rotate": 0,
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d %b, %H:%M %p}",
-        "format-alt": "{:%a %b %d, %G} "
-    },
-    "cpu": {
-        "interval": 10,
-        "format": " {}%",
-        "max-length": 10,
-        "on-click": "kitty btm"
-    },
-    "memory": {
-        "interval": 30,
-        "format": " {}%",
-        "format-alt": " {used:0.1f}GB",
-        "max-length": 10
-    },
-    "custom/pacman": {
-        "format": "{icon}{}",
-        "return-type": "json",
-        "format-icons": {
-          "pending-updates": " ",
-          "updated": " "
-        },
-        "exec-if": "which waybar-updates",
-        "exec": "waybar-updates",
-        "on-click": "kitty yay -Syu --noconfirm"
-      },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-ethernet": "󰖟",
-        "format-disconnected": "󰪎",
-        "tooltip-format": "{essid}",
-        "on-click": "kitty nmtui",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
-    },
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-muted": "󰖁",
-        "format-icons": {
-            "default": ["", "", "󰕾"]
-        },
-        "on-click": "pavucontrol &",
-        "on-click-right": "pamixer -t",
-        "scroll-step": 5,
-        "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
-        "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec"
-    },
-    "custom/spotify": {
-        "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-        "format": " {}",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
-        "max-length": 50
-    },
-    "custom/power-menu": {
-        "format": "  ",
-        "on-click": "~/.config/rofi/scripts/powermenu"
-    },
-    "custom/launcher": {
-        "format": "",
-        "on-click": "~/.config/rofi/scripts/launcher"
-    },
-    "custom/wallpaper": {
-        "format": "󰋹",
-        "on-click": "~/.config/rofi/scripts/wallpaper",
-        "on-click-right": "~/.config/waybar/scripts/wallpaper.sh"
-    },
-    "custom/theme": {
-        "format": "󰊠",
-        "on-click": "~/.config/waybar/scripts/theme.sh"
+    "persistent-workspaces": {
+      "*": 6
     }
+  },
+  "clock": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%d %b, %H:%M %p}",
+    "format-alt": "{:%a %b %d, %G} "
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {}%",
+    "max-length": 10,
+    "on-click": "kitty btm"
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "format-alt": " {used:0.1f}GB",
+    "max-length": 10
+  },
+  "custom/pacman": {
+    "format": "{icon}{}",
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": " ",
+      "updated": " "
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates",
+    "on-click": "kitty yay -Syu --noconfirm"
+  },
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰖟",
+    "format-disconnected": "󰪎",
+    "tooltip-format": "{essid}",
+    "on-click": "kitty nmtui",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": ["", "", "󰕾"]
+    },
+    "on-click": "pavucontrol &",
+    "on-click-right": "pamixer -t",
+    "scroll-step": 5,
+    "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec"
+  },
+  "custom/spotify": {
+    "exec": "python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+    "format": " {}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "max-length": 50
+  },
+  "custom/power-menu": {
+    "format": "  ",
+    "on-click": "~/.config/rofi/scripts/powermenu"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "~/.config/rofi/scripts/launcher"
+  },
+  "custom/wallpaper": {
+    "format": "󰋹",
+    "on-click": "~/.config/rofi/scripts/wallpaper",
+    "on-click-right": "~/.config/waybar/scripts/wallpaper.sh"
+  },
+  "custom/theme": {
+    "format": "󰊠",
+    "on-click": "~/.config/waybar/scripts/theme.sh"
+  }
 }

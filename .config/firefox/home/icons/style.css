@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
 @import url('file:///home/gus/.cache/wal/colors.css');
 
 :root {
@@ -45,7 +46,8 @@ h2 {
 }
 
 p {
-  font-size: 16px;
+  font-family: 'Just Another Hand', cursive;
+  font-size: 24px;
   font-style: italic;
   color: var(--accentcolor);
 }
@@ -71,7 +73,7 @@ li {
 a {
   text-decoration: none;
   font-size: 20px;
-  color: var(--color2);
+  color: var(--primarycolor);
 }
 
 @keyframes blink {

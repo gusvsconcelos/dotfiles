@@ -3,9 +3,9 @@
 ## Set GTK Themes, Icons, Cursor and Fonts
 
 THEME='Plata-Grey-Noir-Compact'
-ICONS='ePapirus-Dark'
+ICONS='Papirus-Dark'
 FONT='Inter Display 11'
-CURSOR='WhiteSur-cursors'
+CURSOR='Bibata-Original-Classic'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 

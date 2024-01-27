@@ -7,7 +7,7 @@ conffile="${HOME}/.config/mako/config"
 # Associative array, color name -> color code.
 declare -A colors
 colors=(
-    ["background-color"]="$background"bb
+    ["background-color"]="$background"cc
     ["text-color"]="$color11"
     ["border-color"]="$color13"
 )

@@ -10,7 +10,7 @@ window#waybar {
   color: @foreground;
   transition-property: background-color;
   transition-duration: 0.5s;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 window#waybar.hidden {
@@ -21,6 +21,9 @@ window#waybar.hidden {
   color: @foreground;
 }
 
+#temperature,
+#custom-weather,
+#clock,
 #pulseaudio,
 #network,
 #cpu,
@@ -33,34 +36,49 @@ window#waybar.hidden {
 #custom-theme,
 #custom-pacman {
   color: @foreground;
-  padding: 0px 10px;
+  padding: 0 10 0 10px;
   background-color: @background;
   border-radius: 20px;
-  margin: 3px 0px 0px;
+  margin: 6px 0 0;
+}
+
+#temperature {
+  color: rgb(255, 115, 0);
+  border-radius: 20 0 0 20;
+  padding-left: 12px;
+  font-size: 20px;
+}
+
+#custom-weather {
+  color: @color14;
+  margin-right: 8px;
+  padding: 0 10 0 0;
+  border-radius: 0 20 20 0px;
+  font-size: 14px;
 }
 
 #custom-launcher {
   color: @color9;
   padding: 0 14 1 8;
-  margin-left: 4px;
-  margin-right: 6px;
+  margin-left: 10px;
+  margin-right: 8px;
   font-size: 18px;
 }
 
 #cpu {
   color: @color11;
-  margin-right: 6px;
+  margin-right: 8px;
   font-size: 14px;
 }
 
 #memory {
   color: @color11;
-  margin-right: 6px;
+  margin-right: 8px;
   font-size: 14px;
 }
 
 #workspaces {
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 #workspaces button {
@@ -88,13 +106,13 @@ window#waybar.hidden {
 }
 
 #custom-spotify {
-  color: @color14;
+  color: #1db954;
   font-size: 14px;
 }
 
 @keyframes blink-update {
   to {
-    background-color: @color9;
+    color: @color9;
   }
 }
 
@@ -104,7 +122,7 @@ window#waybar.hidden {
   animation-direction: alternate;
   color: @color11;
   font-size: 17px;
-  margin-right: 6px;
+  margin-right: 8px;
   padding: 0 4 0 10;
 }
 #custom-pacman.pending-updates {
@@ -168,17 +186,15 @@ window#waybar.hidden {
   padding: 0 5 0 14;
   background-color: @background;
   border-radius: 20px;
-  margin: 3px 0px 0px;
   color: @color9;
-  margin-left: 6px;
   font-size: 14px;
 }
 
 #custom-power-menu {
-  color: @color9;
-  margin-right: 4px;
-  margin-left: 6px;
-  padding: 0 3 2 0;
+  color: #c34632;
+  margin-right: 10px;
+  margin-left: 8px;
+  padding: 0 3 1 0;
 }
 
 @keyframes blink {

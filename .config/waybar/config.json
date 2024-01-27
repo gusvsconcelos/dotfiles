@@ -1,9 +1,11 @@
 {
-  "height": 30,
+  "height": 10,
   "layer": "top",
   "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/spotify"],
   "modules-center": ["clock"],
   "modules-right": [
+    "temperature",
+    "custom/weather",
     "cpu",
     "memory",
     "custom/pacman",
@@ -11,7 +13,6 @@
     "custom/wallpaper",
     "network",
     "pulseaudio",
-
     "custom/power-menu"
   ],
   "hyprland/workspaces": {
@@ -35,13 +36,21 @@
       "*": 6
     }
   },
+  "temperature": {
+    "format": "󱣖"
+  },
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh tiangua",
+    "return-type": "json",
+    "interval": 600
+  },
   "clock": {
     "interval": 60,
     "align": 0,
     "rotate": 0,
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%d %b, %H:%M %p}",
-    "format-alt": "{:%a %b %d, %G} "
+    "format": "{:  %d %b %Y |   %H:%M %p}",
+    "format-alt": "{:  %d de %b, %A | %G} "
   },
   "cpu": {
     "interval": 10,
@@ -56,10 +65,10 @@
     "max-length": 10
   },
   "custom/pacman": {
-    "format": "{icon}{}",
+    "format": "{icon} {}",
     "return-type": "json",
     "format-icons": {
-      "pending-updates": " ",
+      "pending-updates": "",
       "updated": " "
     },
     "exec-if": "which waybar-updates",

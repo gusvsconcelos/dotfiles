@@ -76,6 +76,10 @@ a {
   color: var(--primarycolor);
 }
 
+.ai {
+  padding: 12px;
+}
+
 @keyframes blink {
   0%,
   100% {

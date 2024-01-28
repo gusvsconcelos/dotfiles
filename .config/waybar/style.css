@@ -5,6 +5,10 @@
   font-size: 16px;
 }
 
+#window {
+  color: @foreground;
+}
+
 window#waybar {
   background-color: rgba(0, 0, 0, 0);
   color: @foreground;
@@ -17,44 +21,26 @@ window#waybar.hidden {
   opacity: 0.1;
 }
 
-#window {
-  color: @foreground;
-}
-
-#temperature,
-#custom-weather,
+#custom-launcher,
+#workspaces,
+#custom-chatai,
+#custom-spotify,
 #clock,
-#pulseaudio,
-#network,
+#custom-weather,
+#temperature,
 #cpu,
 #memory,
-#workspaces,
-#custom-power-menu,
-#custom-wallpaper,
-#custom-launcher,
-#custom-spotify,
+#custom-pacman,
 #custom-theme,
-#custom-pacman {
+#custom-wallpaper,
+#network,
+#pulseaudio,
+#custom-power-menu {
   color: @foreground;
-  padding: 0 10 0 10px;
   background-color: @background;
+  padding: 0 10 0 10px;
+  margin: 4px 0 0;
   border-radius: 20px;
-  margin: 6px 0 0;
-}
-
-#temperature {
-  color: rgb(255, 115, 0);
-  border-radius: 20 0 0 20;
-  padding-left: 12px;
-  font-size: 20px;
-}
-
-#custom-weather {
-  color: @color14;
-  margin-right: 8px;
-  padding: 0 10 0 0;
-  border-radius: 0 20 20 0px;
-  font-size: 14px;
 }
 
 #custom-launcher {
@@ -63,18 +49,6 @@ window#waybar.hidden {
   margin-left: 10px;
   margin-right: 8px;
   font-size: 18px;
-}
-
-#cpu {
-  color: @color11;
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-#memory {
-  color: @color11;
-  margin-right: 8px;
-  font-size: 14px;
 }
 
 #workspaces {
@@ -110,6 +84,48 @@ window#waybar.hidden {
   font-size: 14px;
 }
 
+#clock {
+  background-color: @background;
+  color: @color9;
+  padding: 0 5 0 14;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+#custom-weather {
+  color: @color14;
+  padding: 0 10 0 10;
+  margin-right: 8px;
+  border-radius: 20;
+  font-size: 14px;
+}
+
+#temperature {
+  color: @color11;
+  border-radius: 20 0 0 20;
+  font-size: 14px;
+}
+
+#temperature.critical {
+  color: #ff6400;
+  border-radius: 20 0 0 20;
+  font-size: 14px;
+}
+
+#cpu {
+  color: @color11;
+  border-radius: 0;
+  padding: 0 4 0 4;
+  font-size: 14px;
+}
+
+#memory {
+  color: @color11;
+  margin-right: 8px;
+  border-radius: 0 20 20 0;
+  font-size: 14px;
+}
+
 @keyframes blink-update {
   to {
     color: @color9;
@@ -121,10 +137,11 @@ window#waybar.hidden {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   color: @color11;
-  font-size: 17px;
-  margin-right: 8px;
   padding: 0 4 0 10;
+  margin-right: 8px;
+  font-size: 17px;
 }
+
 #custom-pacman.pending-updates {
   animation-name: blink-update;
   animation-duration: 3s;
@@ -132,34 +149,20 @@ window#waybar.hidden {
   font-size: 14px;
 }
 
+#custom-theme {
+  color: @color11;
+  padding: 0 8 0 12;
+  border-radius: 20 0 0 20;
+  font-size: 15px;
+}
+
 #custom-wallpaper {
   color: @color11;
   border-radius: 0;
 }
 
-#custom-theme {
-  color: @color11;
-  border-radius: 20 0 0 20;
-  padding: 0 8 0 12;
-  font-size: 15px;
-}
-
-#pulseaudio,
-#network {
-  background-color: @background;
-}
-
-#network,
-#custom-wallpaper {
-  padding: 0 8 0 8;
-  font-size: 15px;
-}
-
 #network {
   color: @color11;
-  border-right: none;
-  border-left: none;
-  margin-left: 0px;
   border-radius: 0;
 }
 
@@ -169,25 +172,13 @@ window#waybar.hidden {
 
 #pulseaudio {
   color: @color11;
-  border-left: none;
-  border-right: none;
-  margin-left: 0px;
-  border-radius: 0 20 20 0;
   padding: 0 14 0 8;
+  border-radius: 0 20 20 0;
   font-size: 17px;
 }
 
 #pulseaudio.muted {
   color: @color9;
-}
-
-#clock {
-  color: @foreground;
-  padding: 0 5 0 14;
-  background-color: @background;
-  border-radius: 20px;
-  color: @color9;
-  font-size: 14px;
 }
 
 #custom-power-menu {
@@ -205,16 +196,16 @@ window#waybar.hidden {
 }
 
 tooltip {
-  border-radius: 15px;
-  padding: 15px;
   background-color: @background;
   color: @foreground;
+  opacity: 0.8;
+  border-radius: 20px;
   font-family: JetBrainsMono Nerd Font;
 }
 
 tooltip label {
-  padding: 5px;
-  color: @foreground;
+  padding: 8;
+  color: @color11;
 }
 
 label:focus {

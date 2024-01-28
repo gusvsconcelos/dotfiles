@@ -45,7 +45,7 @@ yay -S swww waybar-updates
 ## Setting up themes and other stuff
 
 ```
-pacman -S polkit-kde-agent kitty pcmanfm-qt neovim gedit pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools ark playerctl pamixer python-pillow viewnior gnome-keyring neofetch imagemagick wtype rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler epapirus-icon-theme
+pacman -S polkit-kde-agent kitty pcmanfm-qt neovim gedit pavucontrol alsa-utils grim slurp wl-clipboard python-pip rofi ranger ts-node zsh ttf-jetbrains-mono ttf-jetbrains-mono-nerd inotify-tools ark playerctl pamixer bottom python-pillow viewnior gnome-keyring neofetch imagemagick wtype rofi-emoji noto-fonts-emoji ttf-droid alsa-firmware tumbler epapirus-icon-theme
 yay -S swaylock-effects sddm-sugar-candy-git whitesur-icon-theme-git whitesur-cursor-theme-git whitesur-gtk-theme-git nwg-look-bin python-pywalfox mako-git inter-font-beta github-cli
 ```
 
@@ -54,7 +54,7 @@ yay -S swaylock-effects sddm-sugar-candy-git whitesur-icon-theme-git whitesur-cu
 Here are the apps that I normally have installed on distros that I use. Feel free to remove those that you're not using anyway.
 
 ```
-paru -S github-desktop spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh
+yay -S github-desktop spotify-launcher spicetify-cli visual-studio-code-bin cava cmatrix tty-clock pipes.sh
 pacman -S firefox obsidian vlc
 ```
 

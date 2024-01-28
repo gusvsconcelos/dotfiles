@@ -137,7 +137,7 @@ window#waybar.hidden {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   color: @color11;
-  padding: 0 4 0 10;
+  padding: 0 3 0 9;
   margin-right: 8px;
   font-size: 17px;
 }

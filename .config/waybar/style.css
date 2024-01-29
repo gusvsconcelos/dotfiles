@@ -46,7 +46,7 @@ window#waybar.hidden {
 #custom-launcher {
   color: @color9;
   padding: 0 14 1 8;
-  margin-left: 10px;
+  margin-left: 6px;
   margin-right: 8px;
   font-size: 18px;
 }
@@ -183,7 +183,7 @@ window#waybar.hidden {
 
 #custom-power-menu {
   color: #c34632;
-  margin-right: 10px;
+  margin-right: 6px;
   margin-left: 8px;
   padding: 0 3 1 0;
 }

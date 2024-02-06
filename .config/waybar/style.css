@@ -3,6 +3,7 @@
 * {
   font-family: JetBrainsMono Nerd Font;
   font-size: 16px;
+  font-weight: bold;
 }
 
 #window {
@@ -204,7 +205,7 @@ tooltip {
 }
 
 tooltip label {
-  padding: 8;
+  padding: 6;
   color: @color11;
 }
 

@@ -2,6 +2,9 @@
 
 Here are my configuration files for this rice. This rice relies heavily on [Pywal](https://github.com/dylanaraps/pywal). Colors change as you change your wallpaper.
 
+<img src="https://github.com/gusvsconcelos/dotfiles/blob/main/preview.png" width="730">
+
+
 ## Some features and configs
 
 - Select a wallpaper with `Super + W` and see the colors change

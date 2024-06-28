@@ -29,3 +29,6 @@ abbr .5 'cd ../../../../..'
 abbr mkdir 'mkdir -p'
 
 pokemon-colorscripts -r --no-title
+
+# Created by `pipx` on 2024-06-28 08:40:14
+set PATH $PATH /home/gus/.local/bin

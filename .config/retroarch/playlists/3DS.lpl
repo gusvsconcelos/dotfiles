@@ -1,0 +1,84 @@
+{
+  "version": "1.5",
+  "default_core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+  "default_core_name": "Nintendo - 3DS (Citra)",
+  "label_display_mode": 3,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "thumbnail_match_mode": 0,
+  "sort_mode": 0,
+  "items": [
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Alpha Sapphire (USA).3ds",
+      "label": "Pokemon Alpha Sapphire (USA)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Moon (USA) (En,Ja,Fr,De,Es,It,Zh,Ko).3ds",
+      "label": "Pokemon Moon (USA) (En,Ja,Fr,De,Es,It,Zh,Ko)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Omega Ruby (USA).3ds",
+      "label": "Pokemon Omega Ruby (USA)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Sun (USA) (En,Ja,Fr,De,Es,It,Zh,Ko).3ds",
+      "label": "Pokemon Sun (USA) (En,Ja,Fr,De,Es,It,Zh,Ko)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Ultra Moon (USA) (En,Ja,Fr,De,Es,It,Zh,Ko).3ds",
+      "label": "Pokemon Ultra Moon (USA) (En,Ja,Fr,De,Es,It,Zh,Ko)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Ultra Sun (USA) (En,Ja,Fr,De,Es,It,Zh,Ko).3ds",
+      "label": "Pokemon Ultra Sun (USA) (En,Ja,Fr,De,Es,It,Zh,Ko)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon X (USA).3ds",
+      "label": "Pokemon X (USA)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Y - Randomizer Nuzlocke.3ds.cxi",
+      "label": "Pokemon Y - Randomizer Nuzlocke",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Nintendo - 3DS (Citra)",
+      "crc32": "00000000|crc",
+      "db_name": "3DS.lpl"
+    },
+    {
+      "path": "/home/gus/Documentos/Emulação/3DS/Pokemon Y (USA).3ds",
+      "label": "Pokemon Y (USA)",
+      "core_path": "/home/gus/.config/retroarch/cores/citra_libretro.so",
+      "core_name": "Citra",
+      "crc32": "00000000|crc",
+      "db_name": "Nintendo - Nintendo 3DS.lpl"
+    }
+  ]
+}

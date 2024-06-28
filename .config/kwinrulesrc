@@ -1,0 +1,67 @@
+[1]
+Description=Configurações de aplicativo para org.libretro.RetroArch
+desktopfile=org.libretro.RetroArch
+desktopfilerule=3
+wmclass=retroarch org.libretro.RetroArch
+wmclasscomplete=true
+wmclassmatch=1
+
+[2]
+Description=Configurações de aplicativo para com.stremio.stremio
+desktopfile=smartcode-stremio.desktop
+desktopfilerule=4
+wmclass=stremio com.stremio.stremio
+wmclasscomplete=true
+wmclassmatch=1
+
+[3bba49be-b79f-44b1-87dc-03aa3fc10d2f]
+Description=Configurações de aplicativo para com.stremio.stremio
+desktopfile=com.stremio.Stremio
+desktopfilerule=3
+wmclass=\scom.stremio.stremio
+wmclasscomplete=true
+wmclassmatch=1
+
+[42c63ce9-d05a-477d-ad2e-da3e77ebfe40]
+Description=Configurações de aplicativo para com.stremio.stremio
+desktopfile=smartcode-stremio.desktopsmartcode-stremio.desktopsmartcode-stremio.desktopsmartcode-stremio.desktopsmartcode-stremio.desktopsmartcode-stremio.desktopsmartcode-stremio.desktop
+desktopfilerule=3
+wmclass=stremio com.stremio.stremio
+wmclasscomplete=true
+wmclassmatch=1
+
+[4d0d456c-f210-4554-b273-c348674d8311]
+Description=Configurações de aplicativo para com.stremio.stremio
+desktopfile=smartcode-stremio.desktop
+desktopfilerule=3
+wmclass=stremio com.stremio.stremio
+wmclasscomplete=true
+wmclassmatch=1
+
+[695a1f06-6c64-4868-90aa-4ac846031a32]
+Description=Configurações de aplicativo para com-dabomstew-pkrandom-newgui-NewRandomizerGUI
+clientmachine=localhost
+desktopfile=pokemon_randomizer.desktop
+desktopfilerule=3
+wmclass=com-dabomstew-pkrandom-newgui-NewRandomizerGUI
+wmclassmatch=1
+
+[7479ffaf-43b4-4559-bb1c-3af593dcea6f]
+Description=Configurações de aplicativo para org.libretro.RetroArch
+desktopfile=retroarch.desktop
+desktopfilerule=3
+wmclass=retroarch org.libretro.RetroArch
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=5
+rules=acd29048-f7e7-4423-be44-a4f488bd1574,3bba49be-b79f-44b1-87dc-03aa3fc10d2f,695a1f06-6c64-4868-90aa-4ac846031a32,1,2
+
+[acd29048-f7e7-4423-be44-a4f488bd1574]
+Description=Configurações de aplicativo para firefoxdeveloperedition
+desktopfile=firefox-developer-edition
+desktopfilerule=3
+wmclass=firefox firefoxdeveloperedition
+wmclasscomplete=true
+wmclassmatch=1

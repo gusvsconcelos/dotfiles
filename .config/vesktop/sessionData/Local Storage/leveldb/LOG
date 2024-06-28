@@ -1,0 +1,9 @@
+2024/06/27-21:21:15.283 22ec Reusing MANIFEST /home/gus/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2024/06/27-21:21:15.292 22ec Recovering log #4
+2024/06/27-21:21:15.293 22ec Reusing old log /home/gus/.config/vesktop/sessionData/Local Storage/leveldb/000004.log 
+2024/06/27-21:49:00.081 22eb Level-0 table #8: started
+2024/06/27-21:49:00.141 22eb Level-0 table #8: 18734 bytes OK
+2024/06/27-21:49:00.176 22eb Delete type=0 #4
+2024/06/27-23:51:22.666 22eb Level-0 table #10: started
+2024/06/27-23:51:22.720 22eb Level-0 table #10: 8025 bytes OK
+2024/06/27-23:51:22.757 22eb Delete type=0 #7

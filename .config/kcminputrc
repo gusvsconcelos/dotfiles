@@ -1,0 +1,21 @@
+[ButtonRebinds][TabletTool][Wacom One by Wacom S Pen]
+331=Key,[
+332=Key,]
+
+[Keyboard]
+NumLock=0
+RepeatDelay=300
+
+[Libinput][12994][18][HS6209 2.4G Wireless Receiver Mouse]
+PointerAcceleration=0.100
+PointerAccelerationProfile=1
+ScrollFactor=0.75
+
+[Libinput][1386][890][Wacom One by Wacom S Pen]
+LeftHanded=true
+
+[Libinput][7247][132][LIZHI  K-61 04 USB Keyboard Consumer Control]
+ScrollFactor=0.75
+
+[Mouse]
+cursorTheme=Catppuccin-Mocha-Dark-Cursors

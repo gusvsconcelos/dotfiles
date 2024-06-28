@@ -1,0 +1,7 @@
+[Daemon]
+Autolock=false
+LockOnResume=false
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/gus/Imagens/Wallpapers/astronault.png
+PreviewImage=/home/gus/Imagens/Wallpapers/astronault.png

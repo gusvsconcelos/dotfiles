@@ -1,0 +1,26 @@
+[General]
+ShowSpaceInfo=false
+Version=202
+ViewPropsTimestamp=2024,6,8,18,27,52.158
+
+[IconsMode]
+PreviewSize=80
+
+[InformationPanel]
+dateFormat=ShortFormat
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly
+
+[Toolbar mainToolBar]
+IconSize=16
+ToolButtonStyle=IconOnly

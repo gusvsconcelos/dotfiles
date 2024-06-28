@@ -1,0 +1,17 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-149-d08a5ab0-da1c-4c77-870a-7e9ceb4ef523]
+ordering=applications:org.kde.discover.desktop,applications:systemsettings.desktop,applications:kitty.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:firefox-developer-edition.desktop,applications:chromium.desktop,applications:discord.desktop,applications:vesktop.desktop,applications:steam.desktop,applications:page.kramo.Cartridges.desktop,applications:gimp.desktop,applications:org.kde.krita.desktop,applications:com.stremio.Stremio.desktop,applications:spotify.desktop,applications:pokemon_randomizer.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-149-global]
+ordering=applications:org.kde.discover.desktop,applications:systemsettings.desktop,applications:kitty.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:firefox-developer-edition.desktop,applications:chromium.desktop,applications:discord.desktop,applications:vesktop.desktop,applications:steam.desktop,applications:page.kramo.Cartridges.desktop,applications:gimp.desktop,applications:org.kde.krita.desktop,applications:com.stremio.Stremio.desktop,applications:spotify.desktop,applications:pokemon_randomizer.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-d08a5ab0-da1c-4c77-870a-7e9ceb4ef523]
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-89-d08a5ab0-da1c-4c77-870a-7e9ceb4ef523]
+ordering=applications:org.kde.discover.desktop,applications:systemsettings.desktop,applications:kitty.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:firefox-developer-edition.desktop,applications:chromium.desktop,applications:discord.desktop,applications:steam.desktop,applications:page.kramo.Cartridges.desktop,applications:gimp.desktop,applications:org.kde.krita.desktop,applications:spotify.desktop,applications:com.stremio.Stremio.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-89-global]
+ordering=applications:org.kde.discover.desktop,applications:systemsettings.desktop,applications:kitty.desktop,applications:org.kde.dolphin.desktop,preferred://browser,applications:firefox-developer-edition.desktop,applications:chromium.desktop,applications:discord.desktop,applications:steam.desktop,applications:page.kramo.Cartridges.desktop,applications:gimp.desktop,applications:org.kde.krita.desktop,applications:spotify.desktop,applications:com.stremio.Stremio.desktop

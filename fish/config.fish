@@ -13,10 +13,10 @@ alias py='python'
 alias vim='nvim'
 alias nvc='nvim ~/.config/nvim/'
 alias nvp='cd ~/.config/nvim/'
-alias dev='cd ~/Documentos/Dev/'
+alias dev='cd ~/dev/'
 alias fetch='clear;rxfetch'
-alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
-alias tray='sudo -E hardcode-tray'
+#alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+#alias tray='sudo -E hardcode-tray'
 
 # Handy change dir shortcuts
 abbr .. 'cd ..'

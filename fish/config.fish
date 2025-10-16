@@ -14,6 +14,5 @@ alias dev='cd $HOME/Documentos/Dev/'
 alias nvc='cd $HOME/.config/nvim/;nvim'
 alias nvp='cd $HOME/.config/nvim/'
 alias fetch='clear;fastfetch'
-alias m='cat /sys/class/drm/card1-HDMI-A-1/status'
 
 fish_add_path /home/gus/.spicetify

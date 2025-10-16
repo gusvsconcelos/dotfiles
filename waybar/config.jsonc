@@ -1,0 +1,158 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 1,
+  "output": ["*"],
+
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "mpris"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "group/tray-expander", "bluetooth", "pulseaudio", "network", "battery", "custom/power"],
+
+  /* =====================
+     Hyprland Workspaces
+     ===================== */
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "●",
+      "2": "●",
+      "3": "●",
+      "4": "●",
+      "5": "●",
+      "active": "●",
+      "urgent": "",
+      "default": "●"
+    },
+    "persistent-workspaces": {
+      "1": [], "2": [], "3": [], "4": [], "5": []
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+
+  /* =====================
+     Network
+     ===================== */
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪 ",
+    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nDownload: <b><span foreground='#99ffdd'> {bandwidthDownBytes}</span></b>\nUpload: <b><span foreground='#ffcc66'> {bandwidthUpBytes}</span></b>",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 2,
+    "max-length": 30,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "on-click": "kitty -e nmtui"
+  },
+
+  /* =====================
+     Battery
+     ===================== */
+  "battery": {
+    "states": { "warning": 20, "critical": 10 },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ⚡",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  /* =====================
+     PulseAudio
+     ===================== */
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+    "on-click": "kitty pulsemixer",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "scroll-step": 5,
+    "tooltip-format": "Volume: {volume}%"
+  },
+
+  /* =====================
+     Bluetooth
+     ===================== */
+  "bluetooth": {
+    "format": "{icon}",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{device_alias}\t{device_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "kitty bluetuith",
+    "on-click-right": "rfkill toggle bluetooth"
+  },
+
+  /* =====================
+     Clock
+     ===================== */
+  "clock": {
+    "format": "<span color='#7aa2f7'>󰥔</span> {:%H:%M • %A}",
+    "format-alt": "<span color='#7aa2f7'></span> {:%d/%m/%Y}",
+    "tooltip-format": "<big>{:%d %B, %Y}</big>\n<tt><big>{calendar}</big></tt>",
+  },
+
+  /* =====================
+     Group / Tray
+     ===================== */
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": { "transition-duration": 600, "children-class": "tray-group-item" },
+    "modules": ["custom/expand-icon", "tray"]
+  },
+
+  "custom/expand-icon": { "format": " ", "tooltip": false },
+  "tray": { "spacing": 6 },
+
+  /* =====================
+     Custom Launcher
+     ===================== */
+  "custom/launcher": { "format": "󰣇", "on-click": "rofi -show drun", "tooltip": false },
+
+  /* =====================
+     Custom Power
+     ===================== */
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/rofi/scripts/powermenu.sh",
+    "tooltip": false
+  },
+
+  /* =====================
+     MPRIS / Spotify
+     ===================== */
+  "mpris": {
+    "player": "spotify",
+    "format": "{player_icon} {artist} • {title}",
+    "format-paused": "{status_icon} <i>{artist} • {title}</i>",
+    "player-icons": { "default": " " },
+    "status-icons": { "paused": "▶ " },
+    "max-length": 50
+  },
+
+  /* =====================
+     CPU
+     ===================== */
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "tooltip-format": "CPU Usage: {usage}%",
+    "on-click": "kitty btop"
+  },
+
+  /* =====================
+     Memory
+     ===================== */
+  "memory": {
+    "interval": 2,
+    "format": " {used:0.1f}GiB",
+    "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB",
+    "on-click": "kitty btop"
+  }
+}

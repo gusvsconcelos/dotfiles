@@ -6,7 +6,7 @@ end
 
 # Alias
 alias home='cd ~'
-alias up='fastfetch; echo ""; echo "ATUALIZAR SISTEMA"; yay -Syu --noconfirm'
+alias up='clear;fetch;echo "==== SYSTEM UPDATE ====";yay -Syu --noconfirm'
 alias clean='yay -Sc --noconfirm; yay -Qtdq | yay -Rns -'
 alias ls='lsd'
 alias py='python'

@@ -1,0 +1,165 @@
+/* =====================
+   Global Styles
+   ===================== */
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: rgba(26, 27, 38, 0.75);
+  color: #9aa5ce;
+}
+
+/* =====================
+   Modules: Shared Background & Color
+   ===================== */
+#custom-launcher,
+#workspaces,
+#mpris,
+#clock,
+#cpu,
+#memory,
+#custom-expand-icon,
+#tray,
+#bluetooth,
+#pulseaudio,
+#network,
+#battery,
+#custom-power {
+  background-color: #1a1b26;
+  color: #9aa5ce;
+  margin: 4px 0; /* unified vertical spacing */
+  padding: 2px 6px; /* unified inner spacing */
+  border-radius: 4px; /* default rounding */
+}
+
+/* =====================
+   Left modules
+   ===================== */
+#custom-launcher {
+  margin-left: 4px;
+  padding: 2px 12px 2px 8px;
+  font-size: 16px;
+  color: #2959aa;
+}
+#custom-launcher:hover {
+  color: #7aa2f7;
+}
+
+#workspaces {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#workspaces button {
+  padding: 0 2px;
+  margin: 0;
+  color: #565f89;
+}
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: transparent;
+  color: #bb9af7;
+}
+#workspaces button.active {
+  color: #7aa2f7;
+}
+#workspaces button.empty:hover {
+  color: #bb9af7;
+}
+#workspaces button.urgent {
+  color: #f7768e;
+}
+
+/* =====================
+   MPRIS & Clock
+   ===================== */
+#mpris {
+  color: #73dacb;
+}
+/* =====================
+   CPU + Memory (left cluster)
+   ===================== */
+#cpu {
+  border-radius: 4px 0 0 4px; /* left corners rounded */
+  margin-right: 0; /* unified block */
+}
+#memory {
+  border-radius: 0 4px 4px 0; /* right corners rounded */
+  margin-left: 0;
+}
+
+/* =====================
+   Right cluster: Expand icon → Tray → Bluetooth → Pulseaudio → Network → Battery
+   ===================== */
+#custom-expand-icon {
+  border-radius: 4px 0 0 4px; /* left-most rounded */
+  margin-left: 4px; /* space from left modules */
+}
+
+#tray,
+#bluetooth,
+#pulseaudio,
+#network {
+  border-radius: 0; /* middle modules flat */
+  margin: 4px 0; /* unified vertical spacing */
+  padding: 2px 6px; /* unified inner spacing */
+}
+
+#tray {
+  padding-left: 0; /* closer to expand icon */
+}
+
+#pulseaudio {
+  font-size: 16px; /* slightly larger icon */
+}
+
+#network {
+  border-radius: 0 4px 4px 0; /* right-most rounding for cluster */
+  padding-right: 12px; /* visual spacing at the edge */
+}
+
+/* Battery (laptops only) */
+#battery {
+  border-radius: 0 4px 4px 0; /* right-most rounded */
+  padding: 2px 6px;
+}
+#battery.charging {
+  background-color: #73dacb;
+}
+#battery.critical:not(.charging) {
+  background-color: #f7768e;
+  color: #c0caf5;
+}
+
+/* =====================
+   Power button (separate)
+   ===================== */
+#custom-power {
+  margin-left: 4px; /* gap from right cluster */
+  margin-right: 4px;
+  padding: 2px 12px 2px 9px;
+  border-radius: 4px; /* independent rounding */
+  font-size: 14px;
+  color: #8c4351;
+}
+#custom-power:hover {
+  color: #f7768e;
+}
+
+/* =====================
+   Tooltip
+   ===================== */
+tooltip {
+  border-radius: 4px;
+  background-color: #1a1b26;
+}
+tooltip label {
+  color: #c0caf5;
+  padding: 10px;
+}

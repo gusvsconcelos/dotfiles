@@ -15,7 +15,6 @@ docker
 efibootmgr
 fastfetch
 fd
-firewalld
 fish
 fzf
 gimp
@@ -77,10 +76,10 @@ steam
 stremio
 swaylock-effects-git
 swww
-tmux
 ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family
+ufw
 unzip
 upscayl-bin
 vesktop

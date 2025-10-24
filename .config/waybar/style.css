@@ -38,7 +38,7 @@ window#waybar {
   background-color: @bg1;
   color: @fg1;
   margin: 3px 0 3px;
-  padding: 2px 7px;
+  padding: 2px 8px;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
@@ -139,10 +139,13 @@ window#waybar {
 
 /* Battery */
 #battery {
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-left: 4px;
 }
 #battery.charging {
   background-color: @accent7;
+  color: @bg0;
 }
 #battery.critical:not(.charging) {
   background-color: @accent5;

@@ -1,0 +1,174 @@
+@import "colors.css";
+
+/* =====================
+   Global
+   ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetbrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: @bg0;
+  color: @fg1;
+}
+
+/* =====================
+   Shared module style
+   ===================== */
+#custom-launcher,
+#workspaces,
+#mpris,
+#clock,
+#cpu,
+#memory,
+#custom-expand-icon,
+#tray,
+#bluetooth,
+#pulseaudio,
+#network,
+#battery,
+#custom-power {
+  background-color: @bg1;
+  color: @fg1;
+  margin: 3px 0 3px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* =====================
+   Left cluster
+   ===================== */
+#custom-launcher {
+  margin-left: 3px;
+  margin-right: 4px;
+  padding: 0 12px 0px 7px;
+  font-size: 17px;
+  color: @accent3;
+}
+#custom-launcher:hover {
+  color: @accent2;
+}
+
+#workspaces {
+  margin-right: 4px;
+}
+#workspaces button {
+  min-width: 14px;
+  color: @fg0;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+}
+#workspaces button:hover {
+  color: @accent4;
+}
+#workspaces button.active {
+  color: @accent2;
+}
+#workspaces button.empty:hover {
+  color: @accent4;
+}
+#workspaces button.urgent {
+  color: @accent5;
+}
+
+/* =====================
+   MPRIS & Clock
+   ===================== */
+#mpris {
+  color: @spotify;
+}
+
+/* =====================
+   CPU & Memory
+   ===================== */
+#cpu {
+  border-radius: 4px 0 0 4px;
+}
+#memory {
+  border-radius: 0 4px 4px 0;
+}
+
+/* =====================
+   Right cluster
+   (Expand → Tray → Bluetooth → Audio → Network → Battery)
+   ===================== */
+#tray,
+#bluetooth,
+#pulseaudio,
+#network {
+  border-radius: 0;
+  margin: 3px 0 3px;
+  padding: 2px 6px;
+}
+
+#custom-expand-icon {
+  border-radius: 4px 0 0 4px;
+  margin-left: 4px;
+  padding-right: 0;
+  font-size: 14px;
+}
+
+#tray {
+  padding: 0;
+}
+
+#bluetooth {
+  font-size: 14px;
+  padding-right: 4px;
+}
+
+#pulseaudio {
+  font-size: 16px;
+  padding-right: 4px;
+}
+
+#network {
+  font-size: 13px;
+  padding-right: 10px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Battery */
+#battery {
+  border-radius: 0 4px 4px 0;
+}
+#battery.charging {
+  background-color: @accent7;
+}
+#battery.critical:not(.charging) {
+  background-color: @accent5;
+  color: @fg2;
+}
+
+/* =====================
+   Power button
+   ===================== */
+#custom-power {
+  margin-right: 3px;
+  margin-left: 4px;
+  padding: 2px 12px 2px 9px;
+  font-size: 14px;
+  color: @accent6;
+}
+#custom-power:hover {
+  color: @accent5;
+}
+
+/* =====================
+   Tooltip (disabled)
+   ===================== */
+tooltip {
+  opacity: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}

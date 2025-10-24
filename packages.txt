@@ -42,6 +42,7 @@ localsend-bin 1.17.0-1
 lsd 1.2.0-1
 mako 1.10.0-1
 nano 8.6-1
+ncdu 2.9.1-2
 neovim 0.11.4-1
 networkmanager 1.54.1-1
 niri 25.08-2

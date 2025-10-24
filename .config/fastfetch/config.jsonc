@@ -1,10 +1,10 @@
 {
  "logo": {
    "source": "$HOME/.config/fastfetch/assets/squirtle_skol.png",
-   "width": 32,
+   "width": 34,
    "type": "kitty-direct",
    "padding": {
-     "right": 1,
+     "right": 0,
    },
    },
     "display": {
@@ -36,6 +36,10 @@
         {
             "key": "│ {#35} kernel  {#keys}│",
             "type": "kernel"
+        },
+        {
+            "key": "│ {#37} pkgs{#keys}    │",
+            "type": "packages"
         },
         {
             "key": "│ {#36}󰇄 desktop {#keys}│",

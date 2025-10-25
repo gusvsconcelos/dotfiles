@@ -3,7 +3,7 @@
 WALLPAPER_DIR="$HOME/Imagens/Wallpapers"
 [ ! -d "$WALLPAPER_DIR" ] && exit 1
 
-wallpapers=$(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \))
+wallpapers=$(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" \))
 [ -z "$wallpapers" ] && exit 1
 
 chosen=$(for img in $wallpapers; do

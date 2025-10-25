@@ -1,7 +1,7 @@
 @import "colors.rasi"
 
 * {
-    font:   "Ubuntu Bold 11";
+    font:   "Ubuntu 12";
     text-color:         @fg0;
     background-color:   transparent;
     margin:     0px;

@@ -13,7 +13,7 @@ fade-in=0.5
 # ── Appearance ─────────────────────────────────────────────
 color=1a1b26
 font=JetBrainsMono Nerd Font
-font-size=44
+font-size=46
 
 # ── Indicator ──────────────────────────────────────────────
 indicator
@@ -24,7 +24,7 @@ separator-color=00000000
 # ── Base Colors ────────────────────────────────────────────
 line-color=292e42
 ring-color=292e42
-inside-color=1a1b26
+inside-color=#16161e
 text-color=9aa5ce
 key-hl-color=7aa2f7
 bs-hl-color=f7768e
@@ -52,5 +52,5 @@ text-caps-lock-color=e0af68
 
 # ── Clock / Date ───────────────────────────────────────────
 clock
-timestr=%I:%M %p
-datestr=%a, %B %e
+timestr=%H:%M %p
+datestr=%e de %B 

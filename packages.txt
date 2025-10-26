@@ -1,6 +1,5 @@
 7zip
 amd-ucode
-arronax
 base
 base-devel
 bluetuith
@@ -9,7 +8,6 @@ bluez-obex
 bluez-utils
 btop
 btrfs-progs
-cartridges
 cava
 cliphist
 docker
@@ -71,7 +69,6 @@ rofi
 rofi-emoji
 sassc
 sddm
-selectdefaultapplication-git
 smartmontools
 spotify-launcher
 starship

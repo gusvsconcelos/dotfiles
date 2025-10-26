@@ -1,0 +1,10 @@
+Type=X-GNOME-Metatheme
+[Desktop Entry]
+Name=tokyonight-gtk
+Comment=An Flat Gtk+ theme based on Elegant Design
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=tokyonight-gtk
+MetacityTheme=tokyonight-gtk
+ButtonLayout=close,minimize,maximize:menu

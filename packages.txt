@@ -70,6 +70,7 @@ rofi-emoji
 sassc
 sddm
 smartmontools
+spicetify-cli
 spotify-launcher
 starship
 steam

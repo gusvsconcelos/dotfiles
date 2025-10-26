@@ -1,7 +1,7 @@
 @import "colors.rasi"
 
 * {
-    font:   "Ubuntu 12";
+    font:   "Ubuntu 14";
     text-color:         @fg0;
     background-color:   transparent;
     margin:     0px;
@@ -35,10 +35,6 @@ message {
     border-radius:      4px;
     border-color:       @bg2;
     background-color:   @bg2;
-}
-
-textbox {
-    padding:    8px 24px;
 }
 
 listview {

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-options="Shutdown\nReboot\nLogout\nSuspend\nLock"
+options="󰤆    Shutdown\n    Reboot\n󰗽    Logout\n󰏦    Suspend\n    Lock\n󰤁    Hibernate"
 
 chosen=$(echo -e "$options" | rofi -dmenu -p "Power Menu" -lines 6 -width 20 -theme $HOME/.config/rofi/themes/powermenu.rasi)
 
 confirm() {
-    echo -e "Yes\nNo" | rofi -dmenu -p "Confirm $1?" -theme $HOME/.config/rofi/themes/powermenu_confirm.rasi
+    echo -e "    Yes\n    No" | rofi -dmenu -p "Confirm $1?" -theme $HOME/.config/rofi/themes/powermenu_confirm.rasi
 }
 
 case "$chosen" in

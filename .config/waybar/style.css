@@ -130,6 +130,10 @@ window#waybar {
   font-size: 16px;
   padding-right: 4px;
 }
+#pulseaudio.volume {
+  font-size: 12px;
+  color: @fg0;
+}
 
 #network {
   font-size: 13px;

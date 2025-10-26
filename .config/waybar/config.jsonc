@@ -12,7 +12,7 @@
     "memory",
     "group/tray-expander",
     "bluetooth",
-    "pulseaudio",
+    "group/audio-expander",
     "network",
     "battery",
     "custom/power"
@@ -64,14 +64,31 @@
   /* =====================
      PulseAudio
      ===================== */
-  "pulseaudio": {
-    "format": "{icon}",
-    "format-muted": "󰝟",
-    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
-    "scroll-step": 5,
-    "tooltip-format": "Volume: {volume}%",
-    "on-click": "kitty pulsemixer",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  "pulseaudio#icon": {
+      "format": "{icon}",
+      "format-muted": "󰝟",
+      "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+      "scroll-step": 5,
+      "tooltip-format": "Volume: {volume}%",
+      "on-click": "kitty pulsemixer",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "pulseaudio#volume": {
+      "format": "{volume}%",
+      "format-muted": "0%",
+      "scroll-step": 5,
+      "tooltip-format": "Volume: {volume}%",
+      "on-click": "kitty pulsemixer",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "group/audio-expander": {
+      "orientation": "inherit",
+      "drawer": {
+          "transition-duration": 600,
+          "children-class": "pulseaudio#volume",
+          "transition-left": true
+      },
+      "modules": ["pulseaudio#icon", "pulseaudio#volume"]
   },
 
   /* =====================

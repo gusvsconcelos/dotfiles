@@ -60,7 +60,7 @@ layout {
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
-        proportion 0.66667
+        proportion 0.66666
     }
 
     default-column-width { proportion 0.5; }
@@ -149,7 +149,6 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
-    match app-id=r#"arronax$"# title="^Arronax$"
     match app-id=r#"org.kde.kcalc$"# title="^KCalc$"
     open-floating true
 }
@@ -168,7 +167,6 @@ layer-rule {
 environment {
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt6ct"
-    QT_QUICK_CONTROLS_STYLE "org.kde.desktop"
 }
 
 

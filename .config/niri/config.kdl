@@ -109,7 +109,7 @@ spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
-spawn-at-startup "swayidle" "-w"
+// spawn-at-startup "swayidle" "-w"
 
 
 //     __  ______  ________ __ ________  __   ____ _    ____________  __    _____  __
@@ -190,7 +190,8 @@ binds {
     Mod+Y                 hotkey-overlay-title="Color Picker"         { spawn-sh "niri msg pick-color | grep -oE '#[0-9a-fA-F]{6}' | head -n1 | wl-copy"; }
     Super+Shift+W         hotkey-overlay-title="Wallpaper Switcher"   { spawn-sh "$HOME/.config/rofi/scripts/wallpaper_switcher.sh"; }
     Super+Alt+L           hotkey-overlay-title="Lock the Screen"      { spawn "swaylock"; }
-    Super+Shift+Escape    hotkey-overlay-title="Power Menu"           { spawn-sh "$HOME/.config/rofi/scripts/powermenu.sh"; }
+    Super+Shift+Escape    hotkey-overlay-title="System Monitor"       { spawn-sh "kitty btop"; }
+    Super+Escape          hotkey-overlay-title="Power Menu"           { spawn-sh "$HOME/.config/rofi/scripts/powermenu.sh"; }
     Mod+Ctrl+Return       hotkey-overlay-title="Open System Settings" { spawn-sh "kitty nvim $HOME/.config/niri/config.kdl"; }
 
     // ─── Audio / Brightness ─────────────────────────────────────────

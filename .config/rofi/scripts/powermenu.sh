@@ -10,17 +10,17 @@ confirm() {
 
 case "$chosen" in
     *Shutdown)
-        if [[ $(confirm "Shutdown") == "Yes" ]]; then
+        if [[ $(confirm "󰤆    Shutdown") == "    Yes" ]]; then
             systemctl poweroff
         fi
         ;;
     *Reboot)
-        if [[ $(confirm "Reboot") == "Yes" ]]; then
+        if [[ $(confirm "    Reboot") == "    Yes" ]]; then
             systemctl reboot
         fi
         ;;
     *Logout)
-        if [[ $(confirm "Logout") == "Yes" ]]; then
+        if [[ $(confirm "󰗽    Logout") == "    Yes" ]]; then
            niri msg action quit -s 
         fi
         ;;

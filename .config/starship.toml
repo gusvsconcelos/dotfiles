@@ -1,8 +1,5 @@
 add_newline = false
 
-[status]
-disabled = true
-
 [aws]
 symbol = "  "
 

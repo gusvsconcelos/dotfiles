@@ -1,2 +1,2 @@
-timeout 300 'swaylock -f -c 000000' # Lock screen after 5 minutes
-timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' # Turn off display after 10 minutes
+timeout 300 'swaylock -f' # Lock screen after 5 minutes
+timeout 600 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors' # Turn off display after 10 minutes

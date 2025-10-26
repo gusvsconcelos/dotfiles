@@ -105,10 +105,11 @@ overview {
 //   \__ \ / / / /| | / /_/ / / / / / / / /_/ /
 //  ___/ // / / ___ |/ _, _/ / / / /_/ / ____/ 
 // /____//_/ /_/  |_/_/ |_| /_/  \____/_/      
-spawn-at-startup "waybar"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+spawn-at-startup "swww-daemon"
+spawn-at-startup "waybar"
+spawn-at-startup "swayidle" "-w"
 
 
 //     __  ______  ________ __ ________  __   ____ _    ____________  __    _____  __

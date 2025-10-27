@@ -132,7 +132,6 @@ window#waybar {
 }
 #pulseaudio.volume {
   font-size: 12px;
-  color: @fg0;
 }
 
 #network {
@@ -141,7 +140,9 @@ window#waybar {
   border-radius: 0 4px 4px 0;
 }
 
-/* Battery */
+/* =====================
+   Battery
+   ===================== */
 #battery {
   border-radius: 4px;
   padding: 2px 8px;

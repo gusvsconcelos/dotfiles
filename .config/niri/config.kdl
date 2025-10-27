@@ -180,16 +180,16 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+Space             hotkey-overlay-title="Run an Application"   { spawn-sh "rofi -show drun"; }
-    Super+B               hotkey-overlay-title="Open Browser"         { spawn "zen-browser"; }
-    Super+E               hotkey-overlay-title="Open File Manager"    { spawn-sh "kitty yazi"; }
+    Mod+B                 hotkey-overlay-title="Open Browser"         { spawn "zen-browser"; }
+    Mod+E                 hotkey-overlay-title="Open File Manager"    { spawn-sh "kitty yazi"; }
     Mod+Return            hotkey-overlay-title="Open Terminal"        { spawn "kitty"; }
     Mod+Ctrl+V            hotkey-overlay-title="Clipboard"            { spawn-sh "$HOME/.config/rofi/scripts/clipboard.sh"; }
     Mod+Ctrl+Period       hotkey-overlay-title="Emoji Picker"         { spawn-sh "rofi -modi emoji -show emoji -theme $HOME/.config/rofi/themes/menu_no_icons.rasi | wtype"; }
     Mod+Y                 hotkey-overlay-title="Color Picker"         { spawn-sh "niri msg pick-color | grep -oE '#[0-9a-fA-F]{6}' | head -n1 | wl-copy"; }
-    Super+Shift+W         hotkey-overlay-title="Wallpaper Switcher"   { spawn-sh "$HOME/.config/rofi/scripts/wallpaper_switcher.sh"; }
-    Super+Alt+L           hotkey-overlay-title="Lock the Screen"      { spawn "swaylock"; }
-    Super+Shift+Escape    hotkey-overlay-title="System Monitor"       { spawn-sh "kitty btop"; }
-    Super+Escape          hotkey-overlay-title="Power Menu"           { spawn-sh "$HOME/.config/rofi/scripts/powermenu.sh"; }
+    Mod+Shift+W           hotkey-overlay-title="Wallpaper Switcher"   { spawn-sh "$HOME/.config/rofi/scripts/wallpaper_switcher.sh"; }
+    Mod+Shift+L           hotkey-overlay-title="Lock the Screen"      { spawn "swaylock"; }
+    Ctrl+Shift+Escape     hotkey-overlay-title="System Monitor"       { spawn-sh "kitty btop"; }
+    Mod+Shift+Escape      hotkey-overlay-title="Power Menu"           { spawn-sh "$HOME/.config/rofi/scripts/powermenu.sh"; }
     Mod+Ctrl+Return       hotkey-overlay-title="Open System Settings" { spawn-sh "kitty nvim $HOME/.config/niri/config.kdl"; }
 
     // ─── Audio / Brightness ─────────────────────────────────────────

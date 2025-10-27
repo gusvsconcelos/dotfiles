@@ -19,6 +19,15 @@
   ],
 
   /* =====================
+     Custom Launcher
+     ===================== */
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  /* =====================
      Niri Workspaces
      ===================== */
   "niri/workspaces": {
@@ -36,29 +45,78 @@
   },
 
   /* =====================
-     Network
+     MPRIS / Spotify
      ===================== */
-  "network": {
-    "interval": 2,
-    "max-length": 30,
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰈀",
-    "format-linked": "󰈀 {ifname} (No IP)",
-    "format-disconnected": "󰖪",
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nDownload: <b><span foreground='#99ffdd'> {bandwidthDownBytes}</span></b>\nUpload: <b><span foreground='#ffcc66'> {bandwidthUpBytes}</span></b>",
-    "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty -e nmtui"
+  "mpris": {
+    "player": "spotify",
+    "format": "{player_icon}  {artist} • {title}",
+    "format-paused": "{status_icon}  <i>{artist} • {title}</i>",
+    "player-icons": { "default": "" },
+    "status-icons": { "paused": "" },
+    "max-length": 50
   },
 
   /* =====================
-     Battery
+     Clock
      ===================== */
-  "battery": {
-    "states": { "warning": 20, "critical": 10 },
-    "format": "{capacity}% {icon} ",
-    "format-charging": "{capacity}% ⚡",
-    "format-icons": ["", "", "", "", ""]
+  "clock": {
+    "format": "󰥔 {:%H:%M • %A}",
+    "format-alt": " {:%d/%m/%Y}",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>"
+  },
+
+  /* =====================
+     CPU
+     ===================== */
+  "cpu": {
+    "interval": 2,
+    "format": "  {usage}%",
+    "tooltip-format": "CPU Usage: {usage}%",
+    "on-click": "kitty btop"
+  },
+
+  /* =====================
+     Memory
+     ===================== */
+  "memory": {
+    "interval": 2,
+    "format": "  {used:0.1f}GiB",
+    "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB",
+    "on-click": "kitty btop"
+  },
+
+  /* =====================
+     Group / Tray
+     ===================== */
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": ["custom/expand-icon", "tray"]
+  },
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 6
+  },
+
+  /* =====================
+     Bluetooth
+     ===================== */
+  "bluetooth": {
+    "format": "{icon}",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "kitty bluetuith",
+    "on-click-right": "rfkill toggle bluetooth"
   },
 
   /* =====================
@@ -92,55 +150,29 @@
   },
 
   /* =====================
-     Bluetooth
+     Network
      ===================== */
-  "bluetooth": {
-    "format": "{icon}",
-    "format-disabled": "󰂲",
-    "format-off": "󰂲",
-    "format-on": "󰂯",
-    "format-connected": "󰂱",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "kitty bluetuith",
-    "on-click-right": "rfkill toggle bluetooth"
+  "network": {
+    "interval": 2,
+    "max-length": 30,
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-disconnected": "󰖪",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nDownload: <b><span foreground='#99ffdd'> {bandwidthDownBytes}</span></b>\nUpload: <b><span foreground='#ffcc66'> {bandwidthUpBytes}</span></b>",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty -e nmtui"
   },
 
   /* =====================
-     Clock
+     Battery
      ===================== */
-  "clock": {
-    "format": "󰥔 {:%H:%M • %A}",
-    "format-alt": " {:%d/%m/%Y}",
-    "tooltip-format": "<tt><big>{calendar}</big></tt>"
-  },
-
-  /* =====================
-     Group / Tray
-     ===================== */
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
-    },
-    "modules": ["custom/expand-icon", "tray"]
-  },
-  "custom/expand-icon": {
-    "format": " ",
-    "tooltip": false
-  },
-  "tray": {
-    "spacing": 6
-  },
-
-  /* =====================
-     Custom Launcher
-     ===================== */
-  "custom/launcher": {
-    "format": "󰣇",
-    "on-click": "rofi -show drun",
-    "tooltip": false
+  "battery": {
+    "states": { "warning": 20, "critical": 10 },
+    "format": "{capacity}% {icon} ",
+    "format-charging": "{capacity}% ⚡",
+    "format-icons": ["", "", "", "", ""]
   },
 
   /* =====================
@@ -151,36 +183,4 @@
     "on-click": "~/.config/rofi/scripts/powermenu.sh",
     "tooltip": false
   },
-
-  /* =====================
-     MPRIS / Spotify
-     ===================== */
-  "mpris": {
-    "player": "spotify",
-    "format": "{player_icon}  {artist} • {title}",
-    "format-paused": "{status_icon}  <i>{artist} • {title}</i>",
-    "player-icons": { "default": "" },
-    "status-icons": { "paused": "" },
-    "max-length": 50
-  },
-
-  /* =====================
-     CPU
-     ===================== */
-  "cpu": {
-    "interval": 2,
-    "format": "  {usage}%",
-    "tooltip-format": "CPU Usage: {usage}%",
-    "on-click": "kitty btop"
-  },
-
-  /* =====================
-     Memory
-     ===================== */
-  "memory": {
-    "interval": 2,
-    "format": "  {used:0.1f}GiB",
-    "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB",
-    "on-click": "kitty btop"
-  }
 }

@@ -68,13 +68,13 @@ window#waybar {
   text-shadow: none;
 }
 #workspaces button:hover {
-  color: @accent4;
+  color: @fg1;
 }
 #workspaces button.active {
   color: @accent2;
 }
 #workspaces button.empty:hover {
-  color: @accent4;
+  color: @fg1;
 }
 #workspaces button.urgent {
   color: @accent5;

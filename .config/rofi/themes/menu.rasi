@@ -1,7 +1,7 @@
 @import "colors.rasi"
 
 * {
-    font:   "Ubuntu 11";
+    font:   "Ubuntu 12";
     text-color:         @fg0;
     background-color:   transparent;
     margin:     0px;
@@ -52,7 +52,7 @@ textbox {
 
 listview {
     margin:     12px 0 0;
-    lines:      8;
+    lines:      6;
     columns:    1;
     fixed-height: false;
 }
@@ -80,7 +80,7 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size:           1.4em;
+    size:           1.5em;
     vertical-align: 0.5;
 }
 

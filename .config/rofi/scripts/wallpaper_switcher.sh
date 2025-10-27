@@ -9,7 +9,7 @@ wallpapers=$(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -ina
 chosen=$(for img in $wallpapers; do
     name=$(basename "$img")
     echo -en "$name\0icon\x1f$img\n"
-done | rofi -dmenu -p "Wallpaper" -lines 10 -theme-str 'element-icon { size: 64px; }'  -theme $HOME/.config/rofi/themes/wallpaper_switcher.rasi)
+done | rofi -dmenu -p "Wallpaper" -theme-str 'element-icon { size: 64px; }' -theme $HOME/.config/rofi/themes/wallpaper_switcher.rasi)
 
 [ -z "$chosen" ] && exit 0
 

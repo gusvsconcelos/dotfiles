@@ -93,6 +93,7 @@ wget
 wireless_tools
 wireplumber
 wl-clipboard
+wlsunset
 wtype
 xdg-desktop-portal-gnome
 xdg-utils

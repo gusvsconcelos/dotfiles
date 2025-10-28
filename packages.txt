@@ -8,6 +8,7 @@ bluez-obex
 bluez-utils
 btop
 btrfs-progs
+cartridges
 cava
 cliphist
 docker
@@ -39,6 +40,7 @@ linux-zen
 localsend-bin
 lsd
 mako
+minecraft-launcher
 nano
 ncdu
 neovim

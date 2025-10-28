@@ -38,7 +38,7 @@ window#waybar {
   background-color: @bg1;
   color: @fg1;
   margin: 3px 0 3px;
-  padding: 2px 8px;
+  padding: 2px 6px;
   border-radius: 4px;
   transition: all 0.2s ease;
 }
@@ -48,7 +48,7 @@ window#waybar {
    ===================== */
 #custom-launcher {
   margin-left: 3px;
-  margin-right: 4px;
+  margin-right: 3px;
   padding: 0 12px 0px 7px;
   font-size: 17px;
   color: @accent3;
@@ -58,7 +58,7 @@ window#waybar {
 }
 
 #workspaces {
-  margin-right: 4px;
+  margin-right: 3px;
 }
 #workspaces button {
   min-width: 14px;
@@ -112,7 +112,7 @@ window#waybar {
 
 #custom-expand-icon {
   border-radius: 4px 0 0 4px;
-  margin-left: 4px;
+  margin-left: 3px;
   padding-right: 0;
   font-size: 14px;
 }
@@ -137,7 +137,7 @@ window#waybar {
 
 #network {
   font-size: 13px;
-  padding-right: 10px;
+  padding-right: 9px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -146,8 +146,8 @@ window#waybar {
    ===================== */
 #battery {
   border-radius: 4px;
-  padding: 2px 8px;
-  margin-left: 4px;
+  padding: 2px 6px;
+  margin-left: 3px;
 }
 #battery.charging {
   background-color: @accent7;
@@ -163,7 +163,7 @@ window#waybar {
    ===================== */
 #custom-power {
   margin-right: 3px;
-  margin-left: 4px;
+  margin-left: 3px;
   padding: 2px 12px 2px 9px;
   font-size: 14px;
   color: @accent6;

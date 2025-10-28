@@ -179,7 +179,7 @@
      Custom Power
      ===================== */
   "custom/power": {
-    "format": "⏻",
+    "format": "",
     "on-click": "~/.config/rofi/scripts/powermenu.sh",
     "tooltip": false
   },

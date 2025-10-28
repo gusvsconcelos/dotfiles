@@ -113,12 +113,13 @@ window#waybar {
 #custom-expand-icon {
   border-radius: 4px 0 0 4px;
   margin-left: 4px;
-  padding-right: 4px;
+  padding-right: 0;
   font-size: 14px;
 }
 
 #tray {
-  padding: 0;
+  padding-left: 4px;
+  padding-right: 0;
 }
 
 #bluetooth {

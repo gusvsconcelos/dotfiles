@@ -17,12 +17,16 @@ fastfetch
 fd
 fish
 fzf
+gamemode
+gamescope
 gimp
 git
 github-cli
+gnome-keyring
 gst-plugin-pipewire
 imv
 iwd
+jre-openjdk
 kcalc
 kitty
 krita

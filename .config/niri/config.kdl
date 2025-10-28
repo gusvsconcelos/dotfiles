@@ -186,6 +186,7 @@ binds {
     Mod+Return        hotkey-overlay-title="Open Terminal"            { spawn "kitty"; }
     Mod+B             hotkey-overlay-title="Open Browser"             { spawn "zen-browser"; }
     Mod+E             hotkey-overlay-title="Open File Manager"        { spawn-sh "kitty yazi"; }
+    Mod+G             hotkey-overlay-title="Open Game Launcher"       { spawn "cartridges"; }
 
     // ─── Utilities / Tools ──────────────────────────────────────────
     Mod+Ctrl+V        hotkey-overlay-title="Clipboard"                { spawn-sh "$HOME/.config/rofi/scripts/clipboard.sh"; }

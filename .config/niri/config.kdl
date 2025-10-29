@@ -170,7 +170,6 @@ layer-rule {
 environment {
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt6ct"
-    _JAVA_AWT_WM_NONREPARENTING "1" // Fix Intellij gray screen.
 }
 
 

@@ -165,7 +165,7 @@ window#waybar {
 #custom-power {
   margin-right: 3px;
   margin-left: 3px;
-  padding: 0px 11px 0px 7px;
+  padding: 0px 10px 0px 7px;
   font-size: 16px;
   color: @accent6;
 }

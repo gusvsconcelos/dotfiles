@@ -32,40 +32,48 @@
         {
             "key": "│ {#34} desktop  {#keys}│",
             "type": "wm",
-        },
-        {
-            "key": "│ {#35} kernel   {#keys}│",
-            "type": "kernel"
-        },
-        {
-            "key": "│ {#37}󰏖 packages {#keys}│",
-            "type": "packages"
+            "format": "{pretty-name}"
         },
         {
             "key": "│ {#37}󰇄 desktop  {#keys}│",
             "type": "de"
         },
         {
+            "key": "│ {#35} kernel   {#keys}│",
+            "type": "kernel",
+            "format": "{release}"
+        },
+        {
+            "key": "│ {#37}󰏖 packages {#keys}│",
+            "type": "packages",
+            "format": "{all}"
+        },
+        {
             "key": "│ {#38} terminal {#keys}│",
-            "type": "terminal"
+            "type": "terminal",
+            "format": "{pretty-name}"
         },
         {
             "key": "│ {#34} shell    {#keys}│",
-            "type": "shell"
+            "type": "shell",
+            "format": "{pretty-name}"
         },
         {
             "key": "│ {#31}󰉉 disk     {#keys}│",
             "type": "disk",
-            "folders": "/"
+            "folders": "/",
+            "format": "{1} / {2}"
         },
         {
             "key": "│ {#32}󰍛 cpu      {#keys}│",
             "type": "cpu",
-            "showPeCoreCount": true
+            "format": "{name}",
+            "showPeCoreCount": false
         },
         {
             "key": "│ {#33} memory   {#keys}│",
-            "type": "memory"
+            "type": "memory",
+            "format": "{used} / {total}"
         },
         {
             "key": "│ {#39}󰅐 uptime   {#keys}│",

@@ -4,7 +4,7 @@
    "width": 34,
    "type": "kitty-direct",
    "padding": {
-     "right": 0,
+     "right": 1,
    },
    },
     "display": {

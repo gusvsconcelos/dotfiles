@@ -61,6 +61,7 @@ pipewire-pulse
 plymouth
 plymouth-theme-monoarch
 polkit-gnome
+protonup-qt
 pulsemixer
 python-pip
 python-pipx

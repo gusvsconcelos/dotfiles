@@ -76,7 +76,6 @@ rofi-emoji
 sassc
 sddm
 smartmontools
-spicetify-cli
 spotify-launcher
 starship
 steam
@@ -89,6 +88,7 @@ ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family
 ufw
+unzip
 upscayl-bin
 vesktop
 vim

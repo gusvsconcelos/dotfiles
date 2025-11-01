@@ -42,6 +42,7 @@ linux-firmware
 linux-zen
 localsend-bin
 lsd
+lutris
 mako
 mangohud
 minecraft-launcher
@@ -54,6 +55,7 @@ noto-fonts-emoji
 npm
 nwg-look
 obsidian
+opentabletdriver
 pipewire
 pipewire-alsa
 pipewire-jack

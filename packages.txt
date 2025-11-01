@@ -8,7 +8,6 @@ bluez-obex
 bluez-utils
 btop
 btrfs-progs
-cartridges
 cava
 cliphist
 docker

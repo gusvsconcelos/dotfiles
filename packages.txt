@@ -16,6 +16,7 @@ fastfetch
 fd
 fish
 fzf
+gamemode
 gimp
 git
 github-cli
@@ -32,10 +33,10 @@ kvantum-qt5
 lazydocker
 lazygit
 less
+lib32-gamemode
 lib32-mangohud
 libnotify
 libpulse
-libreoffice-fresh
 limine
 linux-firmware
 linux-zen
@@ -54,6 +55,7 @@ noto-fonts-emoji
 npm
 nwg-look
 obsidian
+onlyoffice-bin
 opentabletdriver
 pipewire
 pipewire-alsa

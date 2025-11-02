@@ -1,3 +1,12 @@
+//  _       ______  ____  __ _______ ____  ___   _________________
+// | |     / / __ \/ __ \/ //_/ ___// __ \/   | / ____/ ____/ ___/
+// | | /| / / / / / /_/ / ,<  \__ \/ /_/ / /| |/ /   / __/  \__ \ 
+// | |/ |/ / /_/ / _, _/ /| |___/ / ____/ ___ / /___/ /___ ___/ / 
+// |__/|__/\____/_/ |_/_/ |_/____/_/   /_/  |_\____/_____//____/  
+workspace "1"
+workspace "2"
+
+
 //     _____   ______  __  ________
 //    /  _/ | / / __ \/ / / /_  __/
 //    / //  |/ / /_/ / / / / / /   
@@ -12,8 +21,6 @@ input {
         repeat-delay 300
     }
 
-    disable-power-key-handling
-
     touchpad {
         tap
         natural-scroll
@@ -23,6 +30,8 @@ input {
         accel-profile "flat"
         accel-speed   0.4
     }
+
+    disable-power-key-handling
 }
 
 
@@ -82,10 +91,10 @@ layout {
 
     shadow {
         // on
-        softness 30
-        spread   5
+        softness 6
+        spread   4
         offset   x=0 y=5
-        color    "#0007"
+        color    "#16161ebb"
     }
 
     background-color "transparent"
@@ -114,7 +123,6 @@ spawn-at-startup "swayidle"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
 
-
 //     __  ______  ________ __ ________  __   ____ _    ____________  __    _____  __
 //    / / / / __ \/_  __/ //_// ____/\ \/ /  / __ \ |  / / ____/ __ \/ /   /   \ \/ /
 //   / /_/ / / / / / / / ,<  / __/    \  /  / / / / | / / __/ / /_/ / /   / /| |\  / 
@@ -131,7 +139,7 @@ hotkey-overlay {
 // | |/ |/ // // /|  / /_/ / /_/ /| |/ |/ /  / /_/ / /___/ __  / ___ | |/ // // /_/ / _, _/ 
 // |__/|__/___/_/ |_/_____/\____/ |__/|__/  /_____/_____/_/ /_/_/  |_|___/___/\____/_/ |_|  
 prefer-no-csd
-screenshot-path "~/Imagens/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Imagens/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
 
 //  _       _______   ______  ____ _       __   ____  __  ____    ___________
@@ -201,9 +209,9 @@ binds {
     Mod+Ctrl+Return   hotkey-overlay-title="Open System Settings"     { spawn-sh "kitty nvim $HOME/.config/niri/config.kdl"; }
 
     // ─── Audio / Brightness ─────────────────────────────────────────
-	XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"; }
-	XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; }
-    XF86AudioMute         allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+	XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "$HOME/.config/mako/scripts/volume_osd.sh 'wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+'"; }
+	XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "$HOME/.config/mako/scripts/volume_osd.sh 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "$HOME/.config/mako/scripts/volume_osd.sh 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'"; }
     XF86AudioMicMute      allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86AudioNext         allow-when-locked=true { spawn-sh "playerctl next"; }
     XF86AudioPlay         allow-when-locked=true { spawn-sh "playerctl play-pause"; }
@@ -325,12 +333,3 @@ binds {
     Mod+Shift+9 { move-column-to-workspace 9; }
     Mod+Shift+0 { move-column-to-workspace 10; }
 }
-
-
-//  _       ______  ____  __ _______ ____  ___   _________________
-// | |     / / __ \/ __ \/ //_/ ___// __ \/   | / ____/ ____/ ___/
-// | | /| / / / / / /_/ / ,<  \__ \/ /_/ / /| |/ /   / __/  \__ \ 
-// | |/ |/ / /_/ / _, _/ /| |___/ / ____/ ___ / /___/ /___ ___/ / 
-// |__/|__/\____/_/ |_/_/ |_/____/_/   /_/  |_\____/_____//____/  
-workspace "1"
-workspace "2"

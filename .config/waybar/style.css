@@ -74,7 +74,6 @@ window#waybar {
 #workspaces button.active {
   color: @accent2;
 }
-}
 #workspaces button.urgent {
   color: @accent5;
 }

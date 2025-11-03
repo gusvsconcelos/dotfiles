@@ -1,0 +1,17 @@
+set -g fish_greeting
+
+if status is-interactive
+    starship init fish | source
+end
+
+# Alias
+alias up='clear; neofetch; echo "SYSTEM UPDATE:"; sudo apt update && sudo apt full-upgrade -y'
+alias clean='sudo apt autoremove -y && sudo apt autoclean'
+alias clean-full='sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-size=50M && sudo rm -rf /tmp/* /var/tmp/*'
+alias ls='lsd'
+alias py='python'
+alias vim='nvim'
+alias zel='zellij'
+alias fetch='clear;fastfetch'
+alias dev='cd $HOME/Documentos/dev/'
+alias nv='cd $HOME/.config/nvim/;nvim'

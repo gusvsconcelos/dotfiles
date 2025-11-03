@@ -97,6 +97,7 @@ ttf-ubuntu-font-family
 ufw
 unzip
 upscayl-bin
+ventoy-bin
 vesktop
 vim
 vulkan-radeon

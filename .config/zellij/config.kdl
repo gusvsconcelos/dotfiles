@@ -267,6 +267,6 @@ web_client {
     font "monospace"
 }
 
-theme "tokyonight"
+theme "rose-pine"
 
 show_startup_tips false

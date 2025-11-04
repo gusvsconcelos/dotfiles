@@ -182,6 +182,9 @@ layer-rule {
 environment {
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt6ct"
+    GTK_IM_MODULE "ibus"
+    QT_IM_MODULE "ibus"
+    XMODIFIERS "@im=ibus"
 }
 
 
@@ -195,9 +198,9 @@ binds {
 
     // ─── Application Launchers ──────────────────────────────────────
     Mod+Space         hotkey-overlay-title="Run an Application"       { spawn-sh "rofi -show drun"; }
-    Mod+Return        hotkey-overlay-title="Open Terminal"            { spawn "kitty"; }
+    Mod+Return        hotkey-overlay-title="Open Terminal"            { spawn "ghostty"; }
     Mod+B             hotkey-overlay-title="Open Browser"             { spawn "zen-browser"; }
-    Mod+E             hotkey-overlay-title="Open File Manager"        { spawn-sh "kitty yazi"; }
+    Mod+E             hotkey-overlay-title="Open File Manager"        { spawn-sh "ghostty -e yazi"; }
 
     // ─── Utilities / Tools ──────────────────────────────────────────
     Mod+Ctrl+V        hotkey-overlay-title="Clipboard"                { spawn-sh "$HOME/.config/rofi/scripts/clipboard.sh"; }
@@ -207,10 +210,10 @@ binds {
     Mod+Ctrl+B        hotkey-overlay-title="Toggle Blue Light Filter" { spawn-sh "$HOME/.config/niri/scripts/bluelight_filter.sh"; }
 
     // ─── System Actions ─────────────────────────────────────────────
-    Ctrl+Shift+Escape hotkey-overlay-title="System Monitor"           { spawn-sh "kitty btop"; }
+    Ctrl+Shift+Escape hotkey-overlay-title="System Monitor"           { spawn-sh "ghostty -e btop"; }
     Mod+Shift+L       hotkey-overlay-title="Lock the Screen"          { spawn "swaylock"; }
     Mod+Shift+Escape  hotkey-overlay-title="Power Menu"               { spawn-sh "$HOME/.config/rofi/scripts/powermenu.sh"; }
-    Mod+Ctrl+Return   hotkey-overlay-title="Open System Settings"     { spawn-sh "kitty nvim $HOME/.config/niri/config.kdl"; }
+    Mod+Ctrl+Return   hotkey-overlay-title="Open System Settings"     { spawn-sh "ghostty -e nvim $HOME/.config/niri/config.kdl"; }
 
     // ─── Audio / Brightness ─────────────────────────────────────────
 	XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "$HOME/.config/mako/scripts/volume_osd.sh 'wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+'"; }

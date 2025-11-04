@@ -72,7 +72,7 @@
     "interval": 2,
     "format": "  {usage}%",
     "tooltip-format": "CPU Usage: {usage}%",
-    "on-click": "kitty btop"
+    "on-click": "ghostty -e btop"
   },
 
   /* =====================
@@ -82,7 +82,7 @@
     "interval": 2,
     "format": "  {used:0.1f}GiB",
     "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB",
-    "on-click": "kitty btop"
+    "on-click": "ghostty -e btop"
   },
 
   /* =====================
@@ -115,7 +115,7 @@
     "format-connected": "󰂱",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "kitty bluetuith",
+    "on-click": "ghostty -e bluetuith",
     "on-click-right": "rfkill toggle bluetooth"
   },
 
@@ -128,7 +128,7 @@
       "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
       "scroll-step": 5,
       "tooltip-format": "Volume: {volume}%",
-      "on-click": "kitty pulsemixer",
+      "on-click": "ghostty -e pulsemixer",
       "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "pulseaudio#volume": {
@@ -136,7 +136,7 @@
       "format-muted": "0%",
       "scroll-step": 5,
       "tooltip-format": "Volume: {volume}%",
-      "on-click": "kitty pulsemixer",
+      "on-click": "ghostty -e pulsemixer",
       "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "group/audio-expander": {
@@ -162,7 +162,7 @@
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nDownload: <b><span foreground='#99ffdd'> {bandwidthDownBytes}</span></b>\nUpload: <b><span foreground='#ffcc66'> {bandwidthUpBytes}</span></b>",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty -e nmtui"
+    "on-click": "ghostty -e nmtui"
   },
 
   /* =====================

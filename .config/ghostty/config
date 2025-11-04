@@ -3,9 +3,11 @@
 # ╰───────────────────────────────────────────────────────────╯
 
 # ──[ Appearance ]────────────────────────────────────────────
-theme = dark:Rose Pine, light:Rose Pine Dawn
-background-opacity = 0.8
+theme = TokyoNight Night 
 window-decoration = false
+background-opacity = 0.8
+cursor-style = block
+shell-integration-features = no-cursor
 
 # ──[ Typography ]────────────────────────────────────────────
 font-family = FantasqueSansM Nerd Font Mono

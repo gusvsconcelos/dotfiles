@@ -19,16 +19,17 @@ fd
 fish
 fzf
 gamemode
+ghostty
 gimp
 git
 github-cli
 gnome-keyring
 goverlay
 gst-plugin-pipewire
+ibus
 imv
 jre-openjdk
 kcalc
-kitty
 krita
 kvantum
 kvantum-qt5
@@ -92,6 +93,7 @@ swaylock-effects-git
 swww
 tldr
 ttf-cascadia-code-nerd
+ttf-fantasque-nerd
 ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family
 ufw

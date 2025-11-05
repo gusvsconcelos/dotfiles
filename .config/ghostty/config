@@ -1,26 +1,22 @@
-# ╭──────────────────────────────────────────────────────────────╮
-# │                           GHOSTTY                            │
-# ╰──────────────────────────────────────────────────────────────╯
+# ╭────────────────────────────────────────────────────────────╮
+# │                           GHOSTTY                          │
+# ╰────────────────────────────────────────────────────────────╯
 
-
-# ──[ Appearance ]────────────────────────────────────────────
+# ──[ Appearance ]──────────────────────────────────────────────
 theme = TokyoNight Night
 window-decoration = false
 background-opacity = 0.8
 cursor-style = block
 
-
-# ──[ Typography ]────────────────────────────────────────────
+# ──[ Typography ]──────────────────────────────────────────────
 font-family = JetbrainsMono Nerd Font
 font-size = 14
 
-
-# ──[ Spacing & Layout ]──────────────────────────────────────
+# ──[ Spacing & Layout ]────────────────────────────────────────
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
 
-
-# ──[ Behavior ]──────────────────────────────────────────────
+# ──[ Behavior ]────────────────────────────────────────────────
 confirm-close-surface = false
 shell-integration-features = no-cursor

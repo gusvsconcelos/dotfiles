@@ -1,4 +1,8 @@
-# ── General ───────────────────────────────────────────────
+# ╭────────────────────────────────────────────────────────────╮
+# │                            MAKO                            │
+# ╰────────────────────────────────────────────────────────────╯
+
+# ──[ General ]─────────────────────────────────────────────────
 max-history=5
 history=1
 sort=-time
@@ -9,7 +13,7 @@ layer=top
 anchor=bottom-center
 actions=1
 
-# ── Appearance ─────────────────────────────────────────────
+# ──[ Appearance ]──────────────────────────────────────────────
 font=Ubuntu Regular 11
 width=320
 height=100
@@ -20,23 +24,23 @@ border-size=2
 border-radius=4
 text-alignment=left
 
-# ── Colors ─────────────────────────────────────────────────
+# ──[ Colors ]──────────────────────────────────────────────────
 background-color=#1a1b26
 text-color=#a9b1d6
 border-color=#292e42
 progress-color=over #414868
 
-# ── Icons ──────────────────────────────────────────────────
+# ──[ Icons ]───────────────────────────────────────────────────
 icons=1
 max-icon-size=64
 icon-location=left
 icon-path=$HOME/.local/share/icons/YAMIS
 
-# ── Urgency overrides ──────────────────────────────────────
+# ──[ Urgency Overrides ]───────────────────────────────────────
 [urgency=high]
 border-color=#f7768e
 
-# ── OSD overrides ──────────────────────────────────────
+# ──[ OSD Overrides ]───────────────────────────────────────────
 [app-name=volume_osd]
 layer=overlay
 text-alignment=center

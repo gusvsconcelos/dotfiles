@@ -1,7 +1,6 @@
-// ╭──────────────────────────────────────────────────────────────╮
-// │                            WAYBAR                            │
-// ╰──────────────────────────────────────────────────────────────╯
-
+// ╭───────────────────────────────────────────────────────────╮
+// │                          WAYBAR                           │
+// ╰───────────────────────────────────────────────────────────╯
 
 {
   "layer": "top",
@@ -10,7 +9,7 @@
   "output": ["*"],
   "reload_style_on_change": true,
 
-  // ──[ Modules ]────────────────────────────────────────────────
+  // ──[ Modules ]──────────────────────────────────────────────
   "modules-left": ["custom/launcher", "niri/workspaces", "mpris"],
   "modules-center": ["clock"],
   "modules-right": [
@@ -24,14 +23,14 @@
     "custom/power"
   ],
 
-  // ──[ Custom Launcher ]────────────────────────────────────────
+  // ──[ Custom Launcher ]──────────────────────────────────────
   "custom/launcher": {
     "format": "󰣇",
     "on-click": "rofi -show drun",
     "tooltip": false
   },
 
-  // ──[ Niri Workspaces ]────────────────────────────────────────
+  // ──[ Niri Workspaces ]──────────────────────────────────────
   "niri/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -45,7 +44,7 @@
     }
   },
 
-  // ──[ MPRIS / Spotify ]────────────────────────────────────────
+  // ──[ MPRIS / Spotify ]──────────────────────────────────────
   "mpris": {
     "player": "spotify",
     "format": "{player_icon}  {artist} • {title}",
@@ -56,14 +55,14 @@
     "ellipsis": "…"
   },
 
-  // ──[ Clock ]──────────────────────────────────────────────────
+  // ──[ Clock ]────────────────────────────────────────────────
   "clock": {
     "format": "󰥔 {:%H:%M • %A}",
     "format-alt": " {:%d/%m/%Y}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>"
   },
 
-  // ──[ CPU ]────────────────────────────────────────────────────
+  // ──[ CPU ]──────────────────────────────────────────────────
   "cpu": {
     "interval": 2,
     "format": "  {usage}%",
@@ -71,7 +70,7 @@
     "on-click": "ghostty -e btop"
   },
 
-  // ──[ Memory ]─────────────────────────────────────────────────
+  // ──[ Memory ]───────────────────────────────────────────────
   "memory": {
     "interval": 2,
     "format": "  {used:0.1f}GiB",
@@ -79,7 +78,7 @@
     "on-click": "ghostty -e btop"
   },
 
-  // ──[ Group / Tray ]───────────────────────────────────────────
+  // ──[ Group / Tray ]─────────────────────────────────────────
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
@@ -96,7 +95,7 @@
     "spacing": 4
   },
 
-  // ──[ Bluetooth ]──────────────────────────────────────────────
+  // ──[ Bluetooth ]────────────────────────────────────────────
   "bluetooth": {
     "format": "{icon}",
     "format-disabled": "󰂲",
@@ -109,7 +108,7 @@
     "on-click-right": "rfkill toggle bluetooth"
   },
 
-  // ──[ PulseAudio ]─────────────────────────────────────────────
+  // ──[ PulseAudio ]───────────────────────────────────────────
   "pulseaudio#icon": {
     "format": "{icon}",
     "format-muted": "󰝟",
@@ -137,7 +136,7 @@
     "modules": ["pulseaudio#icon", "pulseaudio#volume"]
   },
 
-  // ──[ Network ]────────────────────────────────────────────────
+  // ──[ Network ]──────────────────────────────────────────────
   "network": {
     "interval": 2,
     "max-length": 30,
@@ -151,7 +150,7 @@
     "on-click": "ghostty -e nmtui"
   },
 
-  // ──[ Battery ]────────────────────────────────────────────────
+  // ──[ Battery ]──────────────────────────────────────────────
   "battery": {
     "states": { "warning": 20, "critical": 10 },
     "format": "{capacity}% {icon} ",
@@ -159,7 +158,7 @@
     "format-icons": ["", "", "", "", ""]
   },
 
-  // ──[ Custom Power ]───────────────────────────────────────────
+  // ──[ Custom Power ]─────────────────────────────────────────
   "custom/power": {
     "format": "",
     "on-click": "~/.config/rofi/scripts/powermenu.sh",

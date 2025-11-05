@@ -1,27 +1,31 @@
-# ── General ───────────────────────────────────────────────
+# ╭────────────────────────────────────────────────────────────╮
+# │                      SWAYLOCK CONFIG                       │
+# ╰────────────────────────────────────────────────────────────╯
+
+# ──[ General ]─────────────────────────────────────────────────
 daemonize
 show-failed-attempts
 ignore-empty-password
 grace=0
 grace-no-touch
 
-# ── Visual Effects ─────────────────────────────────────────
+# ──[ Visual Effects ]──────────────────────────────────────────
 effect-blur=12x12
 effect-vignette=1:1
 fade-in=0.5
 
-# ── Appearance ─────────────────────────────────────────────
+# ──[ Appearance ]──────────────────────────────────────────────
 color=1a1b26
 font=JetBrainsMono Nerd Font
 font-size=46
 
-# ── Indicator ──────────────────────────────────────────────
+# ──[ Indicator ]───────────────────────────────────────────────
 indicator
 indicator-radius=160
 indicator-thickness=28
 separator-color=00000000
 
-# ── Base Colors ────────────────────────────────────────────
+# ──[ Base Colors ]─────────────────────────────────────────────
 line-color=292e42
 ring-color=292e42
 inside-color=#16161e
@@ -29,28 +33,28 @@ text-color=9aa5ce
 key-hl-color=7aa2f7
 bs-hl-color=f7768e
 
-# ── Verification State ─────────────────────────────────────
+# ──[ Verification State ]──────────────────────────────────────
 line-ver-color=7aa2f7
 ring-ver-color=7aa2f7
 inside-ver-color=1a1b26
 text-ver-color=7aa2f7
 
-# ── Wrong Password State ───────────────────────────────────
+# ──[ Wrong Password State ]────────────────────────────────────
 ring-wrong-color=f7768e
 line-wrong-color=f7768e
 inside-wrong-color=1a1b26
 text-wrong-color=f7768e
 
-# ── Clear State ────────────────────────────────────────────
+# ──[ Clear State ]─────────────────────────────────────────────
 ring-clear-color=c0caf5
 line-clear-color=c0caf5
 inside-clear-color=1a1b26
 text-clear-color=c0caf5
 
-# ── Caps Lock State ────────────────────────────────────────
+# ──[ Caps Lock State ]─────────────────────────────────────────
 text-caps-lock-color=e0af68
 
-# ── Clock / Date ───────────────────────────────────────────
+# ──[ Clock / Date ]────────────────────────────────────────────
 clock
 timestr=%H:%M %p
-datestr=%e de %B 
+datestr=%e de %B

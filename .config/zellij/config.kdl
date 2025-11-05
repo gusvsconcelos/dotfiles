@@ -1,7 +1,13 @@
+// ╭───────────────────────────────────────────────────────────╮
+// │                       ZELLIJ CONFIG                       │
+// ╰───────────────────────────────────────────────────────────╯
+
+// ──[ Keybinds ]───────────────────────────────────────────────
 keybinds clear-defaults=true {
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
+
     pane {
         bind "left" { MoveFocus "left"; }
         bind "down" { MoveFocus "down"; }
@@ -24,6 +30,7 @@ keybinds clear-defaults=true {
         bind "w" { ToggleFloatingPanes; SwitchToMode "normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "normal"; }
     }
+
     tab {
         bind "left" { GoToPreviousTab; }
         bind "down" { GoToNextTab; }
@@ -52,6 +59,7 @@ keybinds clear-defaults=true {
         bind "x" { CloseTab; SwitchToMode "normal"; }
         bind "tab" { ToggleTab; }
     }
+
     resize {
         bind "left" { Resize "Increase left"; }
         bind "down" { Resize "Increase down"; }
@@ -70,6 +78,7 @@ keybinds clear-defaults=true {
         bind "l" { Resize "Increase right"; }
         bind "Ctrl n" { SwitchToMode "normal"; }
     }
+
     move {
         bind "left" { MovePane "left"; }
         bind "down" { MovePane "down"; }
@@ -84,10 +93,12 @@ keybinds clear-defaults=true {
         bind "p" { MovePaneBackwards; }
         bind "tab" { MovePane; }
     }
+
     scroll {
         bind "e" { EditScrollback; SwitchToMode "normal"; }
         bind "s" { SwitchToMode "entersearch"; SearchInput 0; }
     }
+
     search {
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "n" { Search "down"; }
@@ -95,6 +106,7 @@ keybinds clear-defaults=true {
         bind "p" { Search "up"; }
         bind "w" { SearchToggleOption "Wrap"; }
     }
+
     session {
         bind "a" {
             LaunchOrFocusPlugin "zellij:about" {
@@ -133,6 +145,7 @@ keybinds clear-defaults=true {
             SwitchToMode "normal"
         }
     }
+
     shared_except "locked" {
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
@@ -156,36 +169,47 @@ keybinds clear-defaults=true {
         bind "Alt Shift p" { ToggleGroupMarking; }
         bind "Ctrl q" { Quit; }
     }
+
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }
     }
+
     shared_except "locked" "session" {
         bind "Ctrl o" { SwitchToMode "session"; }
     }
+
     shared_except "locked" "scroll" "search" "tmux" {
         bind "Ctrl b" { SwitchToMode "tmux"; }
     }
+
     shared_except "locked" "scroll" "search" {
         bind "Ctrl s" { SwitchToMode "scroll"; }
     }
+
     shared_except "locked" "tab" {
         bind "Ctrl t" { SwitchToMode "tab"; }
     }
+
     shared_except "locked" "pane" {
         bind "Ctrl p" { SwitchToMode "pane"; }
     }
+
     shared_except "locked" "resize" {
         bind "Ctrl n" { SwitchToMode "resize"; }
     }
+
     shared_except "normal" "locked" "entersearch" {
         bind "enter" { SwitchToMode "normal"; }
     }
+
     shared_except "normal" "locked" "entersearch" "renametab" "renamepane" {
         bind "esc" { SwitchToMode "normal"; }
     }
+
     shared_among "pane" "tmux" {
         bind "x" { CloseFocus; SwitchToMode "normal"; }
     }
+
     shared_among "scroll" "search" {
         bind "PageDown" { PageScrollDown; }
         bind "PageUp" { PageScrollUp; }
@@ -204,23 +228,29 @@ keybinds clear-defaults=true {
         bind "Ctrl s" { SwitchToMode "normal"; }
         bind "u" { HalfPageScrollUp; }
     }
+
     entersearch {
         bind "Ctrl c" { SwitchToMode "scroll"; }
         bind "esc" { SwitchToMode "scroll"; }
         bind "enter" { SwitchToMode "search"; }
     }
+
     renametab {
         bind "esc" { UndoRenameTab; SwitchToMode "tab"; }
     }
+
     shared_among "renametab" "renamepane" {
         bind "Ctrl c" { SwitchToMode "normal"; }
     }
+
     renamepane {
         bind "esc" { UndoRenamePane; SwitchToMode "pane"; }
     }
+
     shared_among "session" "tmux" {
         bind "d" { Detach; }
     }
+
     tmux {
         bind "left" { MoveFocus "left"; SwitchToMode "normal"; }
         bind "down" { MoveFocus "down"; SwitchToMode "normal"; }
@@ -244,6 +274,7 @@ keybinds clear-defaults=true {
     }
 }
 
+// ──[ Plugins ]────────────────────────────────────────────────
 plugins {
     about location="zellij:about"
     compact-bar location="zellij:compact-bar"
@@ -263,10 +294,12 @@ plugins {
 
 load_plugins {
 }
+
+// ──[ Web Client ]─────────────────────────────────────────────
 web_client {
     font "monospace"
 }
 
-theme "rose-pine"
-
+// ──[ Theme & Misc ]───────────────────────────────────────────
+theme "tokyonight"
 show_startup_tips false

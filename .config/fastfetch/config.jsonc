@@ -1,96 +1,101 @@
+// ╭───────────────────────────────────────────────────────────╮
+// │                     FASTFETCH CONFIG                      │
+// ╰───────────────────────────────────────────────────────────╯
+
 {
-   "logo":{
-      "source":"$HOME/.config/fastfetch/assets/squirtle_skol.png",
-      "width":34,
-      "type":"kitty-direct",
-      "padding":{
-         "right":1
+   "logo": {
+      "source": "$HOME/.config/fastfetch/assets/squirtle_skol.png",
+      "width": 34,
+      "type": "kitty-direct",
+      "padding": {
+         "right": 0,
+         "top": 1
       }
    },
-   "display":{
-      "separator":" "
+   "display": {
+      "separator": " "
    },
-   "modules":[
+   "modules": [
       {
-         "key":"╭────────────╮",
-         "type":"custom"
+         "key": "╭────────────╮",
+         "type": "custom"
       },
       {
-         "key":"│ {#31} user     {#keys}│",
-         "type":"title",
-         "format":"{user-name}"
+         "key": "│ {#31} user     {#keys}│",
+         "type": "title",
+         "format": "{user-name}"
       },
       {
-         "key":"│ {#32}󰇅 host     {#keys}│",
-         "type":"title",
-         "format":"{host-name}"
+         "key": "│ {#32}󰇅 host     {#keys}│",
+         "type": "title",
+         "format": "{host-name}"
       },
       {
-         "key":"│ {#33}{icon} distro   {#keys}│",
-         "type":"os"
+         "key": "│ {#33}{icon} distro   {#keys}│",
+         "type": "os"
       },
       {
-         "key":"│ {#34} desktop  {#keys}│",
-         "type":"wm",
-         "format":"{pretty-name}"
+         "key": "│ {#34} desktop  {#keys}│",
+         "type": "wm",
+         "format": "{pretty-name}"
       },
       {
-         "key":"│ {#37}󰇄 desktop  {#keys}│",
-         "type":"de"
+         "key": "│ {#37}󰇄 desktop  {#keys}│",
+         "type": "de"
       },
       {
-         "key":"│ {#35} kernel   {#keys}│",
-         "type":"kernel",
-         "format":"{release}"
+         "key": "│ {#35} kernel   {#keys}│",
+         "type": "kernel",
+         "format": "{release}"
       },
       {
-         "key":"│ {#37}󰏖 packages {#keys}│",
-         "type":"packages",
-         "format":"{all}"
+         "key": "│ {#37}󰏖 packages {#keys}│",
+         "type": "packages",
+         "format": "{all}"
       },
       {
-         "key":"│ {#38} terminal {#keys}│",
-         "type":"terminal",
-         "format":"{pretty-name}"
+         "key": "│ {#38} terminal {#keys}│",
+         "type": "terminal",
+         "format": "{pretty-name}"
       },
       {
-         "key":"│ {#34} shell    {#keys}│",
-         "type":"shell",
-         "format":"{pretty-name}"
+         "key": "│ {#34} shell    {#keys}│",
+         "type": "shell",
+         "format": "{pretty-name}"
       },
       {
-         "key":"│ {#31}󰉉 disk     {#keys}│",
-         "type":"disk",
-         "folders":"/",
-         "format":"{1} / {2}"
+         "key": "│ {#31}󰉉 disk     {#keys}│",
+         "type": "disk",
+         "folders": "/",
+         "format": "{1} / {2}"
       },
       {
-         "key":"│ {#32}󰍛 cpu      {#keys}│",
-         "type":"cpu",
-         "format":"{name}",
-         "showPeCoreCount":false
+         "key": "│ {#32}󰍛 cpu      {#keys}│",
+         "type": "cpu",
+         "format": "{name}",
+         "showPeCoreCount": false
       },
       {
-         "key":"│ {#33} memory   {#keys}│",
-         "type":"memory",
-         "format":"{used} / {total}"
+         "key": "│ {#33} memory   {#keys}│",
+         "type": "memory",
+         "format": "{used} / {total}"
       },
       {
-         "key":"│ {#39}󰅐 uptime   {#keys}│",
-         "type":"uptime"
+         "key": "│ {#39}󰅐 uptime   {#keys}│",
+         "type": "uptime"
       },
       {
-         "key":"├────────────┤",
-         "type":"custom"
+         "key": "├────────────┤",
+         "type": "custom"
       },
       {
-         "key":"│ {#39} colors   {#keys}│",
-         "type":"colors",
-         "symbol":"circle"
+         "key": "│ {#39} colors   {#keys}│",
+         "type": "colors",
+         "symbol": "circle"
       },
       {
-         "key":"╰────────────╯",
-         "type":"custom"
+         "key": "╰────────────╯",
+         "type": "custom"
       }
    ]
 }

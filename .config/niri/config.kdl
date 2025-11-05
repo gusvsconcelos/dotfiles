@@ -1,12 +1,10 @@
-// ╭──────────────────────────────────────────────────────────────╮
-// │                             NIRI                             │
-// ╰──────────────────────────────────────────────────────────────╯
-
+// ╭───────────────────────────────────────────────────────────╮
+// │                           NIRI                            │
+// ╰───────────────────────────────────────────────────────────╯
 
 // ──[ Workspaces ]────────────────────────────────────────────
 workspace "1"
 workspace "2"
-
 
 // ──[ Input ]─────────────────────────────────────────────────
 input {
@@ -31,7 +29,6 @@ input {
     disable-power-key-handling
 }
 
-
 // ──[ Output ]────────────────────────────────────────────────
 output "HDMI-A-1" {
     mode "1920x1080@74.973"
@@ -39,7 +36,6 @@ output "HDMI-A-1" {
     transform "normal"
     position x=0 y=0
 }
-
 
 // ──[ Layout ]────────────────────────────────────────────────
 layout {
@@ -77,23 +73,19 @@ layout {
     background-color "transparent"
 }
 
-
 // ──[ Animations ]────────────────────────────────────────────
 animations {
     slowdown 0.5
 }
-
 
 // ──[ Overview ]──────────────────────────────────────────────
 overview {
     backdrop-color "#1a1b26"
 }
 
-
 // ──[ Window Behavior ]───────────────────────────────────────
 prefer-no-csd
 screenshot-path "~/Imagens/Screenshots/%Y-%m-%d %H-%M-%S.png"
-
 
 // ──[ Window Rules ]──────────────────────────────────────────
 window-rule {
@@ -117,13 +109,11 @@ window-rule {
     open-floating true
 }
 
-
 // ──[ Layer Rules ]───────────────────────────────────────────
 layer-rule {
     match namespace="^swww-daemon$"
     place-within-backdrop true
 }
-
 
 // ──[ Environment ]───────────────────────────────────────────
 environment {
@@ -134,7 +124,6 @@ environment {
     XMODIFIERS "@im=ibus"
 }
 
-
 // ──[ Startup ]───────────────────────────────────────────────
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
@@ -143,12 +132,10 @@ spawn-at-startup "swayidle"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
 
-
 // ──[ Hotkey Overlay ]────────────────────────────────────────
 hotkey-overlay {
     skip-at-startup
 }
-
 
 // ──[ Binds ]─────────────────────────────────────────────────
 binds {

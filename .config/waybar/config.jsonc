@@ -19,7 +19,6 @@
     "bluetooth",
     "group/audio-expander",
     "network",
-    "battery",
     "custom/power"
   ],
 
@@ -148,14 +147,6 @@
     "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nDownload: <b><span foreground='#99ffdd'> {bandwidthDownBytes}</span></b>\nUpload: <b><span foreground='#ffcc66'> {bandwidthUpBytes}</span></b>",
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "ghostty -e nmtui"
-  },
-
-  // ──[ Battery ]──────────────────────────────────────────────
-  "battery": {
-    "states": { "warning": 20, "critical": 10 },
-    "format": "{capacity}% {icon} ",
-    "format-charging": "{capacity}% ⚡",
-    "format-icons": ["", "", "", "", ""]
   },
 
   // ──[ Custom Power ]─────────────────────────────────────────

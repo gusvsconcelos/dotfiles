@@ -33,7 +33,6 @@ window#waybar {
 #bluetooth,
 #pulseaudio,
 #network,
-#battery,
 #custom-power {
   background: @bg1;
   color: @fg1;
@@ -117,20 +116,6 @@ window#waybar {
 #network {
   padding-right: 10px;
   border-radius: 0 4px 4px 0;
-}
-
-/* ──[ Battery ]──────────────────────────────────────────────── */
-#battery {
-  padding: 2px 6px;
-  margin-left: 3px;
-}
-#battery.charging {
-  background: @accent7;
-  color: @bg0;
-}
-#battery.critical:not(.charging) {
-  background: @accent5;
-  color: @fg2;
 }
 
 /* ──[ Power ]────────────────────────────────────────────────── */

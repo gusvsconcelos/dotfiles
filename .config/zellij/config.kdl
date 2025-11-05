@@ -301,5 +301,5 @@ web_client {
 }
 
 // ──[ Theme & Misc ]───────────────────────────────────────────
-theme "rose-pine"
+theme "tokyonight"
 show_startup_tips false

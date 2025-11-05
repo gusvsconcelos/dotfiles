@@ -1,8 +1,10 @@
+/* ───────────────────────────────────────────────────────────── */
+/*                           WAYBAR STYLE                        */
+/* ───────────────────────────────────────────────────────────── */
+
 @import "colors.css";
 
-/* =====================
-   Global
-   ===================== */
+/* ──[ Global ]───────────────────────────────────────────────── */
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +21,7 @@ window#waybar {
   color: @fg1;
 }
 
-/* =====================
-   Shared module style
-   ===================== */
+/* ──[ Base block style ]──────────────────────────────────────── */
 #custom-launcher,
 #workspaces,
 #mpris,
@@ -35,23 +35,19 @@ window#waybar {
 #network,
 #battery,
 #custom-power {
-  /* background-color: @bg1; */
-  background-color: @bg1;
+  background: @bg1;
   color: @fg1;
-  margin: 3px 0 3px;
-  padding: 2px 6px;
+  margin: 3px 0;
+  padding: 0 6px;
   border-radius: 4px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
-/* =====================
-   Left cluster
-   ===================== */
+/* ──[ Left ]─────────────────────────────────────────────────── */
 #custom-launcher {
-  margin-left: 3px;
-  margin-right: 3px;
-  padding: 0 11px 0 7px;
-  font-size: 18px;
+  margin: 3px;
+  padding: 0 10px 0 6px;
+  font-size: 17px;
   color: @accent3;
 }
 #custom-launcher:hover {
@@ -63,10 +59,9 @@ window#waybar {
 }
 #workspaces button {
   min-width: 14px;
-  color: @fg0;
-  background: transparent;
+  background: none;
   box-shadow: none;
-  text-shadow: none;
+  color: @fg0;
 }
 #workspaces button:hover {
   color: @fg1;
@@ -78,91 +73,70 @@ window#waybar {
   color: @accent5;
 }
 
-/* =====================
-   MPRIS & Clock
-   ===================== */
+/* ──[ MPRIS ]────────────────────────────────────────────────── */
 #mpris {
   color: @spotify;
 }
 
-/* =====================
-   CPU & Memory
-   ===================== */
+/* ──[ CPU & Memory ]────────────────────────────────────────── */
 #cpu {
   border-radius: 4px 0 0 4px;
+  padding-right: 4px;
 }
 #memory {
   border-radius: 0 4px 4px 0;
 }
 
-/* =====================
-   Right cluster
-   (Expand → Tray → Bluetooth → Audio → Network → Battery)
-   ===================== */
+/* ──[ Right ]────────────────────────────────────────────────── */
+#custom-expand-icon {
+  border-radius: 4px 0 0 4px;
+  margin-left: 3px;
+  padding-right: 0;
+}
+
 #tray,
 #bluetooth,
 #pulseaudio,
 #network {
   border-radius: 0;
-  margin: 3px 0 3px;
-  padding: 2px 6px;
-}
-
-#custom-expand-icon {
-  border-radius: 4px 0 0 4px;
-  margin-left: 3px;
-  padding-right: 0;
-  font-size: 14px;
+  padding: 0 4px;
 }
 
 #tray {
-  padding-left: 4px;
-  padding-right: 0;
-}
-
-#bluetooth {
-  font-size: 14px;
-  padding-right: 4px;
+  padding: 0 2px;
 }
 
 #pulseaudio {
   font-size: 16px;
-  padding-right: 4px;
 }
 #pulseaudio.volume {
-  font-size: 12px;
+  font-size: 11px;
+  padding-right: 2px;
 }
 
 #network {
-  font-size: 13px;
-  padding-right: 9px;
+  padding-right: 10px;
   border-radius: 0 4px 4px 0;
 }
 
-/* =====================
-   Battery
-   ===================== */
+/* ──[ Battery ]──────────────────────────────────────────────── */
 #battery {
-  border-radius: 4px;
   padding: 2px 6px;
   margin-left: 3px;
 }
 #battery.charging {
-  background-color: @accent7;
+  background: @accent7;
   color: @bg0;
 }
 #battery.critical:not(.charging) {
-  background-color: @accent5;
+  background: @accent5;
   color: @fg2;
 }
 
-/* =====================
-   Power button
-   ===================== */
+/* ──[ Power ]────────────────────────────────────────────────── */
 #custom-power {
-  margin-right: 3px;
-  margin-left: 3px;
-  padding: 0px 10px 0px 7px;
+  margin: 3px;
+  padding: 0 9px 0 6px;
   font-size: 16px;
   color: @accent6;
 }
@@ -170,12 +144,10 @@ window#waybar {
   color: @accent5;
 }
 
-/* =====================
-   Tooltip (disabled)
-   ===================== */
+/* ──[ Tooltip ]──────────────────────────────────────────────── */
 tooltip {
-  opacity: 0;
   background: transparent;
+  opacity: 0;
   border: none;
   box-shadow: none;
 }

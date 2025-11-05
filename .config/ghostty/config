@@ -1,22 +1,26 @@
-# ╭───────────────────────────────────────────────────────────╮
-# │                     GHOSTTY CONFIG                        │
-# ╰───────────────────────────────────────────────────────────╯
+# ╭──────────────────────────────────────────────────────────────╮
+# │                           GHOSTTY                            │
+# ╰──────────────────────────────────────────────────────────────╯
+
 
 # ──[ Appearance ]────────────────────────────────────────────
-theme = TokyoNight Night 
+theme = TokyoNight Night
 window-decoration = false
 background-opacity = 0.8
 cursor-style = block
-shell-integration-features = no-cursor
+
 
 # ──[ Typography ]────────────────────────────────────────────
-font-family = FantasqueSansM Nerd Font Mono
+font-family = JetbrainsMono Nerd Font
 font-size = 14
 
+
 # ──[ Spacing & Layout ]──────────────────────────────────────
-window-padding-x = 10
-window-padding-y = 10
+window-padding-x = 12
+window-padding-y = 12
 window-padding-balance = true
+
 
 # ──[ Behavior ]──────────────────────────────────────────────
 confirm-close-surface = false
+shell-integration-features = no-cursor

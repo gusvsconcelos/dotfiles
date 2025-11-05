@@ -1,10 +1,16 @@
+// ╭──────────────────────────────────────────────────────────────╮
+// │                            WAYBAR                            │
+// ╰──────────────────────────────────────────────────────────────╯
+
+
 {
   "layer": "top",
   "position": "bottom",
-  "height": 30,
+  "height": 28,
   "output": ["*"],
   "reload_style_on_change": true,
 
+  // ──[ Modules ]────────────────────────────────────────────────
   "modules-left": ["custom/launcher", "niri/workspaces", "mpris"],
   "modules-center": ["clock"],
   "modules-right": [
@@ -18,18 +24,14 @@
     "custom/power"
   ],
 
-  /* =====================
-     Custom Launcher
-     ===================== */
+  // ──[ Custom Launcher ]────────────────────────────────────────
   "custom/launcher": {
     "format": "󰣇",
     "on-click": "rofi -show drun",
     "tooltip": false
   },
 
-  /* =====================
-     Niri Workspaces
-     ===================== */
+  // ──[ Niri Workspaces ]────────────────────────────────────────
   "niri/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -38,36 +40,29 @@
       "3": "●",
       "4": "●",
       "5": "●",
-      // "active": "●",
       "urgent": "",
       "default": "●"
     }
   },
 
-  /* =====================
-     MPRIS / Spotify
-     ===================== */
+  // ──[ MPRIS / Spotify ]────────────────────────────────────────
   "mpris": {
     "player": "spotify",
-    "format": "{player_icon}  {artist} • {title}",
-    "format-paused": "{status_icon}  <i>{artist} • {title}</i>",
+    "format": "{player_icon}  {artist} • {title}",
+    "format-paused": "{status_icon}  <i>{artist} • {title}</i>",
     "player-icons": { "default": "" },
     "status-icons": { "paused": "" },
-    "max-length": 50
+    "max-length": 64
   },
 
-  /* =====================
-     Clock
-     ===================== */
+  // ──[ Clock ]──────────────────────────────────────────────────
   "clock": {
-    "format": "󰥔 {:%H:%M • %A}",
+    "format": "󰥔 {:%H:%M • %A}",
     "format-alt": " {:%d/%m/%Y}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>"
   },
 
-  /* =====================
-     CPU
-     ===================== */
+  // ──[ CPU ]────────────────────────────────────────────────────
   "cpu": {
     "interval": 2,
     "format": "  {usage}%",
@@ -75,9 +70,7 @@
     "on-click": "ghostty -e btop"
   },
 
-  /* =====================
-     Memory
-     ===================== */
+  // ──[ Memory ]─────────────────────────────────────────────────
   "memory": {
     "interval": 2,
     "format": "  {used:0.1f}GiB",
@@ -85,13 +78,11 @@
     "on-click": "ghostty -e btop"
   },
 
-  /* =====================
-     Group / Tray
-     ===================== */
+  // ──[ Group / Tray ]───────────────────────────────────────────
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
-      "transition-duration": 600,
+      "transition-duration": 320,
       "children-class": "tray-group-item"
     },
     "modules": ["custom/expand-icon", "tray"]
@@ -104,9 +95,7 @@
     "spacing": 6
   },
 
-  /* =====================
-     Bluetooth
-     ===================== */
+  // ──[ Bluetooth ]──────────────────────────────────────────────
   "bluetooth": {
     "format": "{icon}",
     "format-disabled": "󰂲",
@@ -119,39 +108,35 @@
     "on-click-right": "rfkill toggle bluetooth"
   },
 
-  /* =====================
-     PulseAudio
-     ===================== */
+  // ──[ PulseAudio ]─────────────────────────────────────────────
   "pulseaudio#icon": {
-      "format": "{icon}",
-      "format-muted": "󰝟",
-      "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
-      "scroll-step": 5,
-      "tooltip-format": "Volume: {volume}%",
-      "on-click": "ghostty -e pulsemixer",
-      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+    "scroll-step": 5,
+    "tooltip-format": "Volume: {volume}%",
+    "on-click": "ghostty -e pulsemixer",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "pulseaudio#volume": {
-      "format": "{volume}%",
-      "format-muted": "0%",
-      "scroll-step": 5,
-      "tooltip-format": "Volume: {volume}%",
-      "on-click": "ghostty -e pulsemixer",
-      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    "format": "{volume}%",
+    "format-muted": "0%",
+    "scroll-step": 5,
+    "tooltip-format": "Volume: {volume}%",
+    "on-click": "ghostty -e pulsemixer",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "group/audio-expander": {
-      "orientation": "inherit",
-      "drawer": {
-          "transition-duration": 600,
-          "children-class": "pulseaudio#volume",
-          "transition-left": true
-      },
-      "modules": ["pulseaudio#icon", "pulseaudio#volume"]
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 320,
+      "children-class": "pulseaudio#volume",
+      "transition-left": true
+    },
+    "modules": ["pulseaudio#icon", "pulseaudio#volume"]
   },
 
-  /* =====================
-     Network
-     ===================== */
+  // ──[ Network ]────────────────────────────────────────────────
   "network": {
     "interval": 2,
     "max-length": 30,
@@ -165,9 +150,7 @@
     "on-click": "ghostty -e nmtui"
   },
 
-  /* =====================
-     Battery
-     ===================== */
+  // ──[ Battery ]────────────────────────────────────────────────
   "battery": {
     "states": { "warning": 20, "critical": 10 },
     "format": "{capacity}% {icon} ",
@@ -175,12 +158,10 @@
     "format-icons": ["", "", "", "", ""]
   },
 
-  /* =====================
-     Custom Power
-     ===================== */
+  // ──[ Custom Power ]───────────────────────────────────────────
   "custom/power": {
     "format": "",
     "on-click": "~/.config/rofi/scripts/powermenu.sh",
     "tooltip": false
-  },
+  }
 }

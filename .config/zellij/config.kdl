@@ -303,3 +303,4 @@ web_client {
 // ──[ Theme & Misc ]───────────────────────────────────────────
 theme "tokyonight"
 show_startup_tips false
+pane_frames false

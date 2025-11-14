@@ -34,11 +34,11 @@
          "key": "│ {#33}{icon} distro   {#keys}│",
          "type": "os"
       },
-      {
-         "key": "│ {#34} desktop  {#keys}│",
-         "type": "wm",
-         "format": "{pretty-name}"
-      },
+      // {
+      //    "key": "│ {#34} desktop  {#keys}│",
+      //    "type": "wm",
+      //    "format": "{pretty-name}"
+      // },
       {
          "key": "│ {#37}󰇄 desktop  {#keys}│",
          "type": "de"

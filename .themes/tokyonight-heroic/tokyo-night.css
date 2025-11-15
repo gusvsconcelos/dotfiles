@@ -1,23 +1,23 @@
 body.tokyo-night {
-  --background: #11111b;
-  --background-darker: #11111b;
-  --background-secondary: #1a1b26;
-  --background-lighter: #1a1b26;
+  --background: #0b0e14;
+  --background-darker: #0b0e14;
+  --background-secondary: #11111b;
+  --background-lighter: #11111b;
   --accent: #7aa2f7;
   --accent-overlay: var(--accent);
 
   --navbar-background: var(--background);
   --body-background: var(--background-darker);
   --current-background: var(--body-background);
-  --text-default: #c0caf5;
+  --text-default: #9aa5ce;
   --text-secondary: var(--text-default);
   --text-tertiary: var(--background);
   --navbar-accent: #9aa5ce;
   --navbar-active: var(--accent);
-  --navbar-active-background: #292e42;
+  --navbar-active-background: #1a1b26;
   --success: #9ece6a;
   --success-hover: #73daca;
-  --input-background: #1a1b26;
+  --input-background: #11111b;
   --modal-background: var(--body-background);
   --modal-border: var(--body-background);
   --primary: #db4b4b;
@@ -34,7 +34,7 @@ body.tokyo-night {
   --action-icon: var(--navbar-accent);
   --action-icon-hover: var(--text-default);
   --action-icon-active: var(--accent);
-  --icon-disabled: #1a1b26;
+  --icon-disabled: #11111b;
   --cancel-button: #e0af68;
   --neutral-06: var(--text-default);
 }

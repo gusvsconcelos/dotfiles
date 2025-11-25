@@ -64,7 +64,6 @@ python-pip
 python-pipx
 qbittorrent
 smartmontools
-spicetify-cli
 spotify-launcher
 stacer-bin
 starship

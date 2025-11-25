@@ -22,6 +22,7 @@ git
 github-cli
 goverlay
 gst-plugin-pipewire
+gwenview
 jdk-openjdk
 kitty
 krita
@@ -31,16 +32,18 @@ less
 lib32-gamemode
 lib32-mangohud
 libpulse
+limine
 linux-firmware
 linux-zen
 localsend-bin
 lsd
 mangohud
-minecraft-launcher
+mpv
 nano
 neovim
 networkmanager
 nodejs
+noto-fonts-cjk
 npm
 obsidian
 onlyoffice-bin
@@ -63,6 +66,7 @@ qbittorrent
 smartmontools
 spicetify-cli
 spotify-launcher
+stacer-bin
 starship
 steam
 tldr
@@ -70,6 +74,7 @@ ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family
 ufw
+unrar
 upscayl-bin
 ventoy-bin
 vesktop

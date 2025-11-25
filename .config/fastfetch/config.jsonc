@@ -5,11 +5,11 @@
 {
    "logo": {
       "source": "$HOME/.config/fastfetch/assets/squirtle_skol.png",
-      "width": 34,
+      "width": 31,
       "type": "kitty-direct",
       "padding": {
          "right": 0,
-         "top": 1
+         "top": 2
       }
    },
    "display": {

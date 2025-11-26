@@ -11,7 +11,6 @@ alias clean-full='paru -Scc --noconfirm; paru -Rns $(paru -Qtdq) --noconfirm; su
 alias ls='lsd'
 alias py='python'
 alias vim='nvim'
-alias zel='zellij'
 alias fetch='clear;fastfetch'
 alias dev='cd $HOME/Documentos/dev/'
 alias nv='cd $HOME/.config/nvim/;nvim'

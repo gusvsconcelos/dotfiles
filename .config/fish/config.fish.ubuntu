@@ -5,7 +5,7 @@ if status is-interactive
 end
 
 # Alias
-alias up='clear;fastfetch;echo "SYSTEM UPDATE:";sudo apt update && sudo apt full-upgrade -y'
+alias up='clear;fetch;echo "SYSTEM UPDATE:";sudo apt update && sudo apt full-upgrade -y'
 alias clean='sudo apt autoremove -y && sudo apt autoclean'
 alias clean-full='sudo apt autoremove -y && sudo apt clean && sudo journalctl --vacuum-size=50M && sudo rm -rf /tmp/* /var/tmp/*'
 alias ls='lsd'

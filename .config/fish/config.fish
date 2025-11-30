@@ -5,13 +5,13 @@ if status is-interactive
 end
 
 # ──[ Aliases ]─────────────────────────────────────────────────
-alias up='clear;cowsay -f tux "Time to update again, bro.";paru -Syu --noconfirm'
+alias up='clear;fetch;echo "SYSTEM UPDATE:";paru -Syu --noconfirm'
 alias clean='paru -Scc --noconfirm; paru -Rns $(paru -Qtdq) --noconfirm'
 alias clean-full='paru -Scc --noconfirm; paru -Rns $(paru -Qtdq) --noconfirm; sudo journalctl --vacuum-size=50M --vacuum-time=2weeks; sudo rm -rf /var/tmp/* /tmp/*'
 alias ls='lsd'
 alias py='python'
 alias vim='nvim'
-alias fetch='clear;fastfetch'
+alias fetch='clear;$HOME/.config/fastfetch/fetch'
 alias dev='cd $HOME/Documentos/dev/'
 alias nv='cd $HOME/.config/nvim/;nvim'
 alias moviestar='clear;py $HOME/Documentos/dev/moviestar/moviestar.py'

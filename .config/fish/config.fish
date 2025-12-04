@@ -15,3 +15,5 @@ alias fetch='clear;$HOME/.config/fastfetch/fetch'
 alias dev='cd $HOME/Documentos/dev/'
 alias nv='cd $HOME/.config/nvim/;nvim'
 alias moviestar='clear;py $HOME/Documentos/dev/moviestar/moviestar.py'
+
+fetch

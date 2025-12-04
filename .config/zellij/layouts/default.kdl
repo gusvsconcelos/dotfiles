@@ -8,7 +8,7 @@ layout {
                 format_right  "{pipe_zjstatus_hints}{datetime}#[bg=#00000000,fg=#9ece6a,bold] {session} "
                 format_space  ""
 
-                      pipe_zjstatus_hints_format "#[bg=#bb9af7,fg=#1a1b26,bold] {output} "
+                pipe_zjstatus_hints_format "#[bg=#bb9af7,fg=#1a1b26,bold] {output} "
 
                 border_enabled  "false"
                 border_char     "─"

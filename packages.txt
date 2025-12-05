@@ -22,6 +22,7 @@ goverlay
 gst-plugin-pipewire
 gwenview
 jdk-openjdk
+kalk
 kitty
 krita
 lazydocker

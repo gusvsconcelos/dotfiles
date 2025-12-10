@@ -46,7 +46,7 @@ inputbar {
 }
 icon-search {
     expand: false;
-    filename: "system-search";
+    filename: "./assets/search.svg";
     size: 18px;
 }
 

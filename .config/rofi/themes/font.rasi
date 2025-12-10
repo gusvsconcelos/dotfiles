@@ -1,4 +1,4 @@
 * {
     text-font: "Ubuntu 11";
-    text-font-big: "Ubuntu 12";
+    text-font-xl: "Ubuntu 12";
 }

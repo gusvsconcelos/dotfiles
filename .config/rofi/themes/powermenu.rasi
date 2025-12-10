@@ -7,7 +7,7 @@
 
 // ──[ Global ]─────────────────────────────────────────────────
 * {
-    font: @text-font-big;
+    font: @text-font-xl;
     text-color: @fg0;
     background-color: transparent;
     margin: 0px;

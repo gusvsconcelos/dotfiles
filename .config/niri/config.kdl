@@ -119,9 +119,6 @@ layer-rule {
 environment {
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt6ct"
-    GTK_IM_MODULE "ibus"
-    QT_IM_MODULE "ibus"
-    XMODIFIERS "@im=ibus"
 }
 
 // ──[ Startup ]───────────────────────────────────────────────

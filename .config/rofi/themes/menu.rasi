@@ -3,10 +3,11 @@
 // ╰───────────────────────────────────────────────────────────╯
 
 @import "colors.rasi"
+@import "font.rasi"
 
 // ──[ Global ]─────────────────────────────────────────────────
 * {
-    font: "Ubuntu 11";
+    font: @text-font;
     text-color: @fg0;
     background-color: transparent;
     margin: 0px;
@@ -79,7 +80,7 @@ element alternate active {
     text-color: @accent;
 }
 element selected {
-    text-color: @bg1;
+    text-color: @bg0;
 }
 element selected normal, element selected active {
     background-color: @accent;

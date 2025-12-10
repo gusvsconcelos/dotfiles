@@ -60,6 +60,7 @@ window#waybar {
   min-width: 14px;
   background: none;
   box-shadow: none;
+  text-shadow: none;
   color: @fg0;
 }
 #workspaces button:hover {

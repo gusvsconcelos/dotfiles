@@ -5,11 +5,11 @@
 {
    "logo": {
       "source": "$HOME/.config/fastfetch/assets/squirtle_skol.png",
-      "width": 32,
+      "width": 31,
       "type": "kitty-direct",
       "padding": {
-         "right": 0,
-         "top": 0
+         "right": 1,
+         "top": 1
       }
    },
    "display": {
@@ -64,16 +64,16 @@
          "format": "{pretty-name}"
       },
       {
-         "key": "│ {#31}󰉉 disk     {#keys}│",
-         "type": "disk",
-         "folders": "/",
-         "format": "{1} / {2}"
-      },
-      {
          "key": "│ {#32}󰍛 cpu      {#keys}│",
          "type": "cpu",
          "format": "{name}",
          "showPeCoreCount": false
+      },
+      {
+         "key": "│ {#31}󰉉 disk     {#keys}│",
+         "type": "disk",
+         "folders": "/",
+         "format": "{1} / {2}"
       },
       {
          "key": "│ {#33} memory   {#keys}│",

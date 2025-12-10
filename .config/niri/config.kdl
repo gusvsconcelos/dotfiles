@@ -105,7 +105,7 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
-    match app-id=r#"org.kde.kcalc$"# title="^KCalc$"
+    match app-id=r#"org.gnome.Calculator$"# title="^Calculadora$"
     open-floating true
 }
 

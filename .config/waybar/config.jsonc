@@ -24,7 +24,7 @@
 
   // ──[ Custom Launcher ]──────────────────────────────────────
   "custom/launcher": {
-    "format": "󰣇",
+    "format": "󱓞",
     "on-click": "rofi -show drun",
     "tooltip": false
   },
@@ -56,8 +56,8 @@
 
   // ──[ Clock ]────────────────────────────────────────────────
   "clock": {
-    "format": "󰥔 {:%H:%M • %A}",
-    "format-alt": " {:%d/%m/%Y}",
+    "format": "󰥔 {:%H:%M}",
+    "format-alt": " {:%d/%m/%Y}",
     "tooltip-format": "<tt><big>{calendar}</big></tt>"
   },
 

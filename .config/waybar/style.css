@@ -110,7 +110,8 @@ window#waybar {
   font-size: 16px;
 }
 #pulseaudio.volume {
-  font-size: 11px;
+  font-size: 10px;
+  padding-left: 1px;
   padding-right: 2px;
 }
 
@@ -122,7 +123,7 @@ window#waybar {
 /* ──[ Power ]────────────────────────────────────────────────── */
 #custom-power {
   margin: 3px;
-  padding: 0 9px 0 6px;
+  padding: 0 10px 0 7px;
   font-size: 16px;
   color: @accent6;
 }

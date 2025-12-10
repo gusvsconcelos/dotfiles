@@ -46,6 +46,7 @@ localsend-bin
 lsd
 mako
 mangohud
+mpv
 nano
 neovim
 networkmanager

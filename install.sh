@@ -7,14 +7,14 @@ not_installed=()
 
 sudo pacman -Syu
 sudo pacman -S "${avail[@]}" --needed
-if ! pacman -Q paru &>/dev/null; then
-  git clone https://aur.archlinux.org/paru.git /tmp/paru
-  cd /tmp/paru
+if ! pacman -Q yay &>/dev/null; then
+  git clone https://aur.archlinux.org/yay.git /tmp/yay
+  cd /tmp/yay
   makepkg -si
   cd -
-  rm -rf /tmp/paru
+  rm -rf /tmp/yay
 fi
-paru -S "${missing[@]}" --needed
+yay -S "${missing[@]}" --needed
 
 for pkg in "${pkgs[@]}"; do
   if ! pacman -Q "$pkg" &>/dev/null; then

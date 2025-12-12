@@ -3,11 +3,18 @@
 // ╰───────────────────────────────────────────────────────────╯
 
 {
-  "layer": "top",
+  "layer": "overlay",
   "position": "bottom",
   "height": 0,
   "output": ["*"],
   "reload_style_on_change": true,
+  "exclusive": true,
+  "ipc": true,
+
+  "start_hidden": false,
+  "disable_scroll": true,
+  "disable_scroll_when_mouse_over": true,
+  "smooth-scrolling": false,
 
   // ──[ Modules ]──────────────────────────────────────────────
   "modules-left": ["custom/launcher", "niri/workspaces", "mpris"],
@@ -33,11 +40,7 @@
   "niri/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "●",
-      "2": "●",
-      "3": "●",
-      "4": "●",
-      "5": "●",
+      "1": "●", "2": "●", "3": "●", "4": "●", "5": "●",
       "urgent": "",
       "default": "●"
     }
@@ -46,12 +49,14 @@
   // ──[ MPRIS / Spotify ]──────────────────────────────────────
   "mpris": {
     "player": "spotify",
+    "ignore-player-unknown": true,
     "format": "{player_icon}  {artist} • {title}",
     "format-paused": "{status_icon}  <i>{artist} • {title}</i>",
     "player-icons": { "default": "" },
     "status-icons": { "paused": "" },
     "max-length": 64,
-    "ellipsis": "…"
+    "ellipsis": "…",
+    "tooltip": false
   },
 
   // ──[ Clock ]────────────────────────────────────────────────
@@ -66,7 +71,8 @@
     "interval": 2,
     "format": "  {usage}%",
     "tooltip-format": "CPU Usage: {usage}%",
-    "on-click": "kitty btop"
+    "on-click": "kitty btop",
+    "on-click-right": "kitty htop"
   },
 
   // ──[ Memory ]───────────────────────────────────────────────
@@ -74,24 +80,30 @@
     "interval": 2,
     "format": "  {used:0.1f}GiB",
     "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB",
-    "on-click": "kitty btop"
+    "on-click": "kitty btop",
+    "on-click-right": "kitty btop"
   },
 
   // ──[ Group / Tray ]─────────────────────────────────────────
   "group/tray-expander": {
     "orientation": "inherit",
+    "escape": true,
     "drawer": {
       "transition-duration": 320,
       "children-class": "tray-group-item"
     },
     "modules": ["custom/expand-icon", "tray"]
   },
+
   "custom/expand-icon": {
     "format": " ",
-    "tooltip": false
+    "tooltip": false,
+    "on-click-right": "waybar toggle"
   },
+
   "tray": {
-    "spacing": 4
+    "spacing": 4,
+    "reverse-direction": true
   },
 
   // ──[ Bluetooth ]────────────────────────────────────────────
@@ -101,7 +113,7 @@
     "format-off": "󰂲",
     "format-on": "󰂯",
     "format-connected": "󰂱",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{device_alias}\t{device_address}",
+    "tooltip-format": "{controller_alias} ({controller_address})\n{device_alias} ({device_address})",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "on-click": "kitty bluetuith",
     "on-click-right": "rfkill toggle bluetooth"
@@ -117,6 +129,7 @@
     "on-click": "kitty pulsemixer",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
+
   "pulseaudio#volume": {
     "format": "{volume}%",
     "format-muted": "0%",
@@ -125,8 +138,10 @@
     "on-click": "kitty pulsemixer",
     "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
+
   "group/audio-expander": {
     "orientation": "inherit",
+    "escape": true,
     "drawer": {
       "transition-duration": 320,
       "children-class": "volume-item",
@@ -144,7 +159,7 @@
     "format-linked": "󰞉 {ifname} (No IP)",
     "format-disconnected": "󰪎",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>\nDownload: <b><span foreground='#99ffdd'> {bandwidthDownBytes}</span></b>\nUpload: <b><span foreground='#ffcc66'> {bandwidthUpBytes}</span></b>",
+    "tooltip-format": "ESSID: <b>{essid}</b>\nSignal: {signaldBm} dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "kitty nmtui"
   },

@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────── */
-/*                           WAYBAR STYLE                        */
+/*                          WAYBAR STYLE                         */
 /* ───────────────────────────────────────────────────────────── */
 
 @import "colors.css";
@@ -11,9 +11,10 @@
   border: none;
   border-radius: 0;
   min-height: 0;
+
   font-family: "JetbrainsMono Nerd Font", monospace;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 window#waybar {
@@ -21,7 +22,10 @@ window#waybar {
   color: @fg1;
 }
 
-/* ──[ Base block style ]──────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                     BASE BLOCK / MODULE STYLE                 */
+/* ───────────────────────────────────────────────────────────── */
+
 #custom-launcher,
 #workspaces,
 #mpris,
@@ -42,7 +46,10 @@ window#waybar {
   transition: 0.2s ease;
 }
 
-/* ──[ Left ]─────────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                             LEFT                              */
+/* ───────────────────────────────────────────────────────────── */
+
 #custom-launcher {
   margin: 3px;
   padding: 0 10px 0 6px;
@@ -53,8 +60,10 @@ window#waybar {
   color: @accent2;
 }
 
+/* Workspaces -------------------------------------------------- */
 #workspaces {
   margin-right: 3px;
+  padding: 0 4px;
 }
 #workspaces button {
   min-width: 14px;
@@ -62,6 +71,7 @@ window#waybar {
   box-shadow: none;
   text-shadow: none;
   color: @fg0;
+  transition: 0.2s ease;
 }
 #workspaces button:hover {
   color: @fg1;
@@ -73,27 +83,38 @@ window#waybar {
   color: @accent5;
 }
 
-/* ──[ MPRIS ]────────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                             MPRIS                             */
+/* ───────────────────────────────────────────────────────────── */
+
 #mpris {
   color: @spotify;
 }
 
-/* ──[ CPU & Memory ]────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                       CPU & MEMORY GROUP                      */
+/* ───────────────────────────────────────────────────────────── */
+
 #cpu {
   border-radius: 4px 0 0 4px;
   padding-right: 4px;
 }
+
 #memory {
   border-radius: 0 4px 4px 0;
 }
 
-/* ──[ Right ]────────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                              RIGHT                            */
+/* ───────────────────────────────────────────────────────────── */
+
 #custom-expand-icon {
   border-radius: 4px 0 0 4px;
   margin-left: 3px;
   padding-right: 0;
 }
 
+/* Unified tray + system icons --------------------------------- */
 #tray,
 #bluetooth,
 #pulseaudio,
@@ -103,35 +124,43 @@ window#waybar {
 }
 
 #tray {
-  padding: 0 2px;
+  padding: 0;
 }
 
+/* Audio ------------------------------------------------------- */
 #pulseaudio {
   font-size: 16px;
 }
+
 #pulseaudio.volume {
   font-size: 10px;
-  padding-left: 1px;
-  padding-right: 2px;
+  padding: 0 2px;
 }
 
+/* Network ----------------------------------------------------- */
 #network {
   padding-right: 10px;
   border-radius: 0 4px 4px 0;
 }
 
-/* ──[ Power ]────────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                              POWER                            */
+/* ───────────────────────────────────────────────────────────── */
+
 #custom-power {
   margin: 3px;
   padding: 0 10px 0 7px;
-  font-size: 16px;
+  font-size: 15px;
   color: @accent6;
 }
 #custom-power:hover {
   color: @accent5;
 }
 
-/* ──[ Tooltip ]──────────────────────────────────────────────── */
+/* ───────────────────────────────────────────────────────────── */
+/*                             TOOLTIP                           */
+/* ───────────────────────────────────────────────────────────── */
+
 tooltip {
   background: transparent;
   opacity: 0;

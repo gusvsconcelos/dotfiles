@@ -6,8 +6,7 @@ end
 
 # ──[ Aliases ]─────────────────────────────────────────────────
 alias up='clear;fetch;echo "SYSTEM UPDATE:";yay -Syu --noconfirm'
-alias clean='yay -Scc --noconfirm; yay -Rns $(yay -Qtdq) --noconfirm'
-alias clean-full='yay -Scc --noconfirm; yay -Rns $(yay -Qtdq) --noconfirm; sudo journalctl --vacuum-size=50M --vacuum-time=2weeks; sudo rm -rf /var/tmp/* /tmp/*'
+alias clean='$HOME/.config/fish/scripts/clean.sh'
 alias ls='lsd'
 alias py='python'
 alias vim='nvim'

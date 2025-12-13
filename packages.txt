@@ -6,7 +6,6 @@ base-devel
 bluetuith
 bluez
 bluez-obex
-bluez-utils
 btop
 cliphist
 discord
@@ -47,7 +46,6 @@ lsd
 mako
 mangohud
 mpv
-nano
 neovim
 networkmanager
 niri
@@ -65,7 +63,6 @@ pipewire-jack
 pipewire-pulse
 polkit-gnome
 pulsemixer
-python-pip
 python-pipx
 qbittorrent
 qt5-wayland
@@ -80,7 +77,6 @@ rofi-emoji
 sddm
 smartmontools
 spotify-launcher
-stacer-bin
 steam
 swayidle
 swaylock-effects-git
@@ -90,11 +86,8 @@ ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family
 ufw
-unrar
-unzip
 upscayl-bin
 ventoy-bin
-vim
 visual-studio-code-bin
 vulkan-radeon
 vulkan-tools
@@ -107,14 +100,11 @@ wlsunset
 wtype
 xdg-desktop-portal-gnome
 xdg-utils
-xf86-video-amdgpu
-xf86-video-ati
 xorg-server
 xorg-xinit
 xorg-xwayland
 xwayland-satellite
 yay
-yay-debug
 yazi
 zellij
 zen-browser-bin

@@ -66,9 +66,9 @@ if ! $DRY_RUN && ! $PACKAGES_ONLY; then
 fi
 
 echo -e "${BOLD}${FG_BLUE}"
-echo "󰄛󰄛󰄛󰄛󰄛󰄛󰄛󰄛󰄛󰄛"
+echo "──────────────────────────"
 echo "  System Cleanup Utility"
-echo "󰄛󰄛󰄛󰄛󰄛󰄛󰄛󰄛󰄛󰄛"
+echo "──────────────────────────"
 echo -e "${RESET}"
 
 $DRY_RUN && warn "Dry-run mode enabled (no changes will be made)"

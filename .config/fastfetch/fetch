@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# rxfetch — refined
+
+GIB=1048576 
 
 ############################
 # Colors
@@ -134,11 +135,22 @@ get_gpu() {
 }
 
 get_mem() {
-	free --mega | awk 'NR==2{print $3" / "$2" MB"}'
+	awk -v g="$GIB" '
+		/MemTotal/ { total = $2 }
+		/MemAvailable/ { avail = $2 }
+		END {
+			used = total - avail
+			printf "%.1f / %.1f GiB\n", used/g, total/g
+		}
+	' /proc/meminfo
 }
 
 get_disk() {
-	df -h --output=used,size / | awk 'NR==2{print $1" / "$2}'
+	awk -v g="$GIB" '
+		NR==2 {
+			printf "%.1f / %.1f GiB\n", $3/g, $2/g
+		}
+	' < <(df -k /)
 }
 
 ############################
@@ -188,6 +200,6 @@ printf "%b\n" "┃         ${c3}•${c8}_${c3}•${c0}         ┃  ${c2}󰠠${c
 printf "%b\n" "┃         ${c8}${c0}${c9}oo${c0}${c8}|${c0}         ┃  ${c7}${c3}  $(get_de_wm)"
 printf "%b\n" "┃        ${c8}/${c0}${c10} ${c0}${c8}'\\'${c0}        ┃  ${c4}${c3}  $SHELL_NAME"
 printf "%b\n" "┃       ${c9}(${c0}${c8}\_;/${c0}${c9})${c0}        ┃  ${c6}󰏖${c3}  $(get_packages)"
-printf "%b\n" "┃                     ┃  ${c2}󰍛${c3}  $(get_mem)"
-printf "%b\n" "┃                     ┃  ${c5}󰋊${c3}  $(get_disk)"
+printf "%b\n" "┃                     ┃  ${c5}${c3}  $(get_disk)"
+printf "%b\n" "┃                     ┃  ${c2}${c3}  $(get_mem)"
 printf "%b\n" "┗━━━━━━━━━━━━━━━━━━━━━┛  ${c1}━━━${c2}━━━${c3}━━━${c4}━━━${c5}━━━${c6}━━━${c7}━━━${c0}"

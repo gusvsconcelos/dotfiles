@@ -2,9 +2,6 @@
 
 GIB=1048576 
 
-############################
-# Colors
-############################
 ESC="\033"
 reset="${ESC}[0m"
 
@@ -32,23 +29,14 @@ c8="$black"
 c9="$bgyellow"
 c10="$bgwhite"
 
-############################
-# System detection
-############################
 USER="${USER:-$(id -un 2>/dev/null || echo user)}"
 HOST="$(hostname 2>/dev/null || cat /etc/hostname 2>/dev/null || echo unknown)"
 USER="$(whoami)"
 KERNEL="$(uname -r)"
 SHELL_NAME="${SHELL##*/}"
 
-############################
-# Helpers
-############################
 cmd() { command -v "$1" >/dev/null 2>&1; }
 
-############################
-# Init system
-############################
 get_init() {
 	if [[ "$OS" == "Android" ]]; then
 		echo "init.rc"
@@ -61,9 +49,6 @@ get_init() {
 	fi
 }
 
-############################
-# Distro
-############################
 get_distro() {
 	if [[ "$OS" == "Android" ]]; then
 		echo "Android"
@@ -72,9 +57,6 @@ get_distro() {
 	fi
 }
 
-############################
-# Packages
-############################
 get_pkg_count() {
 	local pm
 	for pm in xbps-install apk apt pacman nix dnf rpm emerge; do
@@ -123,9 +105,6 @@ get_packages() {
 	[[ "$snap" -ne 0 || "$flat" -ne 0 ]] && printf ")"
 }
 
-############################
-# Hardware
-############################
 get_cpu() {
 	awk -F': ' '/model name/{print $2; exit}' /proc/cpuinfo
 }
@@ -153,16 +132,10 @@ get_disk() {
 	' < <(df -k /)
 }
 
-############################
-# Uptime
-############################
 get_uptime() {
 	uptime -p | sed 's/up //'
 }
 
-############################
-# DE / WM
-############################
 get_de_wm() {
 	local wm
 	wm="${XDG_CURRENT_DESKTOP#*:}"
@@ -179,9 +152,6 @@ get_de_wm() {
 	echo "${wm:-unknown}"
 }
 
-############################
-# Android header
-############################
 if [[ "$OS" == "Android" ]]; then
 	printf "               %sphone%s  %s %s\n" \
 		"$c5" "$c3" \
@@ -189,9 +159,7 @@ if [[ "$OS" == "Android" ]]; then
 		"$(getprop ro.product.model)"
 fi
 
-############################
-# Output
-############################
+clear;
 printf "%b\n" "┏━━━━━━━━━━━━━━━━━━━━━┓"
 printf "%b\n" "┃ ${c6}f${c4}e${c5}t${c6}${c7}c${c1}h${c0}       ${c6}${c0}  ${c7}${c0}  ${c5}${c0} ┃  ${c1}${USER}${c5}@${c1}${c2}${HOST}${c0}"
 printf "%b\n" "┣━━━━━━━━━━━━━━━━━━━━━┫"

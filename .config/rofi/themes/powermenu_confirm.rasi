@@ -23,7 +23,7 @@ configuration {
 // ──[ Window ]─────────────────────────────────────────────────
 window {
     location: center;
-    width: 200;
+    width: 200px;
     border: 2px;
     border-color: @bg1;
     border-radius: 4px;
@@ -32,7 +32,7 @@ window {
 
 // ──[ Mainbox ]────────────────────────────────────────────────
 mainbox {
-    padding: 8px;
+    padding: 12px;
 }
 
 // ──[ Inputbar ]───────────────────────────────────────────────
@@ -48,7 +48,7 @@ message {
 
 // ──[ Listview ]───────────────────────────────────────────────
 listview {
-    margin: 4px 0;
+    margin: 0;
     lines: 2;
     columns: 1;
     fixed-height: true;
@@ -56,7 +56,7 @@ listview {
 
 // ──[ Elements ]───────────────────────────────────────────────
 element {
-    padding: 4px 12px;
+    padding: 6px 12px;
     border-radius: 4px;
 }
 element normal active {

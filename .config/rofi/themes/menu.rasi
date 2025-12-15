@@ -24,7 +24,7 @@ configuration {
 // ──[ Window ]─────────────────────────────────────────────────
 window {
     location: center;
-    width: 320;
+    width: 320px;
     border: 2px;
     border-color: @bg1;
     border-radius: 4px;
@@ -40,7 +40,7 @@ mainbox {
 inputbar {
     background-color: @bg1;
     border-radius: 4px;
-    padding: 12px 14px;
+    padding: 12px;
     spacing: 12px;
     children: [ icon-search, entry ];
 }

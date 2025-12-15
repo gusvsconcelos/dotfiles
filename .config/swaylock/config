@@ -17,7 +17,7 @@ fade-in=0.5
 # ──[ Appearance ]──────────────────────────────────────────────
 color=1a1b26
 font=JetBrainsMono Nerd Font
-font-size=46
+font-size=48
 
 # ──[ Indicator ]───────────────────────────────────────────────
 indicator
@@ -28,7 +28,7 @@ separator-color=00000000
 # ──[ Base Colors ]─────────────────────────────────────────────
 line-color=292e42
 ring-color=292e42
-inside-color=#16161e
+inside-color=1a1b26
 text-color=9aa5ce
 key-hl-color=7aa2f7
 bs-hl-color=f7768e

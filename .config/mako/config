@@ -3,12 +3,12 @@
 # ╰────────────────────────────────────────────────────────────╯
 
 # ──[ General ]─────────────────────────────────────────────────
-max-history=5
+max-history=4
 history=1
 sort=-time
 default-timeout=5000
 ignore-timeout=1
-max-visible=5
+max-visible=4
 layer=top
 anchor=bottom-center
 actions=1
@@ -26,7 +26,7 @@ text-alignment=left
 
 # ──[ Colors ]──────────────────────────────────────────────────
 background-color=#1a1b26
-text-color=#a9b1d6
+text-color=#9aa5ce
 border-color=#292e42
 progress-color=over #414868
 

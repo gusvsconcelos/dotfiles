@@ -44,4 +44,10 @@ border-color=#f7768e
 [app-name=volume_osd]
 layer=overlay
 text-alignment=center
+default-timeout=3000
 width=160
+
+[app-name=bluelight_filter]
+layer=overlay
+text-alignment=center
+default-timeout=3000

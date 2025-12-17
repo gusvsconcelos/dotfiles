@@ -74,8 +74,8 @@ layout {
 
     tab-indicator {
         on
-        gap 3
-        width 2
+        gap 6
+        width 4
         corner-radius 4
         gaps-between-tabs 3
         length total-proportion=0.5

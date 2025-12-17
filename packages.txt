@@ -3,7 +3,7 @@ amd-ucode
 arronax
 base
 base-devel
-bluetuith
+bluetui
 bluez
 bluez-obex
 btop

@@ -112,7 +112,7 @@
     "format-connected": "󰂱",
     "tooltip-format": "{controller_alias} ({controller_address})\n{device_alias} ({device_address})",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "on-click": "kitty bluetuith",
+    "on-click": "kitty bluetui",
     "on-click-right": "rfkill toggle bluetooth"
   },
 

@@ -50,13 +50,14 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
+        off
         width 2
         active-color "#7aa2f7"
         inactive-color "#292e42"
     }
 
     border {
-        off
+        on
         width 2
         active-color "#7aa2f7"
         inactive-color "#292e42"
@@ -64,10 +65,22 @@ layout {
     }
 
     shadow {
+        off
         softness 8
         spread 4
         offset x=4 y=4
         color "#16161eaa"
+    }
+
+    tab-indicator {
+        on
+        gap 4
+        width 2
+        corner-radius 4
+        gaps-between-tabs 4
+        length total-proportion=0.5
+        position "left"
+        place-within-column
     }
 
     background-color "transparent"

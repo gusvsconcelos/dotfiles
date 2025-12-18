@@ -11,11 +11,11 @@ for arg in "$@"; do
   esac
 done
 
-FG_BLUE="\033[38;5;75m"
-FG_GREEN="\033[38;5;114m"
-FG_PURPLE="\033[38;5;141m"
-FG_YELLOW="\033[38;5;180m"
-FG_GRAY="\033[38;5;245m"
+FG_BLUE="\033[34m"
+FG_GREEN="\033[32m"
+FG_PURPLE="\033[35m"
+FG_YELLOW="\033[33m"
+FG_GRAY="\033[90m"
 RESET="\033[0m"
 
 ICON_INFO="ℹ"

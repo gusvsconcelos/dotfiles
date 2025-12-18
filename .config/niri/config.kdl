@@ -39,7 +39,7 @@ output "HDMI-A-1" {
 
 // ──[ Layout ]────────────────────────────────────────────────
 layout {
-    gaps 6
+    gaps 8
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -74,10 +74,10 @@ layout {
 
     tab-indicator {
         on
-        gap 6
+        gap 4
         width 4
         corner-radius 4
-        gaps-between-tabs 3
+        gaps-between-tabs 2
         length total-proportion=0.5
         position "left"
         place-within-column

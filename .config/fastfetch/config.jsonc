@@ -13,7 +13,7 @@
     "terminal",
     {
         "type": "display",
-        "format": "{name} {width}x{height} {refresh-rate}Hz {inch}\""
+        "format": "{width}x{height} in {inch}\", {refresh-rate} Hz"
     },
     "cpu",
     "gpu",

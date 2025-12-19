@@ -304,3 +304,9 @@ web_client {
 theme "tokyonight"
 show_startup_tips false
 pane_frames true
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}

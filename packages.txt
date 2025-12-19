@@ -12,6 +12,7 @@ discord
 docker
 docker-compose
 efibootmgr
+fastfetch
 fd
 fish
 fzf

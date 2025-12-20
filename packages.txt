@@ -13,7 +13,6 @@ docker
 docker-compose
 efibootmgr
 evince
-fastfetch
 fd
 fish
 fzf

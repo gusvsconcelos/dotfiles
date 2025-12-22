@@ -5,7 +5,7 @@ if status is-interactive
 end
 
 # ──[ Aliases ]─────────────────────────────────────────────────
-alias up='clear;fetch;echo"";echo "SYSTEM UPDATE:";yay -Syu --noconfirm'
+alias up='clear;fetch;echo "SYSTEM UPDATE:";yay -Syu --noconfirm'
 alias clean='$HOME/.config/fish/scripts/clean.sh'
 alias ls='lsd'
 alias py='python'

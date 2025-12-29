@@ -5,14 +5,12 @@ base
 base-devel
 bluetui
 bluez
-bluez-obex
 btop
 cliphist
 discord
 docker
 docker-compose
 efibootmgr
-evince
 fd
 fish
 fzf
@@ -37,7 +35,6 @@ lib32-gamemode
 lib32-mangohud
 libnotify
 libpulse
-libreoffice-fresh
 limine
 linux
 linux-firmware
@@ -92,7 +89,6 @@ vulkan-radeon
 vulkan-tools
 waybar
 wget
-wireless_tools
 wireplumber
 wl-clipboard
 wlsunset

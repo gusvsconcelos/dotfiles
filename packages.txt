@@ -20,7 +20,6 @@ git
 github-cli
 gnome-calculator
 gnome-keyring
-goverlay
 gst-plugin-pipewire
 intellij-idea-community-edition
 jdk-openjdk
@@ -32,7 +31,7 @@ lazydocker
 lazygit
 less
 lib32-gamemode
-lib32-mangohud
+lib32-vulkan-radeon
 libnotify
 libpulse
 limine
@@ -41,7 +40,6 @@ linux-firmware
 localsend-bin
 lsd
 mako
-mangohud
 mpv
 neovim
 networkmanager

@@ -82,7 +82,6 @@ ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family
 ufw
 upscayl-bin
-ventoy-bin
 vulkan-radeon
 vulkan-tools
 waybar
@@ -98,7 +97,6 @@ xorg-xinit
 xorg-xwayland
 xwayland-satellite
 yay
-yazi
 zellij
 zen-browser-bin
 zram-generator

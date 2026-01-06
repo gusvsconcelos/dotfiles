@@ -1,6 +1,6 @@
 #!/bin/bash
 
-options="󰤆    Shutdown\n    Reboot\n󰗽    Logout\n󰏦    Suspend\n    Lock\n󰤁    Hibernate"
+options="󰤆    Desligar\n    Reiniciar\n󰗽    Sair\n󰏦    Suspender\n    Bloquear\n󰤁    Hibernar"
 
 chosen=$(echo -e "$options" | rofi -dmenu -p "Power Menu" -lines 6 -width 20 -theme $HOME/.config/rofi/themes/powermenu.rasi)
 

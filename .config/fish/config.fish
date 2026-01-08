@@ -1,5 +1,5 @@
 set -g fish_greeting
-set -g fish_color_command blue
+set -g fish_color_command purple
 
 if status is-interactive
     starship init fish | source

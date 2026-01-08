@@ -3,6 +3,7 @@ amd-ucode
 arronax
 base
 base-devel
+bat
 bluetui
 bluez
 btop
@@ -11,6 +12,7 @@ discord
 docker
 docker-compose
 efibootmgr
+eza
 fd
 fish
 fzf
@@ -21,6 +23,7 @@ github-cli
 gnome-calculator
 gnome-keyring
 gst-plugin-pipewire
+imv
 intellij-idea-community-edition
 jdk-openjdk
 kitty
@@ -38,7 +41,6 @@ limine
 linux
 linux-firmware
 localsend-bin
-lsd
 mako
 mpv
 neovim
@@ -97,6 +99,7 @@ xorg-xinit
 xorg-xwayland
 xwayland-satellite
 yay
+yazi
 zellij
 zen-browser-bin
 zram-generator

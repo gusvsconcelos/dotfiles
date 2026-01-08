@@ -4,7 +4,6 @@
 
 @import "colors.css";
 
-/* ──[ Global ]───────────────────────────────────────────────── */
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +59,6 @@ window#waybar {
   color: @accent2;
 }
 
-/* Workspaces -------------------------------------------------- */
 #workspaces {
   margin-right: 3px;
   padding: 0 4px;
@@ -114,7 +112,6 @@ window#waybar {
   padding-right: 0;
 }
 
-/* Unified tray + system icons --------------------------------- */
 #tray,
 #bluetooth,
 #pulseaudio,
@@ -124,20 +121,17 @@ window#waybar {
 }
 
 #tray {
-  padding: 0 2px 0 4px;
+  padding: 0 2px 0 2px;
 }
 
-/* Audio ------------------------------------------------------- */
 #pulseaudio {
   font-size: 16px;
 }
-
 #pulseaudio.volume {
   font-size: 10px;
   padding: 0 2px;
 }
 
-/* Network ----------------------------------------------------- */
 #network {
   padding-right: 10px;
   border-radius: 0 4px 4px 0;

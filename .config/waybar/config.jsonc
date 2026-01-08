@@ -7,10 +7,9 @@
   "position": "bottom",
   "height": 0,
   "output": ["*"],
+
   "reload_style_on_change": true,
   "exclusive": true,
-  "ipc": true,
-
   "start_hidden": false,
   "disable_scroll": true,
   "disable_scroll_when_mouse_over": true,

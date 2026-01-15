@@ -1,5 +1,5 @@
 set -g fish_greeting
-set -g fish_color_command purple
+set -g fish_color_command blue
 
 if status is-interactive
     starship init fish | source
@@ -16,8 +16,8 @@ alias ls='eza'
 alias cat='bat'
 alias ex='yazi'
 alias zel='zellij'
-alias lgit='lazygit'
-alias ldocker='lazydocker'
+alias lg='lazygit'
+alias ld='lazydocker'
 alias vim='nvim'
 
 # Misc

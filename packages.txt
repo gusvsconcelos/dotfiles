@@ -79,6 +79,7 @@ swayidle
 swaylock-effects-git
 swww
 tldr
+tree
 ttf-cascadia-code-nerd
 ttf-jetbrains-mono-nerd
 ttf-ubuntu-font-family

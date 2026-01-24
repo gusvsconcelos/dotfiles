@@ -101,6 +101,7 @@ xorg-xwayland
 xwayland-satellite
 yay
 yazi
+zed
 zellij
 zen-browser-bin
 zram-generator

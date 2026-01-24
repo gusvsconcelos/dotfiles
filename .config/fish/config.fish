@@ -18,9 +18,10 @@ alias ex='yazi'
 alias zel='zellij'
 alias lg='lazygit'
 alias ld='lazydocker'
+alias py='python'
 alias vim='nvim'
+alias zed='zeditor'
 
 # Misc
-alias py='python'
 alias ventoy='sudo $HOME/Documentos/Ventoy/VentoyWeb.sh'
 alias moviestar='clear;py $HOME/Documentos/dev/moviestar/moviestar.py'

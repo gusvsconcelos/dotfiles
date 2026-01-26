@@ -16,7 +16,6 @@ eza
 fd
 fish
 fzf
-gamemode
 gimp
 git
 github-cli
@@ -24,7 +23,6 @@ gnome-calculator
 gnome-keyring
 gst-plugin-pipewire
 imv
-intellij-idea-community-edition
 jdk-openjdk
 kitty
 krita
@@ -33,7 +31,6 @@ kvantum-qt5
 lazydocker
 lazygit
 less
-lib32-gamemode
 lib32-vulkan-radeon
 libnotify
 libpulse

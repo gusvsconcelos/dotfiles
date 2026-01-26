@@ -70,7 +70,7 @@
     "auto_reveal_entries": true,
     "indent_size": 20.0,
     "git_status": true,
-    "folder_icons": true,
+    "folder_icons": false,
     "hide_gitignore": false,
     "dock": "left",
     "default_width": 240.0,

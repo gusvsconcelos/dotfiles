@@ -37,7 +37,7 @@ window#waybar {
 #pulseaudio,
 #network,
 #custom-power {
-  background: @bg1;
+  background: transparent;
   color: @fg1;
   margin: 3px 0;
   padding: 0 6px;

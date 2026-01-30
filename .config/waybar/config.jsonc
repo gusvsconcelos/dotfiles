@@ -4,7 +4,7 @@
 
 {
   "layer": "top",
-  "position": "bottom",
+  "position": "top",
   "height": 0,
   "output": ["*"],
 
@@ -25,23 +25,27 @@
     "bluetooth",
     "group/audio-expander",
     "network",
-    "custom/power"
+    "custom/power",
   ],
 
   // ──[ Custom Launcher ]──────────────────────────────────────
   "custom/launcher": {
     "format": "󱓞",
     "on-click": "rofi -show drun",
-    "tooltip": false
+    "tooltip": false,
   },
 
   // ──[ Niri Workspaces ]──────────────────────────────────────
   "niri/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "●", "2": "●", "3": "●", "4": "●", "5": "●",
-      "default": "●"
-    }
+      "1": "●",
+      "2": "●",
+      "3": "●",
+      "4": "●",
+      "5": "●",
+      "default": "●",
+    },
   },
 
   // ──[ MPRIS / Spotify ]──────────────────────────────────────
@@ -54,14 +58,14 @@
     "status-icons": { "paused": "" },
     "max-length": 64,
     "ellipsis": "…",
-    "tooltip": false
+    "tooltip": false,
   },
 
   // ──[ Clock ]────────────────────────────────────────────────
   "clock": {
     "format": "󰥔 {:%H:%M}",
     "format-alt": " {:%d/%m/%Y}",
-    "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
   },
 
   // ──[ CPU ]──────────────────────────────────────────────────
@@ -69,7 +73,7 @@
     "interval": 2,
     "format": "  {usage}%",
     "tooltip-format": "CPU Usage: {usage}%",
-    "on-click": "kitty btop"
+    "on-click": "kitty btop",
   },
 
   // ──[ Memory ]───────────────────────────────────────────────
@@ -77,7 +81,7 @@
     "interval": 2,
     "format": "  {used:0.1f}GiB",
     "tooltip-format": "RAM: {used:0.1f}/{total:0.1f} GiB",
-    "on-click": "kitty btop"
+    "on-click": "kitty btop",
   },
 
   // ──[ Group / Tray ]─────────────────────────────────────────
@@ -86,19 +90,19 @@
     "escape": true,
     "drawer": {
       "transition-duration": 320,
-      "children-class": "tray-group-item"
+      "children-class": "tray-group-item",
     },
-    "modules": ["custom/expand-icon", "tray"]
+    "modules": ["custom/expand-icon", "tray"],
   },
 
   "custom/expand-icon": {
     "format": " ",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "tray": {
     "spacing": 4,
-    "reverse-direction": true
+    "reverse-direction": true,
   },
 
   // ──[ Bluetooth ]────────────────────────────────────────────
@@ -111,7 +115,7 @@
     "tooltip-format": "{controller_alias} ({controller_address})\n{device_alias} ({device_address})",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "on-click": "kitty bluetui",
-    "on-click-right": "rfkill toggle bluetooth"
+    "on-click-right": "rfkill toggle bluetooth",
   },
 
   // ──[ PulseAudio ]───────────────────────────────────────────
@@ -122,7 +126,7 @@
     "scroll-step": 5,
     "tooltip-format": "Volume: {volume}%",
     "on-click": "kitty pulsemixer",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
 
   "pulseaudio#volume": {
@@ -131,7 +135,7 @@
     "scroll-step": 5,
     "tooltip-format": "Volume: {volume}%",
     "on-click": "kitty pulsemixer",
-    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
   },
 
   "group/audio-expander": {
@@ -140,9 +144,9 @@
     "drawer": {
       "transition-duration": 320,
       "children-class": "volume-item",
-      "transition-left": true
+      "transition-left": true,
     },
-    "modules": ["pulseaudio#icon", "pulseaudio#volume"]
+    "modules": ["pulseaudio#icon", "pulseaudio#volume"],
   },
 
   // ──[ Network ]──────────────────────────────────────────────
@@ -156,13 +160,13 @@
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format": "ESSID: <b>{essid}</b>\nSignal: {signaldBm} dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
-    "on-click": "kitty nmtui"
+    "on-click": "kitty nmtui",
   },
 
   // ──[ Custom Power ]─────────────────────────────────────────
   "custom/power": {
     "format": "",
     "on-click": "~/.config/rofi/scripts/powermenu.sh",
-    "tooltip": false
-  }
+    "tooltip": false,
+  },
 }

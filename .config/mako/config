@@ -10,7 +10,7 @@ default-timeout=5000
 ignore-timeout=1
 max-visible=4
 layer=top
-anchor=bottom-center
+anchor=top-center
 actions=1
 
 # ──[ Appearance ]──────────────────────────────────────────────
@@ -43,11 +43,13 @@ border-color=#f7768e
 # ──[ OSD Overrides ]───────────────────────────────────────────
 [app-name=volume_osd]
 layer=overlay
+anchor=center
+width=160
 text-alignment=center
 default-timeout=3000
-width=160
 
 [app-name=bluelight_filter]
 layer=overlay
+anchor=center
 text-alignment=center
 default-timeout=3000

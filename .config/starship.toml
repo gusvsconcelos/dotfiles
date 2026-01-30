@@ -1,5 +1,4 @@
 # $HOME/.config/starship.toml
-# Robby Russell theme
 
 format = """
 $character\

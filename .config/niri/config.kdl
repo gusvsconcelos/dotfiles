@@ -157,7 +157,7 @@ binds {
     Mod+Ctrl+Period hotkey-overlay-title="Emoji Picker" { spawn-sh "rofi -modi emoji -show emoji -emoji-format '{emoji}   {name}' -theme $HOME/.config/rofi/themes/menu_no_icons.rasi | wtype"; }
     Mod+Y hotkey-overlay-title="Color Picker" { spawn-sh "niri msg pick-color | grep -oE '#[0-9a-fA-F]{6}' | head -n1 | wl-copy"; }
     Mod+Shift+W hotkey-overlay-title="Wallpaper Switcher" { spawn-sh "$HOME/.config/rofi/scripts/wallpaper_switcher.sh"; }
-    Mod+Ctrl+B hotkey-overlay-title="Toggle Blue Light Filter" { spawn-sh "$HOME/.config/niri/scripts/bluelight_filter.sh"; }
+    Mod+Ctrl+B hotkey-overlay-title="Toggle Blue Light Filter" { spawn-sh "$HOME/.config/mako/scripts/bluelight_filter_osd.sh"; }
 
     // ── System Actions ─────────────────────────────────────────
     Ctrl+Shift+Escape hotkey-overlay-title="System Monitor" { spawn-sh "kitty btop"; }

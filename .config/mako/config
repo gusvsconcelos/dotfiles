@@ -48,7 +48,7 @@ width=160
 text-alignment=center
 default-timeout=3000
 
-[app-name=bluelight_filter]
+[app-name=bluelight_filter_osd]
 layer=overlay
 anchor=center
 text-alignment=center

@@ -6,7 +6,7 @@ if status is-interactive
 end
 
 # ──[ Aliases ]─────────────────────────────────────────────────
-alias up='clear;fetch;echo "SYSTEM UPDATE:";yay -Syu --noconfirm'
+alias up='clear;fetch;echo "SYSTEM UPDATE:";yay -Syu --noconfirm;clean packages'
 alias clean='$HOME/.config/fish/scripts/clean.sh'
 alias dev='cd $HOME/Documentos/dev/'
 alias nv='cd $HOME/.config/nvim/;nvim'

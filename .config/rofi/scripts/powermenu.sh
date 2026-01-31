@@ -1,6 +1,6 @@
 #!/bin/bash
 
-options="󰤆    Desligar\n    Reiniciar\n󰗽    Sair\n󰏦    Suspender\n    Bloquear\n󰤁    Hibernar"
+options="󰤆    Desligar\n    Reiniciar\n󰗽    Sair\n    Bloquear\n󰤁    Hibernar\n󰏦    Suspender"
 
 chosen=$(echo -e "$options" | rofi -dmenu -p "Power Menu" -lines 6 -width 20 -theme $HOME/.config/rofi/themes/powermenu.rasi)
 
@@ -21,7 +21,7 @@ case "$chosen" in
         ;;
     *Sair)
         if [[ $(confirm "󰗽    Sair") == "    Sim" ]]; then
-           niri msg action quit -s 
+           niri msg action quit -s
         fi
         ;;
     *Suspender)

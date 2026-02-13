@@ -1,0 +1,96 @@
+// ╭───────────────────────────────────────────────────────────╮
+// │                  ROFI WALLPAPER SWITCHER                  │
+// ╰───────────────────────────────────────────────────────────╯
+
+@import "colors.rasi"
+@import "font.rasi"
+
+// ──[ Global ]─────────────────────────────────────────────────
+* {
+    font: @text-font;
+    text-color: @fg0;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+// ──[ Configuration ]──────────────────────────────────────────
+configuration {
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+// ──[ Window ]─────────────────────────────────────────────────
+window {
+    location: center;
+    width: 640px;
+    border: 2px;
+    border-color: @bg1;
+    border-radius: 4px;
+    background-color: @bg0;
+}
+
+// ──[ Mainbox ]────────────────────────────────────────────────
+mainbox {
+    padding: 12px;
+}
+
+// ──[ Inputbar ]───────────────────────────────────────────────
+inputbar {
+    background-color: @bg1;
+    border-radius: 4px;
+    padding: 12px;
+    spacing: 12px;
+    children: [ icon-search, entry ];
+}
+icon-search {
+    expand: false;
+    filename: "./assets/search.svg";
+    size: 18px;
+}
+
+// ──[ Message ]────────────────────────────────────────────────
+message {
+    margin: 12px 0 0;
+    background-color: @bg0;
+}
+textbox {
+    padding: 8px 24px;
+}
+
+// ──[ Listview ]───────────────────────────────────────────────
+listview {
+    margin: 12px 0 0;
+    lines: 4;
+    columns: 2;
+    fixed-height: true;
+}
+
+// ──[ Elements ]───────────────────────────────────────────────
+element {
+    padding: 0 12px;
+    spacing: 12px;
+    border-radius: 4px;
+}
+element normal active {
+    text-color: @accent;
+}
+element alternate active {
+    text-color: @accent;
+}
+element selected {
+    text-color: @bg0;
+}
+element selected normal, element selected active {
+    background-color: @accent;
+}
+
+// ──[ Element Icons & Text ]───────────────────────────────────
+element-icon {
+    vertical-align: 0.5;
+}
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}

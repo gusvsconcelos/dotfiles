@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.5
+Name=Wacom
+GenericName=Tablet driver settings
+Comment=A cross-platform open-source tablet driver
+Exec=otd-gui
+Icon=input-tablet
+Terminal=false
+Type=Application
+Categories=HardwareSettings;Settings;GTK
+StartupNotify=true
+StartupWMClass=OpenTabletDriver.UX
+SingleMainWindow=true
+Hidden=false

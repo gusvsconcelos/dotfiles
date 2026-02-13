@@ -1,0 +1,4 @@
+* {
+    text-font: "Fira Sans 11";
+    text-font-xl: "Fira Sans 12";
+}

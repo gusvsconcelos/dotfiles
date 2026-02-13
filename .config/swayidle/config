@@ -1,0 +1,5 @@
+# Lock screen after 5 minutes
+timeout 300 'swaylock -f'
+
+# Turn off display after 10 minutes
+# timeout 600 'niri msg action power-off-monitors' resume 'niri msg action power-on-monitors'

@@ -1,0 +1,17 @@
+bg0: #0c0e10
+bg1: #11111B
+bg2: #1a1b26
+bg3: #292e42
+fg0: #414868
+fg1: #565f89
+fg2: #9aa5ce
+fg3: #c0caf5
+accent0: #7dcfff
+accent1: #7aa2f7
+accent2: #2959aa
+accent3: #bb9af7
+accent4: #f7768e
+accent5: #8c4351
+accent6: #73dacb
+accent7: #e0af68
+accent8: #9ece6a

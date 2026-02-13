@@ -1,0 +1,79 @@
+// ╭───────────────────────────────────────────────────────────╮
+// │                      ROFI POWER MENU                      │
+// ╰───────────────────────────────────────────────────────────╯
+
+@import "colors.rasi"
+@import "font.rasi"
+
+// ──[ Global ]─────────────────────────────────────────────────
+* {
+    font: @text-font-xl;
+    text-color: @fg0;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+// ──[ Configuration ]──────────────────────────────────────────
+configuration {
+    show-icons: false;
+}
+
+// ──[ Window ]─────────────────────────────────────────────────
+window {
+    location: center;
+    width: 200px;
+    border: 2px;
+    border-color: @bg1;
+    border-radius: 4px;
+    background-color: @bg0;
+}
+
+// ──[ Mainbox ]────────────────────────────────────────────────
+mainbox {
+    padding: 12px;
+}
+
+// ──[ Inputbar ]───────────────────────────────────────────────
+inputbar {
+    enabled: false;
+}
+
+// ──[ Message ]────────────────────────────────────────────────
+message {
+    margin: 12px 0 0;
+    background-color: @bg0;
+}
+
+// ──[ Listview ]───────────────────────────────────────────────
+listview {
+    margin: 0;
+    lines: 6;
+    columns: 1;
+    fixed-height: true;
+}
+
+// ──[ Elements ]───────────────────────────────────────────────
+element {
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+element normal active {
+    text-color: @accent;
+}
+element alternate active {
+    text-color: @accent;
+}
+element selected {
+    text-color: @bg0;
+}
+element selected normal, element selected active {
+    background-color: @accent;
+}
+
+// ──[ Element Text ]───────────────────────────────────────────
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+}

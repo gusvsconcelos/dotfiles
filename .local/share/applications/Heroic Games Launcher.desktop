@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Icon=appimagekit-heroic
+Name=Heroic Games Launcher
+Terminal=false
+Hidden=false
+Exec=/home/gus/.local/share/appimages/Heroic.AppImage

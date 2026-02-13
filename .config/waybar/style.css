@@ -1,0 +1,156 @@
+/* ───────────────────────────────────────────────────────────── */
+/*                          WAYBAR STYLE                         */
+/* ───────────────────────────────────────────────────────────── */
+
+@import "colors.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+
+  font-family: "JetbrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+window#waybar {
+  background: @bg0;
+  color: @fg1;
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/*                           BASE BLOCK                          */
+/* ───────────────────────────────────────────────────────────── */
+
+#custom-launcher,
+#workspaces,
+#mpris,
+#clock,
+#cpu,
+#memory,
+#custom-expand-icon,
+#tray,
+#bluetooth,
+#pulseaudio,
+#network,
+#custom-power {
+  background: transparent;
+  color: @fg1;
+  margin: 3px 0;
+  padding: 0 6px;
+  border-radius: 4px;
+
+  transition: color 0.2s ease;
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/*                         LEFT CLUSTER                          */
+/* ───────────────────────────────────────────────────────────── */
+
+/* ──[ Launcher ]─────────────────────────────────────────────── */
+#custom-launcher {
+  margin: 3px;
+  padding: 0 10px 0 6px;
+  border-radius: 4px;
+  font-size: 17px;
+
+  color: @accent3;
+}
+#custom-launcher:hover {
+  color: @accent2;
+}
+
+/* ──[ Workspaces ]───────────────────────────────────────────── */
+#workspaces {
+  margin-right: 3px;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+#workspaces button {
+  min-width: 14px;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+
+  color: @fg0;
+  transition: color 0.2s ease;
+}
+#workspaces button:hover {
+  color: @fg1;
+}
+#workspaces button.active {
+  color: @accent2;
+}
+#workspaces button.urgent {
+  color: @accent5;
+}
+
+/* ──[ Mpris ]────────────────────────────────────────────────── */
+#mpris {
+  color: @spotify;
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/*                         RIGHT CLUSTER                         */
+/* ───────────────────────────────────────────────────────────── */
+
+#tray,
+#bluetooth,
+#pulseaudio,
+#network,
+#custom-power {
+  border-radius: 0;
+  padding: 0 5px;
+}
+
+/* ──[ CPU/Memory ]───────────────────────────────────────────── */
+#cpu {
+  border-radius: 4px 0 0 4px;
+  padding-right: 4px;
+}
+
+#memory {
+  border-radius: 0 4px 4px 0;
+}
+
+/* ──[ Tray ]─────────────────────────────────────────────────── */
+#custom-expand-icon {
+  border-radius: 4px 0 0 4px;
+  margin-left: 3px;
+  padding-right: 0;
+}
+#tray {
+  padding: 0 2px;
+}
+
+/* ──[ PulseAudio ]───────────────────────────────────────────── */
+#pulseaudio {
+  font-size: 16px;
+}
+#pulseaudio.volume {
+  font-size: 10px;
+  padding: 0 2px;
+}
+
+/* ──[ Power Button ]─────────────────────────────────────────── */
+#custom-power {
+  margin-right: 3px;
+  padding: 0 10px 0 8px;
+  border-radius: 0 4px 4px 0;
+  font-size: 14px;
+
+  color: @accent6;
+}
+#custom-power:hover {
+  color: @accent5;
+}
+
+/* ──[ Tooltips ]─────────────────────────────────────────────── */
+tooltip {
+  opacity: 0;
+  border: none;
+  box-shadow: none;
+}

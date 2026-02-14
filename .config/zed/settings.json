@@ -1,85 +1,76 @@
 {
-  "agent": {
-    "button": false,
-    "favorite_models": [],
-    "model_parameters": []
-  },
-  "autosave": "on_window_change",
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 16.0,
-  "close_on_file_delete": true,
-  "disable_ai": true,
-  "languages": {
-    "PHP": {
-      "prettier": {
-        "allowed": false
-      }
-    }
-  },
-  "project_panel": {
-    "auto_fold_dirs": false,
-    "folder_icons": false
-  },
-  "restore_on_startup": "launchpad",
-  "scroll_beyond_last_line": "off",
-  "scrollbar": {
-    "show": "never"
-  },
-  "search": {
-    "center_on_match": true
-  },
-  "session": {
-    "restore_unsaved_buffers": false,
-    "trust_all_worktrees": true
-  },
-  "status_bar": {
-    "cursor_position_button": false
-  },
-  "tab_bar": {
-    "show_nav_history_buttons": false
-  },
-  "tab_size": 2,
-  "tabs": {
-    "file_icons": true,
-    "git_status": true,
-    "show_diagnostics": "all"
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "terminal": {
-    "font_size": 14.0
-  },
-  "theme": {
-    "dark": "Base16 Tokyo Night Terminal Dark",
-    "light": "Base16 Tokyo Night Terminal Light",
-    "mode": "system"
-  },
-  "title_bar": {
-    "show_branch_icon": true,
-    "show_onboarding_banner": false,
-    "show_sign_in": false,
-    "show_user_picture": false
-  },
-  "toolbar": {
-    "agent_review": false,
-    "breadcrumbs": false,
-    "quick_actions": false,
-    "selections_menu": false
-  },
-  "ui_font_family": "Fira Sans",
-  "use_smartcase_search": true,
-  "use_system_path_prompts": false,
-  "use_system_prompts": false,
-  "vim": {
-    "gdefault": true,
-    "toggle_relative_line_numbers": true,
-    "use_smartcase_find": true
-  },
-  "vim_mode": true,
-  "which_key": {
-    "enabled": true
-  },
-  "window_decorations": "server"
+	"autosave": "on_window_change",
+	"buffer_font_family": "JetBrainsMono Nerd Font",
+	"buffer_font_size": 16.0,
+	"close_on_file_delete": true,
+	"collaboration_panel": {
+		"button": false,
+	},
+	"colorize_brackets": false,
+	"disable_ai": true,
+	"format_on_save": "off",
+	"gutter": {
+		"min_line_number_digits": 0,
+	},
+	"hard_tabs": true,
+	"project_panel": {
+		"auto_fold_dirs": false,
+		"folder_icons": false,
+	},
+	"restore_on_startup": "launchpad",
+	"scroll_beyond_last_line": "off",
+	"scrollbar": {
+		"show": "never",
+	},
+	"search": {
+		"center_on_match": true,
+	},
+	"session": {
+		"restore_unsaved_buffers": false,
+		"trust_all_worktrees": true,
+	},
+	"status_bar": {
+		"cursor_position_button": false,
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false,
+		"show_tab_bar_buttons": false,
+	},
+	"tab_size": 2,
+	"tabs": {
+		"git_status": true,
+		"show_diagnostics": "all",
+	},
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false,
+	},
+	"terminal": {
+		"font_size": 14.0,
+	},
+	"theme": "Tokyo Night Dark",
+	"title_bar": {
+		"show_branch_icon": true,
+		"show_onboarding_banner": false,
+		"show_sign_in": false,
+		"show_user_picture": false,
+	},
+	"toolbar": {
+		"breadcrumbs": false,
+		"quick_actions": false,
+		"selections_menu": false,
+	},
+	"ui_font_family": "Fira Sans",
+	"use_system_path_prompts": false,
+	"use_system_prompts": false,
+	"vim": {
+		"gdefault": true,
+		"toggle_relative_line_numbers": true,
+		"use_smartcase_find": true,
+	},
+	"vim_mode": true,
+	"which_key": {
+		"enabled": true,
+	},
+	"window_decorations": "server",
 }

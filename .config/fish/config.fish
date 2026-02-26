@@ -21,6 +21,7 @@ alias ld='lazydocker'
 alias py='python'
 alias vim='nvim'
 alias zed='zeditor'
+alias code='codium'
 
 # Misc
 alias ventoy='sudo $HOME/.ventoy/VentoyWeb.sh'

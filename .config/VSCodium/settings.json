@@ -1,0 +1,85 @@
+{
+  // ===========================
+  // Appearance & UI
+  // ===========================
+  "workbench.colorTheme": "Borderless Tokyo Night",
+  "workbench.iconTheme": "symbols",
+  "workbench.activityBar.location": "hidden",
+  "workbench.navigationControl.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+
+  "window.menuStyle": "custom",
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "window.menuBarVisibility": "toggle",
+
+  "workbench.startupEditor": "none",
+  "workbench.welcomePage.extraAnnouncements": false,
+  "workbench.welcomePage.walkthroughs.openOnInstall": false,
+  "workbench.reduceMotion": "on",
+
+  "breadcrumbs.enabled": false,
+
+  // ===========================
+  // Editor – Typography
+  // ===========================
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.5,
+  "editor.fontLigatures": true,
+  "editor.fontVariations": true,
+
+  // ===========================
+  // Editor – Behavior
+  // ===========================
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderLineHighlight": "line",
+  "editor.lineNumbers": "relative",
+  "editor.tabCompletion": "on",
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": false,
+
+  "editor.bracketPairColorization.enabled": false,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.codeLens": false,
+
+  // ===========================
+  // Minimap & Scrollbars
+  // ===========================
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.autohide": "mouseover",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+
+  // ===========================
+  // Files & Formatting
+  // ===========================
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+  },
+
+  // ===========================
+  // Git
+  // ===========================
+  "git.autofetch": true,
+
+  // ===========================
+  // Vim
+  // ===========================
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+
+  // ===========================
+  // Extensions
+  // ===========================
+  "symbols.hidesExplorerArrows": false,
+}

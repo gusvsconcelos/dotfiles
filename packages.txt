@@ -45,6 +45,7 @@ npm
 nwg-look
 obsidian
 opentabletdriver
+php
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -78,6 +79,7 @@ ufw
 unzip
 upscayl-bin
 vim
+vscodium-bin
 vulkan-radeon
 waybar
 wget

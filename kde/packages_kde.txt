@@ -57,6 +57,7 @@ spotify-launcher
 steam
 sudo
 tldr
+tree
 ttf-fira-code
 ttf-fira-sans
 ttf-jetbrains-mono-nerd
@@ -67,6 +68,8 @@ upscayl-bin
 ventoy-bin
 vulkan-radeon
 wget
+wine-staging
+winetricks
 wireplumber
 wl-clipboard
 wpa_supplicant

@@ -45,7 +45,6 @@ npm
 nwg-look
 obsidian
 opentabletdriver
-php
 pipewire
 pipewire-alsa
 pipewire-jack

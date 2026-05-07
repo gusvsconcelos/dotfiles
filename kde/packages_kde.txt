@@ -39,7 +39,6 @@ noto-fonts-emoji
 npm
 obsidian
 okular
-php
 pipewire
 pipewire-alsa
 pipewire-jack

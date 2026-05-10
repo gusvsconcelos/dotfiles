@@ -25,4 +25,4 @@ alias code='codium'
 
 # Misc
 alias ventoy='sudo $HOME/.ventoy/VentoyWeb.sh'
-alias moviestar='clear;py $HOME/Documentos/dev/moviestar/moviestar.py'
+alias moviestar='clear;py $HOME/Projetos/moviestar/moviestar.py'

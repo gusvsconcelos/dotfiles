@@ -19,6 +19,7 @@ gimp
 git
 github-cli
 gwenview
+haruna
 jdk-openjdk
 kitty
 krita
@@ -30,7 +31,6 @@ limine
 linux
 linux-firmware
 localsend-bin
-mpv
 neovim
 networkmanager
 nodejs
@@ -45,7 +45,6 @@ pipewire-jack
 pipewire-pulse
 plasma-meta
 plymouth
-prismlauncher
 python-pip
 qbittorrent
 qt6-multimedia

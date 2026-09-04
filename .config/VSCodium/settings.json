@@ -1,21 +1,21 @@
 {
   // ===========================
-  // Workbench
+  // Workbench & Window
   // ===========================
   "workbench.colorTheme": "Nightcall",
   "workbench.iconTheme": "symbols",
   "workbench.startupEditor": "none",
-  "workbench.navigationControl.enabled": false,
-  "workbench.layoutControl.enabled": false,
   "workbench.welcomePage.extraAnnouncements": false,
   "workbench.welcomePage.walkthroughs.openOnInstall": false,
-  "workbench.experimental.modernUI": true,
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
   "workbench.reduceMotion": "on",
+
+  "workbench.experimental.modernUI": true,
 
   "window.commandCenter": true,
   "window.menuStyle": "custom",
   "window.titleBarStyle": "custom",
-  "window.menuBarVisibility": "classic",
 
   "breadcrumbs.enabled": false,
 
@@ -45,7 +45,6 @@
 
   "editor.bracketPairColorization.enabled": false,
   "editor.semanticHighlighting.enabled": false,
-  "editor.codeLens": false,
 
   // ===========================
   // Minimap & Scrollbars
@@ -78,8 +77,29 @@
   // Vim
   // ===========================
   "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": false,
   "vim.foldfix": true,
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    // File / editor navigation
+    "<C-p>": false,
+    "<C-e>": false,
+    "<C-w>": false,
+
+    // Panel / editor groups
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-b>": false,
+
+    // Search
+    "<C-f>": false,
+    "<C-h>": false,
+
+    // Navigation
+    "<C-g>": false,
+
+    // File operations
+    "<C-s>": false,
+  },
 
   // ===========================
   // Extensions
